@@ -1,0 +1,93 @@
+﻿@model DomainEntities.StudentsAttandance
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/ExportToExcel.js"></script>
+<script src="~/Scripts/AttandancentryError.js"></script>
+<script src="~/Content/JS/BackEnd/StudentsAttandance.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i>Exam</></li>
+            <li><a href="/Admin/StudentsAttandance">Students Attandance</a></li>
+            </ol>
+    </div>
+</div>
+
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudentsAttandanceEntry", name = "formStudentsAttandanceEntry", onSubmit = "return false;" }))
+{
+    <div class="x_panel">
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.SessionID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.SessionID, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.SessionID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.ClassID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.ClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.ClassID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.FacultyID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.FacultyID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.FacultyID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.Section)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Section, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Section, String.Empty, new { @class = "text-danger" })
+        </div>
+
+
+        <div class="col-sm-2">
+            <div class="pulldown">
+                <button  class="btn btn-danger" id="StudentsAttandanceSearch">Search</button>
+            </div>
+           
+        </div>
+
+
+
+    </div>
+            
+}
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudentsTotalAttandanceEntry", name = "formStudentsTotalAttandanceEntry", onSubmit = "return false;" }))
+{
+    <div class="x_panel">
+        <div class="col-sm-2">
+
+
+            @Html.LabelFor(model => model.TotalDays)<span style="color:red">*</span>
+            @Html.TextBoxFor(model => model.TotalDays, new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.TotalDays, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-8">
+            <div class="pulldown">
+                <button  class="btn btn-danger" id="addTotalDays">Add Total Days </button>
+                <button  class="btn" id="marksSaveRecords">Save Records</button>
+            </div>
+
+        </div>
+
+    </div>
+                }
+
+
+
+                <div id="MarksEntryList">@Html.Partial("~/Areas/Admin/Views/StudentsAttandance/StudentsAttandanceList.cshtml")</div>
+
+                <div class="divAttandanceError" style="display:none">
+
+
+                </div>
+                <script>
+                    var checkedIds = {};
+                </script>

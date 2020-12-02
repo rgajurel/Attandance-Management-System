@@ -1,0 +1,289 @@
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Infrastructure.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FastMember.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\FoolproofValidation.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainEntities.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\DomainInterface.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\Dapper.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\MoreLinq.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.ValueTuple.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\Infrastructure\obj\Debug\Infrastructure.pdb

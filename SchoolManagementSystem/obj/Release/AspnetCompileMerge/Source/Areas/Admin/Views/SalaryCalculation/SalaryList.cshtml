@@ -1,0 +1,139 @@
+﻿<style>
+    .modal-lg 
+    {
+    width: 1000px !important;
+}
+</style>
+@model DomainEntities.TakeLeave
+@using Kendo.Mvc.UI
+<div class="modal fade" id="salarycalculatepopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="modelcontent">
+            <div class="modal-header">   
+                <button type="button" class="close" style="color:black" data-dismiss="modal">&times;</button>           
+                <h4 class="modal-title" style="background-color:#d9534f;color:white;text-align:center" id="customPopupTitle">Calculate Salary</h4>
+            </div>
+            @*<div class="modal-body message">*@
+            <div class="panel-body">               
+                    
+                <div class="row"  style="display:none">
+                    
+                     
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+                            @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, new { @class = "form-control" })
+                          
+                        </div>
+                        <div class="col-md-4">
+                            @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+                            @Html.DropDownListFor(model => model.Month, ViewBag.monthList as SelectList, new { @class = "form-control" })                           
+                        </div>                      
+
+                </div>
+                
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-9">
+                            <h2 style="color:black;text-decoration:underline">1.Personal Information</h2>
+
+                            <div class="col-md-6">
+                                <label class="black">Name:</label>
+                                <label class="brown" id="name">Name</label>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="black">Designation:</label>
+                                <label class="brown" id="designation">Designation</label>
+
+                            </div>  
+                            
+                            @*<div class="col-md-6">
+                                <label for="black">Organisation:</label>
+                                <label class="brown" id="organisation">Designation</label>
+
+                            </div>*@                       
+
+
+                        </div>
+                        <div class="col-md-3">
+                            <img src="~/Content/Images/School/noimage.png" id="imageupload" height="70" class="pull-right" width="100" />
+                        </div>
+
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                            <h2 style="color:black;text-decoration:underline">2.Leave Information (Days)</h2>
+
+                           <div id="leaveinfo">
+
+                           </div>                    
+                       
+
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-md-12">                        
+                            <h2 style="color:black;text-decoration:underline">3.Attandance Information (Days)</h2>
+
+                        <div id="attandanceinfo">
+
+                        </div> 
+                                             
+
+                    </div>
+                </div>
+              
+
+                <div class="row">
+                    <div class="col-md-12">
+                   <h2 style="color:black;text-decoration:underline">4.Salary Information</h2>
+                    <div id="saladd">                      
+
+
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-6" id="salsubtract">
+
+                        </div>
+
+                        <div class="col-md-6" id="saltax">
+                            
+                          
+                        </div>                        
+                       
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-offset-10"><div class="col-md-3">
+            <button style="display:none" type="button" id="calculatetax" class="btn btn-danger">Calculate Tax</button>
+</div></div>
+                </div>
+
+                
+            </div>
+            @*</div>*@
+            <div class="modal-footer">
+                <button type="button" id="Save" class="btn btn-danger">Save</button>
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<style>
+    .test{
+        color:#a4060c;
+    }
+    .test1{
+        color:black;
+    }
+</style>

@@ -1,0 +1,22 @@
+﻿
+@using Kendo.Mvc.UI
+<div style="display:none">
+    @(Html.Kendo().Window()
+            .Name("batchupload")
+            .Title("Batch Upload Syudents")
+            .Visible(true)
+
+            .Content(@<text>
+                <div>
+                    <h4>Are You Sure To Delete?</h4>
+                    <button id="yes" class="btn btn-danger">Yes</button>
+                    <button id="no" class="btn">No</button>
+                </div>
+            </text>)
+            .Draggable()
+            .Width(400)
+             .Actions(actions => actions.Close())
+
+
+    )
+</div>

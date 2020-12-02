@@ -1,0 +1,369 @@
+﻿@{
+    string val1 = "";
+    string val2 = "";
+
+    //if (Request.Cookies["kdsjyfgwiuhrnhf"] != null)
+    //{
+    //    val1 = Request.Cookies["kdsjyfgwiuhrnhf"].Value;
+    //}
+    var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+
+    if (claimsIdentity != null)
+    {
+        val1 = claimsIdentity.FindFirst("isAdmin").Value.ToString();
+        val2 = claimsIdentity.FindFirst("isSuperAdmin").Value.ToString();
+
+    }
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/Content/Images/School/School.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/jquery-ui.css">
+    <link href="~/Content/CSS/styles.css" rel="stylesheet" />
+    @{
+        var tt = "";
+        var pp = 100;
+    }
+    @{
+
+        try
+        {
+            tt = Request.Url.ToString().Split('/')[4].ToString();
+        }
+        catch
+        {
+            tt = "School Management System";
+        }
+    }
+
+    <title>School Management System</title>
+    <!-- Global stylesheets -->
+    <link href="~/Content/vendor/kendo/css/kendo.common.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/kendo/css/kendo.silver.min.css" rel="stylesheet">
+    <link href="~/Content/CSS/css.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/colors.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/AdminCommon.css" rel="stylesheet" />
+    
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    
+    <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="~/Scripts/jquery.canvasjs.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Content/vendor/kendo/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/spin.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/custom.js"></script>
+    <link href="~/Content/CSS/jquery.timepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/nepali.datepicker.v2.1.min.js"></script>
+    <link href="~/Content/CSS/nepali.datepicker.v2.1.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/custom.css" rel="stylesheet" />
+</head>
+
+<body class="pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="navbar navbar-default header-highlight">
+        <div class="modal pull-right" id="message">
+
+        </div>
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Welcome ! To School</a>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+
+            <p class="navbar-text"><span class="label bg-info">Academic Year: ( 2016 - 2017 )</span></p>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+
+                    <a href="#" <i class="fa fa-envelope" style="color:black"></i> <span class="visible-xs-inline-block position-right">Messages</span> <span class="badge bg-warning-400" id="envelope1" style="display:none"><span> </a>
+                    <div class="dropdown-menu dropdown-content width-500">
+                        <ul class="media-list dropdown-content-body" id="emailnotificationtitle"></ul>
+                    </div>
+
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell" style="color:black"></i> <span class="visible-xs-inline-block position-right">Messages</span> <span class="badge bg-warning-400" id="envelope" style="display:none"><span> </a>
+
+                    <div class="dropdown-menu dropdown-content width-500">
+
+                        <ul class="media-list dropdown-content-body" id="notificationtitle"></ul>
+                        <div id="seeall"></div>
+                    </div>
+                </li>
+
+
+
+                <li class="dropdown dropdown-user" id="refresh">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="~/Content/Images/School/School.png" /> <span style="color:black" id="loginusername"></span> <i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);"><i class="fa fa-user"></i>Profile</a></li>
+                        <li>@Html.ActionLink("Log Out", "LogOff", "Login", new { Area = "" }, null)</li>
+                        @if (val1 == "True" || val2 == "True")
+                        {
+                            <li>
+                                <a href="@Url.Action("Index", "Dashboard", new { Area = "Admin" })"><i class="fa fa-gear fa-fw"></i> Switch To Admin</a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-container" style="min-height:611px">
+        <div class="page-content">
+            <div class="sidebar sidebar-main">
+                <div class="sidebar-content">
+                    <div class="sidebar-user">
+                        @*<div class="category-content">
+                                <div class="media">
+                                    <a href="#" class="media-left"><img src="#" class="img-circle img-sm" alt=""></a>
+                                    <div class="media-body"> <span class="media-heading text-semibold">Web School</span></div>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion" id="side-menu">
+
+                                @Html.Action("ClientMenu", "Menu", new { Area = "Admin" })
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>Dashboard</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("DashBoard", "Index", "DashBoard", new { Area = "Admin" }, null)</li>
+
+                                        </ul>
+                                    </li>*@
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                                            <span>Organisation</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                         <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Organisation Type","Index","SchoolType", new { Area = "Admin" },null)</li>
+                                             <li>@Html.ActionLink("Organisation Details", "Index", "SchoolInformation", new { Area = "Admin" }, null)</li>
+
+                                             <li>@Html.ActionLink("Bus Details", "Index", "BusInfo", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("Hostel Details ", "Index", "HostelInfo", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("House Details", "Index", "HouseInfo", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("Faculty Details", "Index", "Faculty", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("Fee Type", "Index", "FeeType", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("Location", "Index", "Location", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("UserGroup", "Index", "UserGroup", new { Area = "Admin" }, null)</li>
+
+                                            @*<li><a href="@Url.Action("studentImport","House Info")">Student Import</a></li>
+                                            <li><a href="@Url.Action("employeeImport","Setting")">Employee Import</a></li>
+                                            <li><a href="@Url.Action("privilege","Setting")">Privileges</a></li>
+                                            <li><a href="@Url.Action("assignClass","Setting")">Assign Courses</a></li>
+                                            <li><a href="/index.php/site/users"></a></li>
+                                            <li><a href="@Url.Action("onlineEnquiry","Setting")">Enquiry List</a></li>
+                                            <li><a href="@Url.Action("loginFormSettings","Setting")">Login Page</a></li>
+                                            <li><a href="@Url.Action("feeAllocationImport","Setting")">Fees Allocation Import</a></li>
+                                        </ul>
+                                    </li>*@
+
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Students</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Academic Year", "Index", "SessionInfo", new { Area = "Admin" }, null)</li>
+
+                                            <li>@Html.ActionLink("Class Type", "Index", "ClassType", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Class Master", "Index", "ClassMaster", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Section", "Index", "Section", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Class ", "Index", "Class", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Students Category ", "Index", "StudentsCategory", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Students Admission ", "Index", "Students", new { Area = "Admin" }, null)</li>
+
+                                        </ul>
+                                    </li>*@
+
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Exam</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Term Master", "Index", "TermMasterDynamic", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Subject Master", "Index", "Subjects", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Grade Master", "Index", "GradeMaster", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Students Attandance ", "Index", "StudentsAttandance", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Marks Entry ", "Index", "MarksEntry", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Marks Entry Update ", "Index", "MarksEntryEdit", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Marks Sheet Ledger ", "Index", "MarksSheetLedger", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Marks Sheet Print ", "Index", "MarkSheetPrint", new { Area = "Admin" }, null)</li>
+
+
+
+                                        </ul>
+                                    </li>*@
+
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                                            <span>Finance</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Common Fee Entry", "Index", "CommonFeeEntry", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Common Fee Discount", "Index", "CommonFeeDiscount", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Personal Fee", "Index", "PersonalFee", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Fee Collection", "Index", "FeeCollection", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Fee Collection", "Index", "FeeC", new { Area = "Admin" }, null)</li>
+                                        </ul>
+                                    </li>*@
+
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                                            <span>Reports</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Daily Collection", "Index", "FeeDailyCollection", new { Area = "Admin" }, null)</li>
+                                        </ul>
+                                    </li>*@
+
+                                @*<li class="">
+                                        <a href="#" class="has-ul active">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>HR/Payroll</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                        </a>
+                                        <ul class="hidden-ul" style="display:none;">
+                                            <li>@Html.ActionLink("Employee Management", "Index", "Employer", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Tax Master", "Index", "TaxMaster", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Job Type Master", "Index", "JobType", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Accumulative Leave Master", "Index", "AccumulativeLeave", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Leave Type Master", "Index", "LeaveType", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Leave Entry Master", "Index", "LeaveEntry", new { Area = "Admin" }, null)</li>
+                                             <li>@Html.ActionLink("Salary Headings", "Index", "SalaryHeadings", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Salary Head Settings", "Index", "SalaryHeadingSettings", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Department", "Index", "Department", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Designation", "Index", "Designaiton", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Take Leave ", "Index", "TakeLeave", new { Area = "Admin" }, null)</li>
+                                            <li>@Html.ActionLink("Leave Days Master ", "Index", "LeaveDays", new { Area = "Admin" }, null)</li>
+
+                                        </ul>
+                                    </li>*@
+
+
+
+
+
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" data-backdrop="static" data-keyboard="false" id="PendingModalAdmin" tabindex="-1" role="dialog" aria-labelledby="PendingModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content modal-dashboard">
+                        <div class="modal-header">
+                            <button type="button" class="close" id="notificationdisable" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                            <p id="title"></p>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="notificationid" hidden />
+                            <div class="row">
+                                <div class="col-lg-12 quiz-listing">
+                                    <p id="notificationDescription"></p>
+                                    <label></label>
+                                    <ul>
+
+                                        @*<li>
+                                                <i class="mdi mdi-lightbulb-outline"></i>
+                                                <span>The Quiz Name (eg Sandeep) is unfinished.</span>
+                                                <a href="#">
+                                                    <i class="mdi mdi-play-circle-outline pull-right"></i>
+                                                </a>
+                                            </li>*@
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        @*<div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+            <div style="display:none">@Html.Partial("~/Views/Shared/KendoDeleteWindow.cshtml")</div>
+            <div id='loader' style='display: none;'>
+                @*<img src="~/Content/CSS/images/loading_apple.gif" width="100" height="100" />*@
+
+            </div>
+
+            <div class="container-fluid body-content" id="loadcontent">
+
+                @RenderBody()
+            </div>
+
+            @*<footer class="footer">
+                    <div id="navbar-second" class="navbar-collapse collapse">
+                        <div id="message" style="display:none"></div>
+                        <div class="navbar-text"> © Copyright @DateTime.Now.Year. All Right Reserved-Creative Techno Solutions</div>
+                    </div>
+                </footer>*@
+
+
+            <script type="text/javascript" src="~/Scripts/jquery-ui.js"></script>
+            <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+
+            <script src="~/Scripts/jquery.timepicker.min.js"></script>
+
+
+            <script type="text/javascript" src="~/Scripts/app.js"></script>
+
+
+            <script type="text/javascript" src="~/Scripts/effects.js"></script>
+
+
+
+
+            <script src="~/Content/JS/Common.js"></script>
+
+
+
+</body>
+
+
+</html>
+<!-- Core JS files -->
+<script type="text/javascript">
+
+    var variable1 = '@tt';
+
+</script>

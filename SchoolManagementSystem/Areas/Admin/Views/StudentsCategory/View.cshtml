@@ -1,0 +1,74 @@
+﻿
+
+
+
+
+@model DomainEntities.StudentsCategorys
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/StudentsCategory.js"></script>
+
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+            <li>Students</li>
+            <li class="active">Students Category</li>
+        </ul>
+
+    </div>
+</div>
+    <div class="col-lg-12">
+        <div class="form-group">
+            <div id="formSchoolType">
+                <!-- rht middle content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Add Students Category</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-lg-12">
+                                        @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudentCategory", name = "formStudentCategory", onSubmit = "return false;" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    @Html.HiddenFor(model => model.ID)
+                                                    @Html.LabelFor(model => model.StudentsCategory)<span style="color:red">*</span>
+                                                    @Html.TextBoxFor(model => model.StudentsCategory, new { @class = "form-control", @style = "text-transform:uppercase" })
+                                                    @Html.ValidationMessageFor(model => model.StudentsCategory, String.Empty, new { @class = "text-danger" })
+                                                </div>
+
+
+                                                <div class="form-group pull-left">
+
+                                                    <input class="btn btn-info" name="studentCategorySubmit" id="studentCategorySubmit" value="Save" type="submit">
+                                                    <input class="btn" name="studentCategoryCancel" id="studentCategoryCancel" value="Cancel" type="reset">
+
+
+                                                </div>
+
+                                            </div>
+
+                                        }
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+            <div id="categoryList">@Html.Partial("~/Areas/Admin/Views/StudentsCategory/StudentsCategoryList.cshtml")</div>
+       

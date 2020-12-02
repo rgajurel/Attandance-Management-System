@@ -1,0 +1,99 @@
+﻿
+
+@model DomainEntities.GradeMaster
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/GradeMaster.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Exam</a></li>
+            <li><a href="/Admin/OrganisationType">Grade Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+
+
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Grade Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                          @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data",autocomplete="off", id = "formGrade", name = "formGrade", onSubmit = "return false;" }))
+                          {                              
+                                @Html.AntiForgeryToken()
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    @Html.HiddenFor(model => model.ID)
+                                    @Html.LabelFor(model => model.Grade)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.Grade, new { @class = "form-control", @style = "text-transform:uppercase" })
+                                    @Html.ValidationMessageFor(model => model.Grade, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.GradePoint)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.GradePoint, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.GradePoint, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.MarksFrom)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.MarksFrom, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.MarksFrom, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.MarksTo)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.MarksTo, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.MarksTo, String.Empty, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3" style="margin-top:10px">
+                                   
+                                        <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit">
+                                        <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+                                   
+                                </div>
+                            </div>
+                                    
+                               
+
+
+
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+   
+           
+       
+
+<div class="row" id="show">
+    <div class="col-md-12">
+       @Html.Partial("~/Areas/Admin/Views/GradeMaster/GradeMasterList.cshtml")
+    </div>
+</div>

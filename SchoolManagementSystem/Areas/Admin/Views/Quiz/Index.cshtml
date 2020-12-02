@@ -1,0 +1,502 @@
+﻿@model DomainEntities.QuizEntity
+@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { @class = "quiz-form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row" id="divQuizForm" style="display:none">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="formHeading">
+                    Add Quiz
+                </div>
+                <!-- /.panel-heading -->
+                <div class="row panel-body">
+
+                    @Html.HiddenFor(Model => Model.QuizID)
+                    <div class="col-lg-6 col-md-6">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.QuizTitle, "Quiz Title")<span class="txtRed"> *</span>
+                            @Html.EditorFor(model => model.QuizTitle, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.QuizTitle, "", new { @class = "text-danger" })
+                        </div>
+                        @*<div class="form-group mdl-selectfield">
+                            @Html.LabelFor(model => model.CategoryID, "Category")<span class="txtRed"> *</span>
+                            @Html.DropDownListFor(model => model.CategoryID, (SelectList)ViewBag.QuizCategory, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                            </div>*@
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.QuizAppearingPoints, "Quiz Appearing Points")<span class="txtRed"> *</span>
+                            @Html.EditorFor(model => model.QuizAppearingPoints, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.QuizAppearingPoints, "", new { @class = "text-danger" })
+                        </div>
+
+                        @*<div class="form-group mdl-selectfield">
+                            @Html.LabelFor(m => m.Priority, new { @style = "" })<span class="txtRed"> *</span>
+                            @Html.DropDownListFor(m => m.Priority, (SelectList)ViewBag.priorityList, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Priority, String.Empty, new { @class = "text-danger" })
+                            </div>*@
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MetaTitle, new { @style = "" })
+                            @Html.TextBoxFor(model => model.MetaTitle, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MetaTitle, String.Empty, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MetaKeyword, new { @style = "" })
+                            @Html.TextBoxFor(model => model.MetaKeyword, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MetaKeyword, String.Empty, new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.MetaDescription, new { @style = "" })
+                            @Html.TextAreaFor(model => model.MetaDescription, 3, 4, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MetaDescription, String.Empty, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group calendar-date">
+                            @Html.LabelFor(model => model.StartDate, "Start Date")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.TextAreaFor(model => model.StartDate, new { @onkeydown = "javascript:return false;" })
+                            @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group" style="display:none">
+                            @Html.LabelFor(model => model.TotalQuestion, "No. of Question")<span class="txtRed"> *</span>
+                            @Html.TextBoxFor(model => model.TotalQuestion, new { @class = "form-control", @type = "number", min = "1", @Value = 1 })
+                            @Html.ValidationMessageFor(model => model.TotalQuestion, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group calendar-date">
+                            @Html.LabelFor(model => model.EndDate, "End Date")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.TextAreaFor(model => model.EndDate, new { @onkeydown = "javascript:return false;" })
+                            @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                        </div>
+                        @*<div class="form-group" style="display:none">
+                            @Html.CheckBoxFor(m => m.NotifyNow)
+                            @Html.LabelFor(m => m.NotifyNow, "Notify Now",new { @style = "" })
+                            @Html.ValidationMessageFor(model => model.NotifyNow, String.Empty, new { @class = "text-danger" })
+                            </div>*@
+                        <div class="form-group">
+                            @Html.Label("User Group")<span class="txtRed"> *</span>
+                            @Html.DropDownListFor(Model => Model.NotificationID, (SelectList)ViewBag.GetAllUserGroup, new { @class = "form-control", @multiple = true })
+                            @Html.ValidationMessageFor(model => model.NotificationID, "", new { @class = "text-danger" })
+                        </div>
+
+                        @*<div class="form-group mdl-selectfield">
+                            @Html.LabelFor(model => model.Tag, new { @style = "" })
+                            <a id="btn_addtags" href="#" class="fa fa-plus-circle " style="text-decoration: none !important;"></a>
+                            @Html.DropDownListFor(model => model.Tag, (IEnumerable<SelectListItem>)ViewData["TagList"], new { @class = "form-control", @multiple = "multiple", @placeholder = "Select Tags" })
+                            @Html.ValidationMessageFor(model => model.Tag, String.Empty, new { @class = "text-danger" })
+                            </div>*@
+
+                        @*<div class="form-group mdl-selectfield">
+                            @Html.LabelFor(model => model.CourseID, "Course")
+                            @Html.DropDownListFor(model => model.CourseID, (SelectList)ViewBag.QuizCourse, "Select course", new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CourseID, "", new { @class = "text-danger" })
+                            </div>*@
+                        @*<div class="form-group" style="display:none">
+                            @Html.LabelFor(model => model.SortOrder, "Sorting Order")
+                            @Html.EditorFor(model => model.SortOrder, new { htmlAttributes = new { @class = "form-control", @type = "number", min = "1" } })
+                            @Html.ValidationMessageFor(model => model.SortOrder, "", new { @class = "text-danger" })
+                            </div>*@
+                        <div class="form-group mdl-selectfield">
+                            @Html.LabelFor(model => model.StatusValue, "Status")<span class="txtRed"> *</span>
+                            @Html.DropDownListFor(model => model.StatusValue, new SelectList(new List<SelectListItem> {
+                        new SelectListItem { Text = "Active", Value = "1" },
+                        new SelectListItem { Text = "InActive", Value = "0" }
+                        }, "Value", "Text"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.StatusValue, "", new { @class = "text-danger" })
+                        </div>
+
+                        @*<div class="form-group">
+                            @{
+                            Html.RenderAction("Index", "MediaManagementClient", new { Identifier = "QuizImage", AllowMultipleIamge = false });
+                            }
+                            </div>*@
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CanShowCorrectAnswer, "Show Correct Answer")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.RadioButtonFor(Model => Model.CanShowCorrectAnswer, "true") Yes
+                            @Html.RadioButtonFor(Model => Model.CanShowCorrectAnswer, "false", new { @checked = "checked" }) No
+                            @Html.ValidationMessageFor(model => model.CanShowCorrectAnswer, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IsPauseAllowed, "Allow Pause")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.RadioButtonFor(Model => Model.IsPauseAllowed, "true") Yes
+                            @Html.RadioButtonFor(Model => Model.IsPauseAllowed, "false", new { @checked = "checked" }) No
+                            @Html.ValidationMessageFor(model => model.IsPauseAllowed, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CanShowAllQuestions, "Show all question once")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.RadioButtonFor(Model => Model.CanShowAllQuestions, "true") Yes
+                            @Html.RadioButtonFor(Model => Model.CanShowAllQuestions, "false", new { @checked = "checked" }) No
+                            @Html.ValidationMessageFor(model => model.CanShowAllQuestions, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CanSeePreviousAnswer, "Allow to see previous Question")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.RadioButtonFor(Model => Model.CanSeePreviousAnswer, "true") Yes
+                            @Html.RadioButtonFor(Model => Model.CanSeePreviousAnswer, "false", new { @checked = "checked" }) No
+                            @Html.ValidationMessageFor(model => model.CanSeePreviousAnswer, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group" style="display:none">
+                            @Html.LabelFor(model => model.IsQuestionManual, "Add Question Manually")<span class="txtRed"> *</span>
+                            <br />
+                            @Html.RadioButtonFor(Model => Model.IsQuestionManual, "true", new { @checked = "checked" }) Yes
+                            @Html.RadioButtonFor(Model => Model.IsQuestionManual, "false") No
+                            @Html.ValidationMessageFor(model => model.IsQuestionManual, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 clearfix">
+                        <div class="form-group clearfix mtb-sm">
+                            <button id="btnChooseQuestionManually" class="btn btn-default btnCustom pull-left">Choose Manual Question</button>
+                            @*<button id="btnChooseQuestionDynamically" class="btn btn-default btnCustom pull-left" style="display:none">Choose Dynamic Question</button>*@
+                        </div>
+                        <div id="divActualAnswerGrid">
+                        </div>
+                        <div class="form-group clearfix">
+                            @Html.LabelFor(model => model.QuizDescription, "Quiz Description")<span class="txtRed"> *</span>
+                            @*@{
+                                Html.RenderAction("Index", "MediaManagementCKEditor", new { Identifier = "QuizDescription", AllowMultipleIamge = false });
+                                }*@
+                            @Html.TextAreaFor(model => model.QuizDescription, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.QuizDescription, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group clearfix">
+                            @Html.LabelFor(model => model.StartPageDescription, "Start Page Description")<span class="txtRed"> *</span>
+                            @*@{
+                                Html.RenderAction("Index", "MediaManagementCKEditor", new { Identifier = "StartPageDescription", AllowMultipleIamge = false });
+                                }*@
+                            @Html.TextAreaFor(model => model.StartPageDescription, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.StartPageDescription, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group clearfix">
+                            @Html.LabelFor(model => model.EndPageDescription, "End Page Description")<span class="txtRed"> *</span>
+                            @*@{
+                                Html.RenderAction("Index", "MediaManagementCKEditor", new { Identifier = "EndPageDescription", AllowMultipleIamge = false, name = "EndPageDescription" });
+                                }*@
+                            @Html.TextAreaFor(model => model.EndPageDescription, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.EndPageDescription, "", new { @class = "text-danger" })
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-12">
+                        <button type="submit" class="btn btn-default btnCustom" id="btnSave">Submit</button>
+                        <button type="reset" class="btn btn-default btnCancle" id="btnCancel">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+
+
+
+    <!-- Choose Manual Question Modal -->
+    <div class="row" id="divChooseQuizQuestion" style="display:none">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="formHeading">
+                    Choose Quiz Question
+                    <button type="reset" class="btn btn-default btn-xs btnCustom pull-right" id="btnBackToMainForm">Back</button>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="row panel-body">
+                    <div class="col-lg-12">
+                        @*<p>Selected List</p>*@
+                        <div id="SelectedQuestionGrid">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="form-group">
+
+                                <div class="col-md-3">
+                                    <label>Search Question</label>
+                                    <input class="form-control" id="txtSearchQuestion" placeholder="Search Question">
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Select Difficulty Level</label>
+                                    @Html.DropDownList("ddlSearchQuestionDifficulty", (SelectList)ViewBag.QuizQestionDifficulty, "All Question Difficulty", new { @class = "form-control" })
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Question Type</label>
+                                    <select class="form-control" id="ddlSearchQuestionType">
+                                        <option value="-1">All</option>
+                                        <option value="1">Mandatory</option>
+                                        <option value="0">Optional</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="submit" class="btn btn-default btnCustom" id="btnSearchQuizQuestion">Search</button>
+                                    <button type="submit" class="btn btn-default btnCancel ResetInputField" id="btnClearSearch">Reset</button>
+                                </div>
+                            </div>
+
+                            <!-- /.col-lg-4 -->
+                        </div>
+                        <div id="divMainGridContainer" class="table-responsive-scroll">@Html.Partial("~/Areas/Admin/Views/Quiz/QuizQuestionGrid.cshtml")</div>
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-warning btnViewSelected" id="btnViewAllSelectedQuestion">View Selected Question</button>
+                    <button id="btnConfirmSelectedAnswer" class="btn btn-default btnCustom">Confirm</button>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+
+
+    <!-- Choose Dynaimic Question Modal -->
+    <div class="row" id="divChooseDynamicQuizQuestion" style="display:none">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="formHeading">
+                    Choose Dynamic Quiz Question
+                    <button class="pull-right btnAddMoreQuestion"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="row panel-body dynamicQuestionContainer quize-mb">
+                    <div class="hiddenID" style="display:none">
+                        <input type="hidden" value="-1" />
+                    </div>
+                    @*<div class="col-lg-3 col-md-3">
+                        <div class="form-group">
+                        <label>Question Category</label><label style="color:red">*</label>
+                        @Html.DropDownList("ddldynamicQuestionCategory", (SelectList)ViewBag.QuizQuestionCategoryWithCount, "-- Question Category--", new { @class = "form-control dynamicQuestionCategory", @required = "required" })
+                        @Html.ValidationMessage("ddldynamicQuestionCategory")
+                        </div>
+                        </div>*@
+                    <div class="col-lg-3 col-md-3">
+                        <div class="form-group">
+                            <label>Question Difficulty</label><label style="color:red">*</label>
+                            @Html.DropDownList("ddldynamicQuestionDifficulty", (SelectList)ViewBag.QuizQestionDifficulty, "-- Difficulty Level--", new { @class = "form-control dynamicQuestionDifficulty", @required = "required" })
+                            @Html.ValidationMessage("ddldynamicQuestionDifficulty")
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="form-group">
+                            <label>Mandatory Question</label><label style="color:red">*</label>
+                            <input class="form-control" type="number" placeholder="Mandatory Question" name="dyanmicMandatoryQuestionno0" data-val="true" data-val-required="This field is required." min="0">
+                            <span data-valmsg-for="dyanmicMandatoryQuestionno0" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <div class="form-group">
+                            <label>Optional Question</label><label style="color:red">*</label>
+                            <input class="form-control" type="number" placeholder="Optional Question" name="dyanmicOptionalQuestionno0" data-val="true" data-val-required="This field is required." min="0">
+                            <span data-valmsg-for="dyanmicOptionalQuestionno0" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 close-btn">
+                        <div class="form-group">
+                            <i class="fa fa-times deleteDynamicQuestion" aria-hidden="true" style="display:none"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 clear-Both">
+                        red border box are required
+                    </div>
+
+                </div>
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-default btnCustom" id="btnSaveDynamicQuestionDetail">Submit</button>
+                    <button type="submit" class="btn btn-default" id="btnCancelDynamicQuestionDetail">Close</button>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <div id="divQuizGrid">
+        <div class="row">
+            <div class="col-md-12 pageHeaderBox11">
+                <h1 class="page-header">Quiz</h1>
+                <div class="pull-right">
+                    @*@if (ViewBag.createAccess == true)
+                        {*@
+                    <button type="submit" class="btn btn-default btnCustom" id="btnCreateQuiz">Create Quiz</button>
+                    @*}*@
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <label>Quiz Title</label>
+                            <input class="form-control" id="txtSearchQuizTitle" placeholder="Search Quiz Title">
+                        </div>
+
+                        <div class="col-md-2">
+                            <label>Status</label>
+                            @Html.DropDownList("ddlSearchQuizStatus", new SelectList(new List<SelectListItem> {
+                        new SelectListItem { Text = "Active", Value = "Active" },
+                        new SelectListItem { Text = "InActive", Value = "Inactive" }
+                        }, "Value", "Text"), " All Status", new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-2">
+                            <label>Started From</label>
+                            @Html.TextArea("txtSearchQuizStartedFrom", new { @onkeydown = "javascript:return false;", @placeholder = "Quiz Started From" })
+                            @*@(Html.Kendo().DatePicker().Name("txtSearchQuizStartedFrom").HtmlAttributes(new { onkeydown = "javascript:return false;" ,@placeholder="Quiz Started From" }))*@
+                        </div>
+                        <div class="col-md-2">
+                            <label>Started To</label>
+                            @Html.TextArea("txtSearchQuizStartedTo", new { @onkeydown = "javascript:return false;", @placeholder = "Quiz Started To" })
+                            @*@(Html.Kendo().DatePicker().Name("txtSearchQuizStartedTo").HtmlAttributes(new { onkeydown = "javascript:return false;" ,@placeholder = "Quiz Started To" }))*@
+                        </div>
+                        <div class="col-md-2">
+                            <label>End From</label>
+                            @*@Html.TextArea("txtSearchQuizEndFrom", new { @onkeydown = "javascript:return false;", @placeholder = "Quiz Ended From" })*@
+                            @(Html.Kendo().DatePicker().Name("txtSearchQuizEndFrom").HtmlAttributes(new { onkeydown = "javascript:return false;", @placeholder = "Quiz Ended From" }))
+                        </div>
+                        <div class="col-md-2">
+                            <label>End To</label>
+                            @*@Html.TextArea("txtSearchQuizEndTo", new { @onkeydown = "javascript:return false;", @placeholder = "Quiz Ended To" })*@
+                            @(Html.Kendo().DatePicker().Name("txtSearchQuizEndTo").HtmlAttributes(new { onkeydown = "javascript:return false;", @placeholder = "Quiz Ended To" }))
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-default btnCustom" id="btnSearchQuiz">Search</button>
+                            <button type="submit" class="btn btn-default btnCancle ResetInputField" id="btnClearQuizSearch">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <div class="changeStatusOption hide">
+            <div class="col-lg-3 col-md-3">
+                <label>Status</label>
+                @Html.DropDownList("ddlChangeQuizStatus", new SelectList(new List<SelectListItem> {
+            new SelectListItem { Text = "Active", Value = "Active" },
+            new SelectListItem { Text = "InActive", Value = "Inactive" }
+            }, "Value", "Text"), new { @class = "form-control" })
+
+            </div>
+            <div class="col-lg-3 col-md-3 mg-tb">
+                <button type="submit" class="btn btn-default btnCustom" id="btnSaveStatusForSelectedQuiz">Save</button>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="">
+                    <!-- /.panel-heading -->
+                    <div class="row panel-body">
+                        <div id="divMainGridContainer" class="table-responsive-scroll">@Html.Partial("~/Areas/Admin/Views/Quiz/QuizListing.cshtml")</div>
+                    </div>
+                </div>
+                <!-- /.panel -->
+            </div>
+        </div>
+    </div>
+
+}
+<div class="modal fade" id="QuizBatchUpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-dashboard">
+
+            <div class="modal-header">
+                <p>Are you sure?</p>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12 listing">
+                        <label>Quiz</label>
+                        <ol class="UpdateStatusListingBody">
+                            <li>
+                                <span>The Quiz Name (eg Sandeep) is unfinished.</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="btnCancelUpdate">No</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnConfirmUpdate">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div id="modalTagAdd" class="popup hide">
+        <textarea class="form-control" id="text_tagvalue" rows="3" name="text_tagvalue" value="" placeholder="Use , for multiple value"></textarea>
+        <div class="pull-right mt-sm">
+            <button id="btn_tagsave" class="btn btn-default btnCustom">Save</button>
+            <button id="btn_tagcancel" class="btn btn-sm btn-default btnCancle">Cancel</button>
+        </div>
+    </div>*@
+
+@*<script id="noDataTemplate" type="text/x-kendo-tmpl">
+        <div>
+            No data found. Do you want to add new item - '#: instance.input.val() #' ?
+        </div>
+        <br />
+        <button class="k-button" onclick="addNew('#: instance.element[0].id #', '#: instance.input.val() #')">Add new item</button>
+    </script>*@
+@*<script>
+        function addNew(widgetId, value) {
+            var widget = $("#" + widgetId).getKendoMultiSelect();
+            var dataSource = widget.dataSource;
+
+
+
+            kendo.prompt("Please, enter tag name:", value).then(function (data) {
+                console.log(data);
+
+
+                $.post("/Admin/Article/SaveTag", { Identifier: 4, TagName: data, UserName: "admin", IsNew: true })
+                 .done(function (data) {
+                     kendo.alert(data.Message);
+                     if (!data.ErrorOccured) {
+                         $('#TagsDDL').data('kendoMultiSelect').dataSource.read();
+                     }
+                 })
+                .fail(function () {
+                    //alert("error");
+                    kendo.alert("Error occured while saving tag, try again later!!");
+                });
+
+            },
+                function () {
+
+                })
+        }
+    </script>*@
+<script>
+    var CustomRecordPerPage = '@ViewBag.ItemPerPage';
+</script>
+<script src="~/Content/vendor/multiselectdropdown/js/jquery.sumoselect.js" type="text/javascript"></script>
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css" rel="stylesheet" type="text/css" />
+@*<script src="~/Content/JS/backend/QuizAdmin.js"></script>*@
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/QuizAdmin.js"></script>
+@*<link href="~/Content/CSS/custom.css" rel="stylesheet" />
+    <link href="~/Content/CSS/css.css" rel="stylesheet" />
+    <link href="~/Content/CSS/bootstrap.css" rel="stylesheet" />*@

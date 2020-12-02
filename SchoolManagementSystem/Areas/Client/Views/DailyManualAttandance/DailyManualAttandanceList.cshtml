@@ -1,0 +1,99 @@
+﻿
+
+
+@model DomainEntities.Attandance
+<div class="x_panel">
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.YearSearch, (SelectList)ViewBag.sessionListAll, "--Year--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.MonthSearch, ViewBag.monthList as SelectList, "--Month--", new { @class = "form-control" })
+    </div>
+
+
+
+    <div class="col-sm-2">
+        <button class="btn btn-danger maintain" id="takeleaveSearch">Search</button>
+    </div>
+
+
+</div>
+
+       
+
+<br />
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-flat">
+
+                @using Kendo.Mvc.UI
+                @(Html.Kendo().Grid<DomainEntities.Attandance>()
+    .Name("DailyManualAttandanceListGrid")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.EmployeeID).Hidden();
+                columns.Bound(c => c.DateTo).Hidden();
+                columns.Bound(c => c.DateFrom).Hidden();
+                columns.Bound(c => c.OrganisationID).Hidden();              
+                columns.Bound(c => c.EmployeeName).Title("Name").Width(80);
+                //columns.Bound(c => c.Years).Title("Year").Width(50);
+               // columns.Bound(c => c.Months).Title("Month").Width(50);
+                columns.Bound(c => c.EntryTime).Title("En-Time").Width(50);
+                columns.Bound(c => c.ExitTime).Title("Ex-Time").Width(50);
+                 columns.Bound(o => o.Statuss).Width(20).Title("Status")
+                                       .ClientTemplate("#= LineItems_Databound(Statuss) #");
+                if((bool)Session["CheckNepaliDate"] == false)
+                {
+                columns.Bound(c => c.DateFrom).Width(20).Title("From").Format("{0:yyyy-MM-dd}");
+                columns.Bound(c => c.DateTo).Width(20).Title("To").Format("{0:yyyy-MM-dd}");
+                }
+                else
+                {
+                columns.Bound(c => c.NepaliDateFrom).Width(20).Title("From").Format("{0:yyyy-MM-dd}");
+                columns.Bound(c => c.NepaliDateTo).Width(20).Title("To").Format("{0:yyyy-MM-dd}");
+                }
+                columns.Bound(c => c.Days).Title("Days").Width(10);
+
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] {10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "DailyManualAttandance").Data("ParamToDailyManualAttandanceList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+                .Events(ev => ev.DataBound("resetRowNumberDailyManualAttandance"))
+
+                )
+            </div>
+
+        </div>
+    </div>
+</div>

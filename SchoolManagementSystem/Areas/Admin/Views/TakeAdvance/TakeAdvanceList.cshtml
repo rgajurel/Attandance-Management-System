@@ -1,0 +1,72 @@
+﻿
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.TakeAdvance>()
+    .Name("TakeAdvanceListGrid")
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                //columns.Bound(p => p.IsAdmin).ClientTemplate("<input type='checkbox' name='chkbx' class='chkbx' ></input>").Title("Check").Width(100);
+
+
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.Organisation).Title("Organisation").Width(100);
+                columns.Bound(c => c.Employee).Title("Employee").Width(100);
+                columns.Bound(c => c.Years).Title("Years").Width(50);
+                columns.Bound(c => c.Months).Title("Months").Width(50);
+                columns.Bound(c => c.Amount).Title("Amount").Width(50);
+                columns.Bound(c => c.Date).Title("Advance Taken Date").Format("{0:MM-dd-yyyy}").Width(50);             
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+
+                }).Width(70).Title("Action");
+
+
+            })
+
+
+
+                    //.Editable(editable => editable.Mode(GridEditMode.InCell))
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 100 })
+              .PreviousNext(true))
+                    //   .PersistSelection(true)
+                    // .Reorderable(reorder => reorder.Columns(true))
+
+                    //.Navigatable()
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.SN);
+                                    model.Field(p => p.SN).Editable(false);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "TakeAdvance"))// Action invoked when the user saves a new data item
+                    .Events(e => e.Error("onError"))
+                  .PageSize(10)
+
+             )
+
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+
+
+
+)
+
+
+
+
+
+
+
+

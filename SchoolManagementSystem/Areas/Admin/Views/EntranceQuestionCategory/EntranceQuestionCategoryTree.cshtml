@@ -1,0 +1,61 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.CategoryTree>()
+    .Name("CategoryTreeGrid")
+    .AutoBind(false)
+            .Columns(columns =>
+            {
+                //columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.CategoryTreeID).Hidden();
+                columns.Bound(c => c.CategoryName).Title("Title").Width(100);
+
+                columns.Bound(c => c.AddedOn).Title("Created On").Width(50).Format(ViewBag.settingDateFormat);
+                columns.Bound(c => c.UpdatedOn).Title("Modified On").Width(50).Format(ViewBag.settingDateFormat).Hidden();
+                columns.Template(t => { }).Title("Modified On").ClientTemplate("#= CheckModified(ModifiedOn) #").Width(50);
+                columns.Bound(c => c.Status).Title("Status").Width(40);
+                columns.Command(command =>
+                {
+                    //if (ViewBag.editAccess == true)
+                    //{
+                    command.Custom("Edit").Text(" ").Click("EditCategory");
+                    //}
+                    //if (ViewBag.deleteAccess == true)
+                    //{
+                    command.Custom("Delete").Text(" ").Click("DeleteCategory");
+                    //}
+                }).Title("Action").Width(50);
+            })
+              .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                        .PreviousNext(true)
+            )
+                            //  .Sortable()
+                            // .Scrollable()
+                            // .Filterable()
+
+                            .DataSource(dataSource => dataSource
+                            .Ajax()
+                            .ServerOperation(true)
+                                        .Model(model =>
+                                        {
+                                            model.Id(p => p.CategoryTreeID);
+                                            model.Field(p => p.CategoryName);
+                                            model.Field(p => p.Status);
+                                            model.Field(p => p.CreatedOn);
+                                            model.Field(p => p.ModifiedOn);
+                                        })
+                                        .Read(read => read.Action("CategoryTreeGetBasedOnCategoryType", "EntranceQuestionCategory").Data("ParamToLoadCategoryList").Type(HttpVerbs.Post))
+                                         .PageSize(10)
+                                             //.Read(read => read.Url(Url.HttpRouteUrl("DefaultApi", new { controller = "CategoryTreeAdminService", action = "CategoryTreeGetBasedOnCategoryType" })).Data("ParamToLoadCategoryList").Type(HttpVerbs.Post))
+                                             )
+ .Events(ev => ev.DataBound("onDatabound"))
+)
+
+
+
+
+<script>
+    var CustomDateFormat = "MM/dd/yyyy";
+</script>
+

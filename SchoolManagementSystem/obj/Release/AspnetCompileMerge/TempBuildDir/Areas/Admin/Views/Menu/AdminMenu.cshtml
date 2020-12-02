@@ -1,0 +1,64 @@
+﻿
+
+@model IEnumerable<DomainEntities.Menu>
+@{var hasChildMenu = false;}
+
+@if (Model.Any())
+{
+    foreach (var item in Model.Where(x => x.ParentName == null && x.isAdmin == true))
+    {
+        hasChildMenu = false;
+        <li class="">
+            @if (Model.Where(x => x.ParentName == item.Name && x.isAdmin == true).Count() > 0)
+            {
+                hasChildMenu = true;
+            }
+            @if (item.Access.ToLower().Contains("view"))
+            {
+                if (item.URI.Equals("#"))
+                {
+                    <a href="#" class="has-ul active"><i class="@item.IconClass"></i> @Html.DisplayFor(modelItem => item.Name)</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("LoadPartialView", item.URI, new { Area = "Admin" })" class="">
+                        <i class="@item.IconClass"></i> @Html.DisplayFor(modelItem => item.Name)
+
+                        @if (hasChildMenu == true)
+                            {
+                            <span class="fa fa-chevron-down"></span>
+                        }
+                    </a>
+                }
+            }
+            @if (hasChildMenu == true)
+            {
+                <ul class="nav child_menu" style="display:none">
+                    @foreach (var subItem in Model.Where(x => x.ParentName == item.Name && x.ParentName != null && x.isAdmin == true))
+                        {
+                        <li>
+                            @if (subItem.Access.ToLower().Contains("view"))
+                            {
+                                if (subItem.URI.Equals("#"))
+                                {
+                                    <a href="#" class="">@subItem.Name</a>
+                                }
+                                else
+                                {                               
+                                    <a href="@Url.Action("LoadPartialView", subItem.URI, new { Area = "Admin" })" class="">@subItem.Name</a>
+                                }
+                            }
+                        </li>
+                    }
+
+                </ul>
+            }
+        </li>
+    }
+}
+
+
+
+
+
+

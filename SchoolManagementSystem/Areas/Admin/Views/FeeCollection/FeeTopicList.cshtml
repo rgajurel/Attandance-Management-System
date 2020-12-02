@@ -1,0 +1,73 @@
+﻿<style>
+    .makeDisableColumn{
+        background-color:brown;
+        color:white !important;
+        pointer-events:none;
+    }
+</style>
+<div class="row" id="FeeListSelect">
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            @using Kendo.Mvc.UI
+            @(Html.Kendo().Grid<DomainEntities.FeeCollection>()
+    .Name("FeeLists")
+            //.TableHtmlAttributes(new { style = "height: 205px;" })
+            .Columns(columns =>
+            {
+
+            columns.Bound(c => c.TypeId).Hidden();
+            columns.Bound(c => c.MonthId).Hidden();
+            columns.Bound(c => c.PaidStatus).Hidden();
+            columns.Bound(c => c.SN).Title("SN").Width(20);
+            columns.Bound(c => c.Month).Title("Month").Width(50);
+            columns.Bound(c => c.Type).Title("Topic").Width(80);
+            columns.Bound(c => c.Fee).Title("Fee").Width(40);
+            columns.Bound(c => c.Discount).Title("Discount").Width(40);
+
+            columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' #= IsAdmin ? checked='checked':'' # class='chkbxFee' />").Title("").Width(15);
+            })
+            .ToolBar(toolbar =>
+            {
+            toolbar.Template(@<text>
+
+
+                <div class="right-inner-addon row" style="width:800px">
+                    <input type="search"
+                           class="form-control col-lg-4" style="margin-left:20px;  width:40%"
+                           placeholder="Search By Fee Name" id="FieldFilterFee" />
+                </div>
+
+            </text>);
+            })
+                     .Editable(editable => editable.Mode(GridEditMode.InCell))
+                    .Scrollable(scr => scr.Height(165))
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 100, 200, 300})
+              .PreviousNext(true))
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .Sort(x => x.Add("MonthId").Ascending())
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.TypeId);
+                                    model.Field(p => p.MonthId);
+                                    model.Field(p => p.PaidStatus);
+                                    model.Field(p => p.SN).Editable(false);
+                                    model.Field(p => p.Month).Editable(false);
+                                    model.Field(p => p.Type).Editable(false);
+                                    model.Field(p => p.Fee).Editable(false);
+                                    model.Field(p => p.Discount).Editable(false);
+                                })
+                 .Read(read => read.Action("GetAllFeeList", "FeeCollection").Data("ParamToFeeList"))// Action invoked when the user saves a new data item
+              
+                 .PageSize(100)
+             )
+.Events(ev => ev.DataBound("resetRowNumberFeeCollection"))
+            )
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,124 @@
+﻿@using Kendo.Mvc.UI
+@model DomainEntities.AccumulativeLeave
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/AccumulativeLeave.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/AccumulativeLeave">HR/Payroll</a></li>
+            <li><a href="/Admin/AccumulativeLeave">Accumulative Leave Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Accumulative Leave Entry</h4>
+                    </div>
+                    @Html.ValidationSummary()
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data",autocomplete="off", id = "formAccumulativeLeave", name = "formAccumulativeLeave", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="form-group">
+
+                                        <div class="col-md-3">
+
+                                            @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control", required = "required" })
+                                            @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            @Html.HiddenFor(model => model.ID)
+                                            @Html.HiddenFor(model => model.EmployeeID)
+                                            @Html.LabelFor(model => model.Name)<span style="color:red">*</span>
+                                            @(Html.Kendo().AutoCompleteFor(model => model.Name)
+          .Name("Name")
+          .DataTextField("Name")
+          .Filter("contains")
+           .Height(2000)
+          .Events(events => events.Select("EmployeeSelect"))
+          .Placeholder("Search Employee")
+          .MinLength(0)
+          .HtmlAttributes(new { style = "width:100%" })
+          .DataSource(source =>
+          {
+              source.Read(read =>
+              {
+                  read.Action("AutoComplete", "AccumulativeLeave")
+                      .Data("onAdditionalData");
+              })
+              .ServerFiltering(true);
+          })
+                                            )
+                                            @Html.ValidationMessageFor(model => model.Name, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-md-3">
+
+                                            @Html.LabelFor(model => model.LeaveTypeID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.LeaveTypeID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.LeaveTypeID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.YearID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.YearID, (SelectList)ViewBag.sessionListAll, "--Year--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.YearID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.Days)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.Days, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Days, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.UserID)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.UserID, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.UserID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+
+                                        <div class="col-md-4">
+                                            <div class="pulldown">
+                                                <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit">
+                                                <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+                                            </div>
+                                        </div>                                       
+                                    </div>
+                                </div>
+
+
+
+
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>          
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/AccumulativeLeave/AccumulativeLeaveList.cshtml")
+    </div>
+</div>

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div id="MarksEntryDetails">@Html.Partial("~/Areas/Admin/Views/MarksEntryCase/View.cshtml")</div>
+
+
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" id="MarksEntryCase" tabindex="-1" role="dialog" aria-labelledby="PendingModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                @*<button type="button" class="close" id="notificationdisable" aria-label="Close"><span aria-hidden="true">&times;</span></button>*@
+
+                <p id="title"> Entry Sub Subject Marks Entry</p>
+            </div>
+
+            <div class="modal-body">
+                <button type="button" hidden id="downloadcase"></button>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4">
+                                <label>Regualr Study(%)</label>
+                                <input type="number" class="form-control" required max="100" min="1" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>Extra Study(%)</label>
+                                <input type="number" class="form-control" required max="100" min="1" />
+                            </div>
+                            @*<div class="col-md-4">
+                                    <label>File input</label>
+                                    <input type="file" name="excelfile" value="Browse" id="btnUpload" />
+                                </div>*@
+                            <div class="col-md-2" style="margin-top:26px">
+                               
+                                <input class="btn btn-info" name="saveMarks" id="saveMarks" value="Save" type="submit">
+                            </div>
+
+                        </div>
+
+                        @*<input class="btn" name="taxmasterCancel" id="taxmasterCancel" value="Cancel" type="reset">*@
+                    </div>
+
+
+
+                </form>
+                <div class="row" style="margin-top:5px">
+                    <div class="col-md-12" id="casedialog">
+
+                        <table class="table table-bordered table-striped" id="ExcelMarksEntryCase" style="width:100%"></table>
+
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+           
+        
+  
+<style>
+    #casedialog{
+        height:500px;
+        overflow:scroll;
+    }
+</style>

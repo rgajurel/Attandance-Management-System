@@ -1,0 +1,54 @@
+﻿
+@model DomainEntities.SalarySavingList
+
+
+<div class="x_panel">
+    @if (Model.SalarySavings.Count() > 0)
+    {
+        if (!Model.IsExport)
+        {
+            <a class="btn btn-danger"
+               href="@Url.Action("SavingsReportDownload", "SavingsReport")">Export to excel</a>
+        }
+    }
+    <table class="table table-bordered" border="1px solid black">
+        <thead>            
+            <tr><th>Name</th><th> @Model.Employee</th></tr>
+            <tr><th>SavingsType</th><th> @Model.SavingType</th></tr>
+            <tr style="text-align:center">
+                <th>Year</th>
+                <th>Month</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.SalarySavings.Count() == 0)
+            {
+                <tr>                 
+                  <td colspan="3">No Records Availiable</td>                    
+                </tr>
+            }
+            else
+            {             
+
+                foreach (var data in Model.SalarySavings)
+                {
+                <tr>                   
+                        <td>@data.Year</td>
+                        <td>@data.Month</td>
+                        <td>@data.Amount</td>
+                   
+                </tr>
+                
+            }
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>@Model.SalarySavings.Sum(x => Convert.ToDecimal(x.Amount))</td>
+                </tr>
+            }
+           
+
+
+        </tbody>
+    </table>
+</div>

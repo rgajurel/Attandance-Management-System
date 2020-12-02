@@ -1,0 +1,86 @@
+﻿
+
+
+
+@model DomainEntities.OrganisationEvents
+<div class="x_panel">
+
+    <div class="col-sm-3">
+
+        @Html.LabelFor(model => model.EventNameSearch)
+        @Html.TextBoxFor(model => model.EventNameSearch, new { @class = "form-control", @Placeholder = "Search Event Name" })
+        @Html.ValidationMessageFor(model => model.EventNameSearch, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-3">
+
+        @Html.LabelFor(model => model.NotificationTypeSearch)
+        @Html.DropDownListFor(model => model.NotificationTypeSearch, (SelectList)ViewBag.allNotificationTypes, "--Notification Type", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.NotificationTypeSearch, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-3">
+
+        @Html.LabelFor(model => model.OrganisationIDSearch)
+        @Html.DropDownListFor(model => model.OrganisationIDSearch, (SelectList)ViewBag.allOrganisation, "--Organisation--", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.OrganisationIDSearch, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-2 pulldown">
+        <button type="button" class="btn btn-danger" id="Search">Search</button>
+
+    </div>
+
+
+</div>
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.OrganisationEvents>()
+    .Name("OrganisationEventList")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.EventName).Title("EventName").Width(150);
+                columns.Bound(c => c.NotificationType).Title("Notification").Width(150);
+                columns.Bound(c => c.OrganisationName).Title("Organisation").Width(150);
+                columns.Bound(c => c.DateFrom).Title("DateFrom").Width(50).Format("{0:MM-dd-yyyy}"); ;
+                columns.Bound(c => c.DateTo).Title("DateTo").Width(50).Format("{0:MM-dd-yyyy}"); ;
+                columns.Bound(c => c.AddedBy).Title("AddedBy").Width(50);
+                // columns.Bound(c => c.AddedOn).Title("AddedOn").Width(150).Format("{0:MM-dd-yyyy}"); ;
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                })
+                  .Read(read => read.Action("GetAll", "OrganisationEvents").Data("ParamToOrganisationEventsList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+)
+       

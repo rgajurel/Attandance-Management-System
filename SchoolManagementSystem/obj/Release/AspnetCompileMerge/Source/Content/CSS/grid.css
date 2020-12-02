@@ -1,0 +1,128 @@
+
+.grid-view table {
+    margin-bottom: 0 !important;
+}
+ul, ol {
+    margin: 0 !important;
+    padding-left: 0 !important;
+}
+.grid-view-loading {
+}
+li.page, li.next, li.previous {
+    margin: 0;
+}
+.grid-view table.items {
+    border: 0 none !important;
+    border-collapse: collapse;
+    cursor: pointer;
+    width: 100%;
+}
+.grid-view table.items th, .grid-view table.items td {
+    color: #000;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: 0.7em 0.2em 0.7em 1.2em;
+    text-align: left;
+}
+.grid-view table.items td {
+}
+.grid-view table.items th {
+    background: #e8e8e8 none repeat scroll 0 0;
+    border-bottom: 1px solid #d3d3d3;
+    color: #424242;
+}
+.grid-view table.items tr {
+    -moz-user-select: none;
+    border: 1px solid #d3d3d3;
+    cursor: pointer;
+}
+tr.even {
+    background: #f9f9f9 none repeat scroll 0 0;
+}
+tr.odd {
+    background: #fff none repeat scroll 0 0;
+}
+.grid-view table.items tr.selected {
+    background: #cfd8dc none repeat scroll 0 0 !important;
+    color: #fff !important;
+}
+.grid-view table.items tr:hover td {
+    background: #eceff1 none repeat scroll 0 0;
+}
+.grid-view table.items tr:hover td a {
+}
+.grid-view .button-column {
+    margin-right: 0;
+    text-align: center;
+    width: 70px;
+}
+.button-column a {
+    margin-left: 10px;
+}
+.grid-view .checkbox-column {
+    width: 15px;
+}
+div.summary {
+    display: none;
+}
+div.pager {
+    background-color: #f2f2f2;
+    border: 1px solid #979797;
+    height: 30px;
+    margin-top: -1px;
+    padding: 5px 0 0;
+    text-align: center;
+}
+.pager ul {
+    padding-top: 5px;
+}
+.grid-view .empty {
+    font-style: italic;
+}
+.grid-view .filters input, .grid-view .filters select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+}
+ul.yiiPager {
+    font-size: 0.9em;
+}
+ul.yiiPager li {
+    display: inline;
+}
+ul.yiiPager a:link, ul.yiiPager a:visited {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: inherit;
+    font-weight: bold;
+    padding: 2px 8px;
+    text-decoration: none;
+}
+ul.yiiPager .page a {
+    font-weight: 600;
+}
+ul.yiiPager a:hover {
+    color: #76cbe4;
+}
+ul.yiiPager .selected a {
+    background: #76cbe4 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+ul.yiiPager .selected a:hover {
+    background: #f2f2f2 none repeat scroll 0 0;
+    color: #76cbe4;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+ul.yiiPager .hidden a {
+    border: 1px solid #ccc;
+    color: inherit;
+}
+div.demo_box {
+    background: transparent url("images/bg.gif") repeat scroll left top;
+    border-radius: 6px;
+}
+div.grid-view {
+    background: #fff none repeat scroll 0 0;
+}

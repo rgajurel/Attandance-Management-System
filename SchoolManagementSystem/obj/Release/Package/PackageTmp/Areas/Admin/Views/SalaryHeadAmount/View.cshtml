@@ -1,0 +1,49 @@
+﻿
+@model DomainEntities.SalaryHeadAmount
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/SalaryHeadAmount.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation"></a></li>
+            <li><a href="/Admin/OrganisationType">Leave Entry</a></li>
+        </ol>
+    </div>
+</div>
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formSalaryHeadAmount", name = "formSalaryHeadAmount", onSubmit = "return false;" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="x_panel">
+        <div class="col-md-3">
+            @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.OrganisationID, (SelectList)ViewBag.allOrganisation, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(model => model.SalaryHeadID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.SalaryHeadID, (SelectList)ViewBag.allSalaryHead, "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SalaryHeadID, String.Empty, new { @class = "text-danger" })
+        </div>       
+        <div class="col-md-3">
+            <div class="pulldown">
+                <button class="btn btn-danger" name="Save" id="Search" type="button">Search</button>
+
+            </div>
+        </div>
+    </div>
+}
+
+@Html.Partial("~/Areas/Admin/Views/SalaryHeadAmount/SalaryHeadAmountList.cshtml")
+
+
+
+<div class=" row col-lg-6" style="margin-top:5px">
+    <input class="btn btn-danger" name="salaryHeadAmount" id="salaryHeadAmount" value="Save" type="submit">
+    <input class="btn" name="salaryHeadAmountCancel" id="salaryHeadAmountCancel" value="Cancel" type="reset">
+</div>
+<script>
+        var checkedIds = {};
+</script>

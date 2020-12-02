@@ -1,0 +1,138 @@
+﻿@model DomainEntities.FeeCollection
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/FeeCollection.js"></script>
+
+
+<div style="" id="studentsForm">
+    <div class="page-header col-lg-12">
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+                <li>Fee</li>
+                <li class="active">Fee Collection</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="content" style="margin-top:35px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Fee Collection</h4>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudentSearch", name = "formStudentSearch", onSubmit = "return false;" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="row">
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.Session)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.Session, (SelectList)ViewBag.sessionList,"--Select--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Session, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.Class)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.Class, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Class, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.Faculty)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.Faculty, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Faculty, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                       
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.Section)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.Section, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Section, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.StudentName)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.StudentName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.StudentName, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <button style="margin-top:23px" class="btn" id="searchStudent">Search Student</button>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-lg-8 col-sm-12">
+                                <div>@Html.Partial("~/Areas/Admin/Views/FeeCollection/StudentsList.cshtml")</div>
+                            </div>
+                        </div>
+                        <div class="row" style="border-bottom:6px dotted #c3bfbf; margin:5px 0px 10px;"></div>
+                        <div class="row" id="MonthList" style="display:none">
+
+                            <div class="col-lg-2" style="direction:rtl; text-align:left;border:2px solid #dddddd; border-radius:5px; height:310px !important;overflow-y:auto !important;overflow-x:auto !important;">
+                                <table id="Months" style="border:0px;" class="table table-striped"></table>
+                            </div>
+                            <div class="col-lg-6">@Html.Partial("~/Areas/Admin/Views/FeeCollection/FeeTopicList.cshtml")</div>
+                            <div class="col-lg-4">
+                                @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudentPayment", name = "formStudentPayment", onSubmit = "return false;" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="row">
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.PreviousDue)
+                                            @Html.TextBoxFor(model => model.PreviousDue, new { @class = "form-control", @readonly = "true" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.TotalFee)
+                                            @Html.TextBoxFor(model => model.TotalFee, new { @class = "form-control", @readonly = "true" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.TotalDiscount)
+                                            @Html.TextBoxFor(model => model.TotalDiscount, new { @class = "form-control", @readonly = "true" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.GrandTotal)
+                                            @Html.TextBoxFor(model => model.GrandTotal, new { @class = "form-control", @readonly = "true" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.Balance)
+                                            @Html.TextBoxFor(model => model.Balance, new { @class = "form-control", @readonly = "true" })
+                                        </div>
+                                        <div class="form-group col-sm-6 success">
+                                            @Html.LabelFor(model => model.TotalPaid)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.TotalPaid, new { type = "number", @class = "form-control",@readonly="true", @min = "0",@max = "0" })
+                                            @Html.ValidationMessageFor(model => model.TotalPaid, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row"><br />
+                                        <div class="col-sm-4 form-group">
+                                            <input style="width:100%;" class="btn btn-primary" name="paymentBill"  disabled id="paymentBill" value="Pay Now" type="submit">
+
+                                        </div>
+                                        <div class="col-sm-4 form-group">
+                                            <input  class="btn btn-success" name="dueBill" id="dueBill" disabled value="Print DueBill" type="submit">
+                                  
+                                        </div>
+                                        <div class="col-sm-4 form-group"> 
+                                            <input style="width:100%;" class="btn btn-danger" name="paymentCancel" id="paymentCancel" value="Cancel" type="reset">
+                                         
+                                        </div>
+                                    </div>
+                                }
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr />
+
+    </div>
+</div>

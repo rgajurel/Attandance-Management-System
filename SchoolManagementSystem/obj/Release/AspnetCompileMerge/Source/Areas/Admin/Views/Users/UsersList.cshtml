@@ -1,0 +1,79 @@
+﻿@model DomainEntities.User
+<div class="x_panel">
+
+    <div class="col-sm-3">
+
+        @Html.TextBoxFor(model => model.NameSearch, new { @class = "form-control", @placeholder = "Please Enter Full Name", required = "required" })
+    </div>
+    <div class="col-sm-3">
+
+        @Html.TextBoxFor(model => model.UserNameSearch, new { @class = "form-control", @placeholder = "Please Enter UserName", required = "required" })
+    </div>
+
+    <div class="col-md-2">
+
+        @Html.DropDownListFor(model => model.OrganisationIDSearch, (SelectList)ViewBag.allOrganisation, "--Organisation--", new { @class = "form-control", required = "required" })
+
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.SearchStatus,
+new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Active", Value = "1" },
+                 new SelectListItem { Text = "InActive", Value = "0" }
+}, "Value", "Text"), "--Select Status--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2 maintain">
+
+        <button class="btn btn-danger" type="button" id="SearchUsers">Search</button>
+    </div>
+
+</div>
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.User>()
+    .Name("UserList")
+
+            .Columns(columns =>
+            {
+                
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(5);
+                columns.Bound(c => c.Name).Title("Name").Width(100);
+                columns.Bound(c => c.UserName).Title("UserName").Width(100);
+                columns.Bound(c => c.OrganisationName).Title("Organisation").Width(250);
+                columns.Bound(c => c.Email).Title("Email").Width(60);
+                columns.Bound(c => c.StatusString).Title("Status").Width(50);
+               
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "Users").Data("ParamToUsersList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+)

@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+}
+
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Parents</li>
+            <li class="active">Dashboard</li>
+        </ul>
+
+    </div>
+</div>
+<br />
+<div class="row">
+
+    <div class="col-lg-8">
+        <div class="row">
+            @foreach (var students in ViewBag.StudentsList)
+            {
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="font-family:Verdana; font-weight:bold;font-size:16px; color:#496973;text-transform:uppercase">@students.StudentName</div>
+                        <div class="panel-body">
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>Faculty</td>
+                                    <td>@students.Faculty</td>
+                                </tr>
+                                <tr>
+                                    <td>Class</td>
+                                    <td>@students.Class</td>
+                                </tr>
+                                <tr>
+                                    <td>Section</td>
+                                    <td>@students.Section</td>
+                                </tr>
+                                <tr>
+                                    <td>Roll No</td>
+                                    <td>@students.RollNo</td>
+                                </tr>
+                                <tr>
+                                    <td>Blood Group</td>
+                                    <td>@students.BloodGroup</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel panel-default" style="min-height:260px;">
+            <div class="panel-heading text-center" style="font-family:Verdana; text-decoration:underline; font-weight:bold;font-size:16px; color:#496973;text-transform:uppercase">Notice Board</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <tr><td>This Part is under development.</td></tr>
+                    <tr><td>This Part is under development.</td></tr>
+                    <tr><td>This Part is under development.</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,117 @@
+﻿
+@model DomainEntities.MarksEntry
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/Client Scripts/mvcfoolproof.unobtrusive.min.js"></script>
+<script src="~/Scripts/ExportToExcel.js"></script>
+@*<script src="~/Scripts/MarksEntryCase.js"></script>*@
+<script src="~/Content/JS/BackEnd/MarksEntryCase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.js"></script>
+<script src="~/Scripts/FileSaver.min.js"></script>
+<script src="~/Scripts/excel-gen.js"></script>
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+            <li>Exam</li>
+            <li class="active">Marks Entry</li>
+        </ul>
+
+    </div>
+</div>
+<br />
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formMarksEntry", name = "formMarksEntry", onSubmit = "return false;" }))
+{
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.SessionID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.SessionID, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.SessionID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.ClassID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.ClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.ClassID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.FacultyID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.FacultyID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.FacultyID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.Section)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Section, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Section, String.Empty, new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-2">
+
+            @Html.LabelFor(model => model.SubjectID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.SubjectID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.SubjectID, String.Empty, new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-2">
+
+
+            @Html.LabelFor(model => model.TermID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.TermID, (SelectList)ViewBag.termList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.TermID, String.Empty, new { @class = "text-danger" })
+        </div>
+
+
+
+    </div>
+
+            <div class="row">
+                <div class="col-sm-2">
+                    @Html.LabelFor(model => model.FullMarksTheory)<span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.FullMarksTheory, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FullMarksTheory, String.Empty, new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-2">
+                    @Html.LabelFor(model => model.PassMarksTheory)<span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.PassMarksTheory, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PassMarksTheory, String.Empty, new { @class = "text-danger" })
+                </div>
+
+                <div class="col-sm-2">
+                    @Html.LabelFor(model => model.FullMarksPractical)<span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.FullMarksPractical, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.FullMarksPractical, String.Empty, new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-2">
+                    @Html.LabelFor(model => model.PassMarksPractical)<span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.PassMarksPractical, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PassMarksPractical, String.Empty, new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-4">
+                    <button style="margin-top:23px" class="btn btn-primary" id="marksEntrySearch">Enter Marks</button>
+                    <button style="margin-top:23px" class="btn refresh" id="calculatecase">Calculate</button>
+                    <button style="margin-top:23px;" class="btn" id="marksSaveRecords">Save Records</button>
+
+                </div>
+
+            </div>
+
+}
+<br />
+<div id="MarksEntryList">@Html.Partial("~/Areas/Admin/Views/MarksEntryCase/MarksEntrylist.cshtml")</div>
+
+
+<div class="divMarksError" style="display:none">
+
+
+</div>
+
+
+<script>
+                var checkedIds = {};
+</script>

@@ -1,0 +1,249 @@
+﻿
+@{
+    string val1 = "";
+    string val2 = "";
+
+   
+    var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+
+    if (claimsIdentity != null && claimsIdentity.IsAuthenticated==true)
+    {
+        val1 = claimsIdentity.FindFirst("isAdmin").Value.ToString();
+        val2 = claimsIdentity.FindFirst("isSuperAdmin").Value.ToString();
+
+    }
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="~/Content/Images/School/attandance.png" type="image/x-icon">
+    @{
+        var tt = "";
+        var pp = 100;
+    }
+    @{
+
+        try
+        {
+            tt = Request.Url.ToString().Split('/')[4].ToString();
+        }
+        catch
+        {
+            tt = "School Management System";
+        }
+    }
+    <title>E-Attandance Management System</title>
+    
+        <!-- Bootstrap -->
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+   
+    <!-- Font Awesome -->
+
+
+    <link href="~/Content/vendor/css/font-awesome.css" rel="stylesheet" />
+   
+
+    <link href="~/Content/CSS/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/vendor/kendo/css/kendo.common.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/kendo/css/kendo.silver.min.css" rel="stylesheet">   
+    <link href="~/Content/CSS/jquery.timepicker.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/nepali.datepicker.v2.1.min.css" rel="stylesheet" /> 
+    <link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css"
+          rel="stylesheet" type="text/css" />
+ 
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/Content/CSS/custom.min.css" rel="stylesheet" />    
+    <link href="~/Content/CSS/admin.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>   
+
+ </head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">            
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="/Admin/DashBoard" class="site_title"><i class="fa fa-paw"></i> <span>Welcome Admin</span></a>
+                        </div>
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+
+                                <img src="~/Content/Images/School/attandance.png" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <h2>Congratulation ! Login Success</h2>
+                            </div>
+                        </div>
+
+
+                        <div class="clearfix"></div>
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+
+                                <ul class="nav side-menu">                                    
+                                    @Html.Action("AdminMenu", "Menu", new { Area = "Admin" })   
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <!-- /sidebar menu -->
+                        <!-- /menu footer buttons -->
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+           
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <div id="activeyear"></div>
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-user" style="margin-right:2px"></i><span style="color:black" id="loginusername"></span>
+                                        <i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i>                                     
+                                        
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">                                       
+                                       
+                                        <li><a href="@Url.Action("Index", "ChangePassword", new { Area = "" })"><i class="fa fa-wrench"></i> ChangePassword</a></li>                                        
+                                        <li><a href="@Url.Action("LogOff", "Login", new { Area = "" })"><i class="fa fa-lock"></i> Log Out</a></li>
+                                        @if (val1 == "True" || val2 == "True")
+                                        {
+                                            <li>
+                                                <a href="@Url.Action("Index", "Dashboard", new { Area = "Client" })"><i class="fa fa-gear fa-fw"></i> Switch To Client</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-bell"></i>
+                                        <span class="badge bg-green" id="envelope"  style="display:none">6</span>
+                                    </a>
+                                    <ul id="notificationtitle" class="dropdown-menu list-unstyled msg_list" role="menu">                               
+
+                                      
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-envelope-o"></i>
+                                        <span class="badge bg-green" id="envelope1" style="display:none">6</span>
+                                    </a>
+                                    <div>
+                                        <ul id="emailnotificationtitle" class="dropdown-menu list-unstyled msg_list" role="menu">
+
+                                            <li>
+                                                <div class="text-center">
+                                                    <a>
+                                                        <strong>See All Alerts</strong>
+                                                        <i class="fa fa-angle-right"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+                <!-- page content -->
+            <div class="modal fade" data-backdrop="static" data-keyboard="false" id="PendingModalAdmin" tabindex="-1" role="dialog" aria-labelledby="PendingModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content modal-dashboard">
+                        <div class="modal-header">
+                            <button type="button" class="close" id="notificationdisable" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                            <p id="title"></p>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="notificationid" hidden />
+                            <div class="row">
+                                <div class="col-lg-12 quiz-listing">
+                                    <p id="notificationDescription"></p>
+                                    <label></label>
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:none">@Html.Partial("~/Views/Shared/KendoDeleteWindow.cshtml")</div>            
+            <div class="right_col loadbody" role="main">
+                <script src="~/Scripts/jquery.timepicker.min.js"></script>
+                <script src="~/Scripts/popper.js"></script>
+                <script src="~/Scripts/bootstrap.min.js"></script>
+                <script src="~/Scripts/toastr.min.js"></script>
+                <script src="~/Scripts/jquery.signalR-2.2.2.js"></script>
+                <script src="/signalr/hubs"></script>
+                <script src="~/Scripts/nprogress.js"></script>
+                <script src="~/Scripts/jquery.canvasjs.min.js"></script>
+                <script src="~/Content/JS/Common.js"></script>
+                <script src="~/Scripts/custom.min.js"></script>
+                <script src="~/Content/vendor/kendo/js/kendo.all.min.js"></script>
+                <script src="~/Scripts/nepali.datepicker.v2.1.min.js"></script>
+
+                <!-- top tiles -->
+
+                @RenderBody()
+
+
+            </div>
+            </div>
+              
+            </div>
+        
+  
+  
+    
+  
+   
+  
+    <!-- jQuery -->
+   
+   
+    <!-- FastClick -->
+   
+    <!-- NProgress -->
+   
+    
+   
+   
+</body>
+</html>
+<script type="text/javascript">
+
+    var variable1 = '@tt';
+
+</script>
+<style>
+    .image img{
+  border-radius: 50% !important;
+  width:25px;
+  height:25px;
+}
+    #activeyear{
+        padding:9px;
+        color:red;
+    }
+</style>

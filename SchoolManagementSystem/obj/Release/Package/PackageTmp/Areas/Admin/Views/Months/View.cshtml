@@ -1,0 +1,77 @@
+﻿
+
+@model DomainEntities.Months
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/Months.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Organisation</a></li>
+            <li><a href="/Admin/Months">Months</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Year Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formSessionInfo", name = "formSessionInfo", autocomplete = "off", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        @Html.HiddenFor(model => model.ID)
+                                        @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Month, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        @Html.LabelFor(model => model.IsActive)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.IsActive,
+                                        new SelectList(new List<SelectListItem>
+                                        {
+                                              new SelectListItem { Text = "Yes", Value = "1" },
+                                             new SelectListItem { Text = "No", Value = "0" }
+
+                                        }, "Value", "Text"), "--Select--", new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(model => model.IsActive, String.Empty, new { @class = "text-danger" })
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="pulldown">
+                                            <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit" />
+                                            <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/Months/MonthsList.cshtml")
+    </div>
+</div>   

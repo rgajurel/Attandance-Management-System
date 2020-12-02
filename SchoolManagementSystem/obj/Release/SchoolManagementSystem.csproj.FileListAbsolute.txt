@@ -1,0 +1,844 @@
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Kendo.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportSource.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.Shared.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\stdole.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportSource.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.Shared.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Kendo.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\stdole.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\FastMember.Signed.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportSource.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.Shared.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\FastMember.Signed.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\stdole.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.Core.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Quartz.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.Core.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\FastMember.Signed.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Kendo.Mvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Quartz.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\CaptchaMvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\CaptchaMvc.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\SchoolManagementSystem\bin\CaptchaMvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.Core.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Common.Logging.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\FastMember.Signed.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\NotFoundMvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Owin.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Quartz.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Unity.Mvc5.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\WebGrease.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojResolveAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.Extensions.ChildKernel.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Net.Http.Formatting.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.WebHost.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\obj\Release\Interop.zkemkeeper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.ResolveComReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\bin\Interop.zkemkeeper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.Extensions.ChildKernel.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Net.Http.Formatting.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.WebHost.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Interop.zkemkeeper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\Interop.zkemkeeper.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.ResolveComReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.CoreCompileInputs.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\csc.exe
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Collections.Immutable.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\System.Reflection.Metadata.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\vbc.exe
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\roslyn\VBCSCompiler.exe.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\SchoolManagementSystem.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\FoolproofValidation.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainEntities.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DomainInterface.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Infrastructure.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\ClosedXML.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\DocumentFormat.OpenXml.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.SignalR.Client.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.ServiceLocation.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.Configuration.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Ninject.Extensions.ChildKernel.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Net.Http.Formatting.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.Owin.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Http.WebHost.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Helpers.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Mvc.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Optimization.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Deployment.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\System.Web.WebPages.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Antlr3.Runtime.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Newtonsoft.Json.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\EntityFramework.SqlServer.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Core.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Facebook.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Cookies.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.OAuth.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Google.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.Twitter.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Dapper.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\bin\Interop.zkemkeeper.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csprojAssemblyReference.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\Interop.zkemkeeper.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.ResolveComReference.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.CoreCompileInputs.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\SchoolManagementSystem\obj\Release\SchoolManagementSystem.pdb

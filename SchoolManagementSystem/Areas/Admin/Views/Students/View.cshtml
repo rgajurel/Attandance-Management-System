@@ -1,0 +1,398 @@
+﻿@model DomainEntities.BulkUploadStudents
+
+<script src="~/Content/vendor/multiselectdropdown/js/jquery.sumoselect.js"
+        type="text/javascript"></script>
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css"
+      rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/Students.js"></script>
+<script src="~/Scripts/xlsx.core.min.js"></script>
+@using Kendo.Mvc.UI
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Students</a></li>
+            <li><a href="/Admin/OrganisationType">Students Admission</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+            <li class="pull-right"><button class="btn btn-danger cancel" type="submit">Cancel</button></li>
+            <li class="pull-right"><button class="btn btn-danger upload" type="submit">Upload Excel</button></li>           
+
+</ol>
+    </div>
+</div>
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Students Profile</h4>
+                    </div>
+                    @Html.ValidationSummary()
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formStudents", name = "formStudents",autocomplete="off", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                  
+                                    @Html.HiddenFor(model => model.Students.ID)
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.AcademicYear)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.AcademicYear, (SelectList)ViewBag.sessionList,"--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Students.AcademicYear, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.Students.RegistrationNo)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.RegistrationNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.RegistrationNo, String.Empty, new { @class = "text-danger" })
+
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.UserID)
+                                        @Html.TextBoxFor(model => model.Students.UserID, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.UserID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                                                       
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.EnglishJoinningDate)
+                                        @(Html.Kendo().DateTimePickerFor(m => m.EnglishJoinningDate)
+       .Name("EnglishJoinningDate")
+        .Value(DateTime.Now)
+        .Format("MM-dd-yyyy")
+                                         .HtmlAttributes(new { @class = "form-control" })
+                                        )
+                                        @Html.ValidationMessageFor(model => model.EnglishJoinningDate, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.ClassID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.ClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Students.ClassID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.FacultyID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.FacultyID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Students.FacultyID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Section)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.Section, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.Section, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.RollNo) <span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.RollNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.RollNo, String.Empty, new { @class = "text-danger", id = "duplicatemessage" })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Batch)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.Batch, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.Batch, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.SymbolNo)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.SymbolNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.SymbolNo, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.HouseID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.HouseID, (SelectList)ViewBag.houseList, "--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Students.HouseID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <label for="reg_input_logo">Upload Image</label>
+                                        <input type="file" id="inputFile" name="inputFile" />
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Email)
+                                        @Html.TextBoxFor(model => model.Students.Email, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.Email, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.MobileNo)
+                                        @Html.TextBoxFor(model => model.Students.MobileNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.MobileNo, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.PhoneNo)
+                                        @Html.TextBoxFor(model => model.Students.PhoneNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.PhoneNo, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                  
+
+
+
+                                </div>
+                                <div class="row">
+                                    <p><b>PERSONAL DETAILS:-</b></p><hr>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.StudentName)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.StudentName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.StudentName, String.Empty, new { @class = "text-danger" })
+                                    </div>                                 
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.EnglishDateOfBirth)
+                                        @(Html.Kendo().DateTimePickerFor(m => m.EnglishDateOfBirth)
+       .Name("EnglishDateOfBirth")
+        .Value(DateTime.Now)
+        .Format("MM-dd-yyyy")
+                                         .HtmlAttributes(new { @class = "form-control" })
+                                        )
+                                        @Html.ValidationMessageFor(model => model.EnglishDateOfBirth, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                  
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Gender)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.Gender,
+new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Male", Value = "Male" },
+                 new SelectListItem { Text = "Female", Value = "Female" }
+}, "Value", "Text"), new { @class = "form-control" })
+
+
+                                        @Html.ValidationMessageFor(model => model.Students.Gender, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Status)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.Status,
+new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Active", Value = "Active" },
+                 new SelectListItem { Text = "InActive", Value = "Inactive" }
+}, "Value", "Text"), new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(model => model.Students.Status, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                   
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.Students.BloodGroupID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.BloodGroupID, (SelectList)ViewBag.bloodGroupList, "--Select--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.BloodGroupID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.Students.CategoryID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.CategoryID, (SelectList)ViewBag.categoryList, "--Select--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.CategoryID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.ReligionID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.ReligionID, (SelectList)ViewBag.religionList, "--Select--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.ReligionID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.Students.CasteID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Students.CasteID, (SelectList)ViewBag.casteList, "--Select--", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.CasteID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                   
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.CitizenShipNumber)
+                                        @Html.TextBoxFor(model => model.Students.CitizenShipNumber, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.CitizenShipNumber, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.TemporaryAddress)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.TemporaryAddress, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.TemporaryAddress, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.PermanentAddress)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.PermanentAddress, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.PermanentAddress, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <p><b>PREVIOUS QUALIFICATION DETAILS:-</b></p><hr>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.LastSchoolAttended)
+                                        @Html.TextBoxFor(model => model.Students.LastSchoolAttended, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.LastSchoolAttended, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.Result)
+                                        @Html.DropDownListFor(model => model.Students.Result,
+new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Pass", Value = "Pass" },
+                 new SelectListItem { Text = "Failed", Value = "Failed" }
+}, "Value", "Text"), new { @class = "form-control" })
+
+                                        @Html.ValidationMessageFor(model => model.Students.Result, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.DocumetsSubmittedID)                                        
+                                        @Html.DropDownListFor(model => model.Students.DocumetsSubmittedID, (SelectList)ViewBag.documentsList, new { @class = "form-control", @multiple = "multiple" })
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="row">
+                                    <p><b>PARENTS DETAILS:-</b></p><hr>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.FatherName)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.FatherName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.FatherName, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.FatherMobileNo)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.FatherMobileNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.FatherMobileNo, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.FatherEmail)
+                                        @Html.TextBoxFor(model => model.Students.FatherEmail, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.FatherEmail, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.Students.MotherName)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.Students.MotherName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.Students.MotherName, String.Empty, new { @class = "text-danger" })
+                                        @*@Html.LabelFor(model => model.Fatherjob)
+                                            @Html.TextBoxFor(model => model.Fatherjob, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.Fatherjob, String.Empty, new { @class = "text-danger" })*@
+                                    </div>
+                                </div>
+                                @* <div class="row">
+                                        <div class="form-group col-sm-3 success">
+                                            @Html.LabelFor(model => model.MotherName)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.MotherName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.MotherName, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form_group col-sm-3 error">
+                                            @Html.LabelFor(model => model.MotherMobileNo)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.MotherMobileNo, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.MotherMobileNo, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group col-sm-3 success">
+                                            @Html.LabelFor(model => model.MotherEmail)
+                                            @Html.TextBoxFor(model => model.MotherEmail, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.MotherEmail, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form_group col-sm-3 error">
+                                            @Html.LabelFor(model => model.MotherJob)
+                                            @Html.TextBoxFor(model => model.MotherJob, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.MotherJob, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                    </div>*@
+
+                                <div class="row">
+                                    <div class="col-md-3" style="margin-top:10px">
+                                        <input class="btn btn-danger" name="employeeSubmit" id="Save" value="Save" type="submit">
+                                        <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+
+                                    </div>
+                                </div>
+
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="row" id="show">
+        <div class="col-md-12">
+            @Html.Partial("~/Areas/Admin/Views/Students/StudentsList.cshtml")
+        </div>
+    </div>
+
+
+<div class="modal fade" id="customPopupDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>*@
+                <h4 class="modal-title " id="customPopupTitle">Upload Excel File</h4>
+            </div>
+            <div>
+                <button class="btn btn-danger"><a style="color:white" href="~/Content/DownloadFile/StudentsUpload.xlsx" download>Download Sample Excel</a></button>
+            </div>
+           
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formBatchUpload", name = "formBatchUpload", autocomplete = "off", onSubmit = "return false;" }))
+{                 <div class="modal-body message">
+                         <div class="row">
+                    <div class="col-lg-4">
+                        <label>Academic Year</label>
+                        @Html.DropDownListFor(model => model.BulkStudentsSearch.BulkYearID, (SelectList)ViewBag.sessionList,"--Select--", new { @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.BulkStudentsSearch.BulkYearID, String.Empty, new { @class = "text-danger" })
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Class</label>
+                        @Html.DropDownListFor(model => model.BulkStudentsSearch.BulkClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.BulkStudentsSearch.BulkClassID, String.Empty, new { @class = "text-danger" })
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Faculty</label>
+
+                        @Html.DropDownListFor(model => model.BulkStudentsSearch.BulkFacultyID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(model => model.BulkStudentsSearch.BulkFacultyID, String.Empty, new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label>Section</label>
+                        @Html.DropDownListFor(model => model.BulkStudentsSearch.BulkSection, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BulkStudentsSearch.BulkSection, String.Empty, new { @class = "text-danger" })
+                    </div>
+                    <div style="margin-top:5px" class="col-lg-4">
+                        <label>Excel File</label>
+                        @Html.TextBoxFor(model => model.BulkStudentsSearch.BulkImage, null, new { type = "file", @class = "input-file" })
+                        @Html.ValidationMessageFor(model => model.BulkStudentsSearch.BulkImage, String.Empty, new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="ok">Save</button>
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+            </div>
+}
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+

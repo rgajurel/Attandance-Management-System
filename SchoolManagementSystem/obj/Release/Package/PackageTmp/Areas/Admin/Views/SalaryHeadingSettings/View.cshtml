@@ -1,0 +1,68 @@
+﻿@model DomainEntities.SalaryHeadingSettings
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/SalaryHeadingSettings.js"></script>
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+            <li>HR/Payroll</li>
+            <li class="active">Salary Heading Settings</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="form-group">
+            <div id="formSchoolType">
+                <!-- rht middle content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Add Salary Head</h4>
+                                </div>
+                                 @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formSalaryHeadingSettings", name = "formSalaryHeadingSettings", onSubmit = "return false;" }))
+                                        {
+                                     @Html.AntiForgeryToken()
+                                <div class="panel-body">
+                                    <div class="col-lg-6">
+                                       
+                                        @Html.LabelFor(model => model.JobTypeID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.JobTypeID, (SelectList)ViewBag.jobType, "--JobType--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.JobTypeID, String.Empty, new { @class = "text-danger" })
+
+                                    </div>
+                                                                    
+                                    
+                                    <div class="col-lg-12" style="margin-top:10px">
+                                        <div class="form-group">
+                                            <div id="salaryHeadingSettingList">@Html.Partial("~/Areas/Admin/Views/SalaryHeadingSettings/SalaryHeadingSettingsList.cshtml")</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6" style="margin-top:10px">
+                                        <input class="btn btn-info" name="salaryHeadSettingsAdd" id="salaryHeadSettingsAdd" value="Save" type="submit">
+                                        <input class="btn" name="salaryHeadCancel" id="salaryHeadCancel" value="Cancel" type="reset">
+                                    </div>
+                                    
+
+                                   
+                                </div>
+                                 }
+                               
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+</div>
+
+

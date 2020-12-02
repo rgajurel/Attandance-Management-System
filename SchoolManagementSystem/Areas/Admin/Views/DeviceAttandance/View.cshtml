@@ -1,0 +1,82 @@
+﻿
+@model DomainEntities.Attandance
+@using Kendo.Mvc.UI
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/DeviceAttandance.js"></script>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/DeviceAttandance">HR/Payroll</a></li>
+            <li><a href="/Admin/AccumulativeLeave">Device Attandance</a></li>
+            <li class="pull-right"><button class="btn btn-danger connect" type="submit">BioMetric Device</button></li>
+        </ol>
+    </div>
+</div>        
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/DeviceAttandance/DeviceAttandanceList.cshtml")
+    </div>
+</div>
+
+<div class="modal fade" id="deviceConnectPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title " id="customPopupTitle">Connect BioMetric Device</h4>
+            </div>
+
+            <div class="modal-body message">
+                
+                    @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data",autocomplete="off", id = "formConnectDevice", name = "formConnectDevice", onSubmit = "return false;" }))
+                    {
+                @Html.AntiForgeryToken()
+                <div class="row">
+                    <div class="col-lg-4">
+                        <label class="bold">Status</label>
+                        <label id="connected" style="color:red;color:#d9534f">:Disconnected</label>
+                    </div>                    
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.BiometricDevice.IpAddress)<span style="color:red">*</span>
+                        @Html.TextBoxFor(model => model.BiometricDevice.IpAddress, new { @Value="192.168.0.104",@class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-6">
+                        @Html.LabelFor(model => model.BiometricDevice.Port)<span style="color:red">*</span>
+                        @Html.TextBoxFor(model => model.BiometricDevice.Port, new { @Value="4370",@class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BiometricDevice.Port, String.Empty, new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6" style="margin-top:10px">
+                        @*<button type="submit"  id="connectDevice" class="btn btn-danger">Connect</button>*@                      
+                        <button type="button" id="refreshDevice" class="btn btn-danger">Refresh Data</button>
+                        <button type="button" class="btn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                  
+                    }
+               
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+
+
+<style>
+    #Description {
+        height: 50px;
+    }
+</style>

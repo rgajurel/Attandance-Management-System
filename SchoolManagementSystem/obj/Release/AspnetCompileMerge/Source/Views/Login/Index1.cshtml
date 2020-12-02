@@ -1,0 +1,53 @@
+﻿@model DomainEntities.UserLogin
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="icon" href="/Content/Images/School/School.png" type="image/x-icon">      
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="info">
+           
+        </div>
+    </div>
+    <div class="form">
+        <div class="thumbnail">
+        @*<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" />*@
+        </div>        
+       @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data",@class="login-form" }))
+       {
+        @Html.AntiForgeryToken()
+
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @Required = "Required", placeholder = "Enter UserName" })
+        @Html.ValidationMessageFor(model => model.UserName, String.Empty, new { @class = "text-danger" })
+
+
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control", @Required = "Required", Placeholder = "Enter Password" })
+        @Html.ValidationMessageFor(model => model.Password, String.Empty, new { @class = "text-danger" })
+
+
+            <button>Login</button>
+            <p class="message">Forgot Password? <a href="#">Reset</a></p>
+       }
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

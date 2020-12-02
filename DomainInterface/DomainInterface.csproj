@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C76D038A-0A66-451F-AC35-A706D217B1B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DomainInterface</RootNamespace>
+    <AssemblyName>DomainInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\..\..\..\Braindigit projects\NcellLms\Source\Infrastructure\bin\Debug\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IAccumulativeLeaveRepository.cs" />
+    <Compile Include="ICategoryTreeRepository.cs" />
+    <Compile Include="IChangePasswordRepository.cs" />
+    <Compile Include="IClassMasterRepository.cs" />
+    <Compile Include="IClassRepository.cs" />
+    <Compile Include="IClassTypeRepository.cs" />
+    <Compile Include="IClientLoginRepository.cs" />
+    <Compile Include="IClientResultRepository.cs" />
+    <Compile Include="ICommonFeeDiscountRepository.cs" />
+    <Compile Include="ICommonFeeRepository.cs" />
+    <Compile Include="ICommonRepository.cs" />
+    <Compile Include="IDashBoardRepository.cs" />
+    <Compile Include="IDepartmentRepository.cs" />
+    <Compile Include="IDesignationRepository.cs" />
+    <Compile Include="IEditMarksEntryRepository.cs" />
+    <Compile Include="IEmployeeDailyAttandanceRepository.cs" />
+    <Compile Include="IEmployerRepository.cs" />
+    <Compile Include="IEntranceClientRepository.cs" />
+    <Compile Include="IEntranceQuestionRepository.cs" />
+    <Compile Include="IEntranceRepository.cs" />
+    <Compile Include="IEntranceUserReportRepository.cs" />
+    <Compile Include="IFacultyRepository.cs" />
+    <Compile Include="IFeeCollectionRepository.cs" />
+    <Compile Include="IFeeDailyCollectionRepository.cs" />
+    <Compile Include="IFeeDetailsForClientRepository.cs" />
+    <Compile Include="IForgotPasswordRepository.cs" />
+    <Compile Include="IGradeMasterRepository.cs" />
+    <Compile Include="IHostelInfoRepository.cs" />
+    <Compile Include="IBusInfoRepository.cs" />
+    <Compile Include="IDropDownRepository.cs" />
+    <Compile Include="IFeeTypeRepository.cs" />
+    <Compile Include="IHouseInfoRepository.cs" />
+    <Compile Include="IJobTypeRepository.cs" />
+    <Compile Include="ILanguageParameterRepository.cs" />
+    <Compile Include="ILanguageRepository.cs" />
+    <Compile Include="ILeaveDaysRepository.cs" />
+    <Compile Include="ILeavEntryRepository.cs" />
+    <Compile Include="ILeaveTypeRepository.cs" />
+    <Compile Include="ILocationInfoRepository.cs" />
+    <Compile Include="ILoginRepository.cs" />
+    <Compile Include="IMailSendRepository.cs" />
+    <Compile Include="IManageCalendarRepository.cs" />
+    <Compile Include="IManagePublicHolidayAndSaturday.cs" />
+    <Compile Include="IManualAttandanceRepository.cs" />
+    <Compile Include="IMarksEntryRepository.cs" />
+    <Compile Include="IMarkSheetLedgerRepository.cs" />
+    <Compile Include="IMarksSheetPrintRepository.cs" />
+    <Compile Include="IMessageHandlerRepository.cs" />
+    <Compile Include="IMobileRepository.cs" />
+    <Compile Include="IMonthsRepository.cs" />
+    <Compile Include="INotificationRepository.cs" />
+    <Compile Include="IOfficialLeaveRepository.cs" />
+    <Compile Include="IOrganisationEventsRepository.cs" />
+    <Compile Include="IParentsChildRepository.cs" />
+    <Compile Include="IPersonalFeeRepository.cs" />
+    <Compile Include="IPublishResultRepository.cs" />
+    <Compile Include="IQuizCategoryReport.cs" />
+    <Compile Include="IQuizClientRepository.cs" />
+    <Compile Include="IQuizQuestionReportRepository.cs" />
+    <Compile Include="IQuizQuestionRepository.cs" />
+    <Compile Include="IQuizReport.cs" />
+    <Compile Include="IQuizRepository.cs" />
+    <Compile Include="IQuizUserReportRepository.cs" />
+    <Compile Include="IReportRepository.cs" />
+    <Compile Include="ISalarCalculationRepository.cs" />
+    <Compile Include="ISalaryHeadAmountRepository.cs" />
+    <Compile Include="ISalaryHeadRepository.cs" />
+    <Compile Include="ISalaryHeadSettingsRepository.cs" />
+    <Compile Include="ISchoolInformationRepository.cs" />
+    <Compile Include="ISectionRepository.cs" />
+    <Compile Include="ISessionInfoRepository.cs" />
+    <Compile Include="ISettingsRepository.cs" />
+    <Compile Include="IShoolTypeRepository.cs" />
+    <Compile Include="IStudentAssignmentsRepository.cs" />
+    <Compile Include="IStudentsAttandanceRepository.cs" />
+    <Compile Include="IStudentsCategoryRepository.cs" />
+    <Compile Include="IStudentsDailyAttandanceRepository.cs" />
+    <Compile Include="IStudentsProfileRepository.cs" />
+    <Compile Include="IStudentsRepository.cs" />
+    <Compile Include="IStudentSubjectsRepository.cs" />
+    <Compile Include="ISubjectsRepository.cs" />
+    <Compile Include="ITakeAccumulativeLeaveRepository.cs" />
+    <Compile Include="ITakeAdvanceRepository.cs" />
+    <Compile Include="ITakeLeaveRepository.cs" />
+    <Compile Include="ITaxMasterRepository.cs" />
+    <Compile Include="ITermMasterRepository.cs" />
+    <Compile Include="ITravellingAllowanceRepository.cs" />
+    <Compile Include="IUserGroupRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
+    <Compile Include="IUserRole.cs" />
+    <Compile Include="IYearlyHolidaysEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainEntities\DomainEntities.csproj">
+      <Project>{121b8e42-440f-467e-9dab-8b9ad6dc0cc9}</Project>
+      <Name>DomainEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

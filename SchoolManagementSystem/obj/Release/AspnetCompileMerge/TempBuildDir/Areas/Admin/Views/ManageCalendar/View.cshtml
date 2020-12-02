@@ -1,0 +1,86 @@
+﻿
+@model DomainEntities.ManageCalendar
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/Client Scripts/mvcfoolproof.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/ManageCalendar.js"></script>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/AccumulativeLeave">Leave Management</a></li>
+            <li><a href="/Admin/AccumulativeLeave">Manage Calendar</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Manage Calendar</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+    @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formManageCalendar", autocomplete = "off", name = "formManageCalendar", onSubmit = "return false;" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-2">
+                    @Html.HiddenFor(model => model.ID)
+                    @Html.LabelFor(model => model.YearID)<span style="color:red">*</span>
+                    @Html.DropDownListFor(model => model.YearID, (SelectList)ViewBag.sessionList, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.YearID, String.Empty, new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-2">
+
+                    @Html.LabelFor(model => model.MonthID)<span style="color:red">*</span>
+                    @Html.DropDownListFor(model => model.MonthID, ViewBag.monthList as SelectList, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.MonthID, String.Empty, new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-2">
+
+                    @Html.LabelFor(model => model.Days)<span style="color:red">*</span>
+                    @Html.TextBoxFor(model => model.Days, new { @class = "form-control", @placeholder = "Days" })
+                    @Html.ValidationMessageFor(model => model.Days, String.Empty, new { @class = "text-danger" })
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 pulldown">
+                        <input class="btn btn-danger" name="manageCalendarSubmit" id="manageCalendarSubmit" value="Save" type="submit">
+                        <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+
+            </div>
+        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/ManageCalendar/ManageCalendarList.cshtml")
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,39 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.QuizReport>()
+            .Name("QuizReportListing")
+            .AutoBind(false)
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.QuizID).Hidden();
+                columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50).Hidden();
+                columns.Template(t => { }).Title("Quiz Title").ClientTemplate("#= trimQuizTitle(QuizTitle) #").Width(200);
+                columns.Bound(c => c.TotalQuestion).Title("Total Questions").Width(100);
+                columns.Bound(c => c.StartDate).Title("Start Date").Format(ViewBag.settingDateFormat).Width(100);
+                columns.Bound(c => c.EndDate).Title("End Date").Format(ViewBag.settingDateFormat).Width(100);
+                columns.Bound(c => c.Status).Title("Status").Width(100);
+                columns.Command(command =>
+                {
+                    command.Custom("Details").Text(" ").Click("QuizDetails");
+                }).Title("Action").Width(100);
+            })
+                 .Pageable(pageable => pageable
+                 .Refresh(true)
+                 .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                 .PreviousNext(true))
+                 .DataSource(dataSource => dataSource
+                 .Ajax()
+                 .ServerOperation(true)
+                 .Model(model =>
+                 {
+                     model.Id(p => p.QuizID);
+                     model.Field(p => p.TotalQuestion);
+                     model.Field(p => p.QuizTitle);
+                     model.Field(p => p.StartDate);
+                     model.Id(p => p.EndDate);
+                     model.Field(p => p.Status);
+                 })
+                .Read(read => read.Action("GetAllQuiz", "QuizReport").Data("ParamToLoadQuizListing"))
+                .PageSize((int)ViewBag.ItemPerPage)
+   ).Events(ev => ev.DataBound("onDataboundQuizListing"))
+)

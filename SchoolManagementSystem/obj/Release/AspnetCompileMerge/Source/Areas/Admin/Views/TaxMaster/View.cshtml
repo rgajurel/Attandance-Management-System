@@ -1,0 +1,89 @@
+﻿
+
+
+@model DomainEntities.TaxMaster
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/TaxMaster.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">HR/Payroll</a></li>
+            <li><a href="/Admin/OrganisationType">Tax Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div> 
+
+
+
+
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Tax Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                           @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formTaxMaster", name = "formTaxMaster",autocomplete="off", onSubmit = "return false;" }))
+                           {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        @Html.HiddenFor(model => model.ID)
+                                        @Html.LabelFor(model => model.AmountFrom)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.AmountFrom, new { @class = "form-control", @placeholder = "Amount From" })
+                                        @Html.ValidationMessageFor(model => model.AmountFrom, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+                                        @Html.LabelFor(model => model.AmountTo)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.AmountTo, new { @class = "form-control", @placeholder = "Amount To" })
+                                        @Html.ValidationMessageFor(model => model.AmountTo, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.TaxPercentage)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.TaxPercentage, new { @class = "form-control", @placeholder = "Percentage" })
+                                        @Html.ValidationMessageFor(model => model.TaxPercentage, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3">
+
+                                        @Html.LabelFor(model => model.SortOrder)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.SortOrder, new { @class = "form-control", @placeholder = "SortOrder" })
+                                        @Html.ValidationMessageFor(model => model.SortOrder, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-3" style="margin-top:10px">
+                                        
+                                            <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit">
+                                            <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+
+                                        
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div> 
+
+    
+   
+
+<div class="row" id="show">
+    <div class="col-md-12">
+      @Html.Partial("~/Areas/Admin/Views/TaxMaster/TaxMasterList.cshtml")
+    </div>
+</div>  

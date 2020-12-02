@@ -1,0 +1,142 @@
+﻿@model DomainEntities.Role
+
+<div id="roleContainer">  
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              Add Roles
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <form>
+                        <div class="col-lg-6">
+                            <span>After adding roles need to be saved</span>
+
+                            <div class="form-group">
+
+                                <select class="all-roles-list form-control">
+                                    @if (ViewBag.RoleMenu != null)
+                                    {
+                                        foreach (var role in ViewBag.RoleMenu)
+                                        {
+                                            <option value='@role.RoleID' data-val='@role.Options'>@role.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <input class="add-to-dropdown btn btn-danger" type="button" value="Add" />
+                            <input class="edit-to-dropdown btn" type="button" value="Edit" />
+                            @*<input class="load-menu btn btn-primary" type="button" data-val="client" value="Load Admin Menu" />*@
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Menus
+                <input id="saveRole" class=" btn-xs btn btn-danger pull-right" type="button" data-val="client" value="Save Menus" />
+
+            </div>
+            <div class="col-lg-12 clearfix">
+                <div class="row role-menu">
+                    <div class="col-md-12" id="adminmenu">
+                        <h2 class="contentHeader">Admin Menus</h2>
+                        <table class="admin-menu  table table-striped table-bordered table-hover" style="background-color:white">
+                            <thead>
+                                <tr>
+                                    <th>Menu</th>
+                                    <th>options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.AdminMenu != null)
+                                {
+                                    foreach (var menu in ViewBag.AdminMenu)
+                                    {
+                                        <tr>
+                                            <td>@menu.Name</td>
+                                            <td class="menu-options" data-id="@menu.MenuID" data-val="">
+                                                @foreach (var option in menu.Options.Split(','))
+                                                {
+                                                    <input class="user-group-item" data="@option" type="checkbox" /> @option
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-12" id="clientmenu" style="background-color:white">
+                        <h2 class="contentHeader">Client Menus</h2>
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Menu</th>
+                                    <th>options</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.ClientMenu != null)
+                                {
+                                    foreach (var menu in ViewBag.ClientMenu)
+                                    {
+                                        <tr>
+                                            <td>@menu.Name</td>
+                                            <td class="menu-options" data-id="@menu.MenuID" data-val="">
+                                                @foreach (var option in menu.Options.Split(','))
+                                                {
+                                                    <input class="user-group-item" data="@option" type="checkbox" /> @option
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="modal fade" id="customPopupDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>*@
+                <h4 class="modal-title " id="customPopupTitle">Title</h4>
+            </div>
+
+            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete="off", id = "formRole", name = "formRole", onSubmit = "return false;" }))
+            {
+                <div class="modal-body message">
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.RoleID)
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Name, new { @style = "" })<span class="txtRed">*</span>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control add-role" })
+                        @Html.ValidationMessageFor(model => model.Name, String.Empty, new { @class = "text-danger" })
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger ok">Add</button>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>
+                </div>
+            }
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script src="~/Content/JS/BackEnd/UserRole.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

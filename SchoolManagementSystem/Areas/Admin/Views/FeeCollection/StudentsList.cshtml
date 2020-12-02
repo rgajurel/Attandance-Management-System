@@ -1,0 +1,72 @@
+﻿<div class="row" id="FeePayment">
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            @using Kendo.Mvc.UI
+            @(Html.Kendo().Grid<DomainEntities.FeeCollection>()
+    .Name("studentsList")
+
+            .Columns(columns =>
+            {
+            columns.Bound(c => c.ID).Hidden();
+            columns.Bound(c => c.SessionID).Hidden();
+            columns.Bound(c => c.FacultyID).Hidden();
+            columns.Bound(c => c.ClassID).Hidden();
+            columns.Bound(c => c.RollNo).Title("Roll No").Width(30);
+            columns.Bound(c => c.StudentName).Title("Student").Width(120);
+            columns.Bound(c => c.Class).Title("Class").Width(50);
+            columns.Bound(c => c.Section).Title("Section").Width(50);
+            columns.Bound(c => c.Faculty).Title("Faculty").Width(50);
+            @*columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' id='selectStudent' />").Title("").Width(10);*@
+
+            columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' #= IsChecked ? checked='checked':'' # class='chkbx' />").Title("Check").Width(40);
+
+//columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' class='chkbx' uncheked/>").Title("").Width(10);
+            })
+
+
+            .ToolBar(toolbar =>
+            {
+            toolbar.Template(@<text>
+
+
+                <div class="right-inner-addon row" style="width:800px">
+
+                    <input type="search"
+                           class="form-control col-lg-4" style="margin-left:20px;  width:40%"
+                           placeholder="Search By Student" id="FieldFilterStudent" />
+                </div>
+
+                        </text>);
+                     })
+                     .Editable(editable => editable.Mode(GridEditMode.InCell))
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 50, 100, 150, 200, 250, 300, 400, 500 })
+              .PreviousNext(true))
+            .Navigatable()
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Id(p => p.SessionID);
+                                    model.Id(p => p.FacultyID);
+                                    model.Id(p => p.ClassID);
+                                    model.Field(p => p.RollNo).Editable(false);
+                                    model.Field(p => p.StudentName).Editable(false);
+                                    model.Field(p => p.Class).Editable(false);
+                                    model.Field(p => p.Section).Editable(false);
+                                    model.Field(p => p.Faculty).Editable(false);
+                                })
+                 .Read(read => read.Action("GetAllStudents", "FeeCollection").Data("ParamToStudentList"))// Action invoked when the user saves a new data item
+               
+                 .PageSize(5)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+            )
+        </div>
+
+    </div>
+</div>

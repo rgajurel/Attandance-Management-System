@@ -1,0 +1,41 @@
+﻿@model DomainEntities.SalaryList
+
+
+<div class="x_panel">
+    @if (Model.SalaryData.Count() > 0)
+    {
+        if (!Model.IsExport)
+        {
+         <a class="btn btn-danger"
+       href="@Url.Action("SalaryReportDownload", "SalaryReport")">Export to excel</a>
+        }
+    }
+    <table class="table table-bordered" border="1px solid black">
+        <thead>          
+            <tr><th>Year</th><th> @Model.Year</th></tr> 
+            <tr><th>Month</th><th> @Model.Month</th></tr>          
+            <tr>
+                <th>Name</th>
+                @foreach (var data in Model.SalaryHead)
+               {
+                    <th>@data.HeadName</th>
+                }
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model.SalaryData.GroupBy(x => x.EmployeeID))
+            {
+                <tr>
+                    <td>@data.ToList()[0].Name</td>
+                    @foreach (var dat in data)
+                    {
+                        <td>@dat.Amount</td>
+                    }
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+    </div>

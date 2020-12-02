@@ -1,0 +1,37 @@
+﻿@model DomainEntities.Report
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Client/DailyManualAttandance">Attandance</a></li>
+            <li><a href="/Client/AttandanceReport">Attandance Report</a></li>
+            
+        </ol>
+    </div>
+</div>
+@using (Html.BeginForm("GetAttandanceReport", "AttandanceReport", FormMethod.Post))
+{
+    <div class="col-lg-12">
+        <div class="panel panel-flat">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionListAll, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-2">
+
+                        @Html.DropDownListFor(model => model.Month, ViewBag.monthList as SelectList, new { @class = "form-control" })
+                    </div>
+
+                    <div class="col-md-2 maintain">
+                        <button class="btn btn-danger" id="takeleaveSearch">Search</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}

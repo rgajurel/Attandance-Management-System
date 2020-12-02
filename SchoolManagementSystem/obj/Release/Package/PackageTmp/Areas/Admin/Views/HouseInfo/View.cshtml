@@ -1,0 +1,70 @@
+﻿@model DomainEntities.HouseInfo
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/houseInfo.js"></script>
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+            <li>Organisation</li>
+            <li class="active">House Info</li>
+        </ul>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="form-group">
+            <div id="formSchoolType">
+                <!-- rht middle content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Add House</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-lg-12">
+                                        @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formHouseInfo", name = "formHouseInfo", onSubmit = "return false;" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    @Html.HiddenFor(model => model.ID)
+                                                    @Html.LabelFor(model => model.HouseName)<span style="color:red">*</span>
+                                                    @Html.TextBoxFor(model => model.HouseName, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.HouseName, String.Empty, new { @class = "text-danger" })
+                                                </div>
+
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12" style="margin-left:30px;">
+
+                                            <input class="btn btn-info" name="houseInfo" id="houseInfoSubmit" value="Save" type="submit">
+                                            <input class="btn" name="houseInfoCancel" id="houseInfoCancel" value="Cancel" type="reset">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="form-group">
+            <div id="schoolTypeList">@Html.Partial("~/Areas/Admin/Views/HouseInfo/HouseInfoList.cshtml")</div>
+        </div>
+    </div>
+</div>

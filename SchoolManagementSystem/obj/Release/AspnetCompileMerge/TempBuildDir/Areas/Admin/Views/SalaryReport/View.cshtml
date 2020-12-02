@@ -1,0 +1,40 @@
+﻿
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/SalaryReport.js"></script>
+<script src="~/Scripts/jQuery.print.js"></script>
+
+@model DomainEntities.Report
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", id = "formSalaryReport", name = "formSalaryReport", onSubmit = "return false;" }))
+{
+    <div class="x_panel">
+       
+
+        <div class="col-md-4">
+
+            @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Year, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-md-4">
+
+            @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Month, (SelectList)ViewBag.monthList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+        </div>
+
+      
+        <div class="col-md-4">
+            <button style="margin-top:26px" class="btn btn-danger" id="salaryReport">Search</button>            
+                </div>
+
+    </div>
+
+
+}
+
+    <div id="salaryResults">
+
+    </div>
+

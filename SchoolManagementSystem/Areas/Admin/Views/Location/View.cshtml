@@ -1,0 +1,76 @@
+﻿
+@model DomainEntities.Location
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/Location.js"></script>
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+            <li>Institution</li>
+            <li class="active">Location</li>
+        </ul>
+
+    </div>
+</div>
+    <div class="col-lg-12">
+        <div class="form-group">
+            <div id="formSchoolType">
+                <!-- rht middle content -->
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Add Location</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-lg-12">
+                                        @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formLocation", name = "formLocation", onSubmit = "return false;" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="panel-body">
+                                                <div class="form-group">
+                                                    @Html.HiddenFor(model => model.ID)
+                                                    @Html.LabelFor(model => model.LocationName)<span style="color:red">*</span>
+                                                    @Html.TextBoxFor(model => model.LocationName, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.LocationName, String.Empty, new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="form-group">
+                                                  
+                                                    @Html.LabelFor(model => model.Fee)<span style="color:red">*</span>
+                                                    @Html.TextBoxFor(model => model.Fee, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.Fee, String.Empty, new { @class = "text-danger" })
+                                                </div>
+                                                <div class="form-group pull-left">
+
+                                                    <input class="btn btn-info" name="locationSubmit" id="locationSubmit" value="Save" type="submit">
+                                                    <input class="btn" name="locationCancel" id="locationCancel" value="Cancel" type="reset">
+
+
+                                                </div>
+
+                                            </div>
+                                            
+                                        }
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+      
+            <div id="schoolTypeList">@Html.Partial("~/Areas/Admin/Views/Location/LocationList.cshtml")</div>
+        
+

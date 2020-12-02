@@ -1,0 +1,110 @@
+﻿
+
+
+<div class="row" style="margin-top:10px">
+    <div class="col-lg-12">
+        <div class="pageHeaderBox11">
+
+
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.MarksEntry>()
+    .Name("MarksEntryEditGrid")
+            .Columns(columns =>
+            {
+               // columns.Bound(p => p.IsAdmin).ClientTemplate("<input type='checkbox' name='chkbx' class='chkbx' ></input>").Title("Check").Width(100);
+                // columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' #= IsAdmin ? checked='checked':'' # class='chkbx' />").Title("Check");
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.ClassID).Hidden();
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SubjectID).Hidden();
+                columns.Bound(c => c.TermID).Hidden();
+                columns.Bound(c => c.SessionID).Hidden();
+                columns.Bound(c => c.Section).Hidden();
+                columns.Bound(c => c.StudentName).Title("Student Name").Width(150);
+                columns.Bound(c => c.FullMarksTheory).Title("Full(T)").Width(20);
+                columns.Bound(c => c.PassMarksTheory).Title("Pass(T)").Width(20);
+                columns.Bound(c => c.CreditPoint).Title("Credit").Width(20);
+                columns.Bound(c => c.FullMarksPractical).Title("Full(P)").Width(20);
+                columns.Bound(c => c.PassMarksPractical).Title("Pass(P)").Width(20);
+                columns.Bound(c => c.ObtainedMarksTheory).Title("Obtained(T)").Width(20);
+                columns.Bound(c => c.ObtainedMarksPractical).Title("Obtained(P)").Width(20);
+                columns.Bound(c => c.ObtainedGradeTheory).Title("Grade(T)").Width(20);
+                columns.Bound(c => c.ObtaindedGradePractical).Title("Grade(P)").Width(20);
+                columns.Bound(c => c.FinalGrade).Title("Final Grade").Width(20);
+                columns.Bound(c => c.GradePoint).Title("Grade Point").Width(20);
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+
+            })
+
+
+            @*.ToolBar(toolbar =>
+                             {
+                             toolbar.Template(@<text>
+
+
+                <div class="right-inner-addon" style="width:200px">
+
+                    <input type="search"
+                           class="form-control"
+                           placeholder="Search By Name" id="FieldFilter" />
+
+                </div>
+                            </text>);
+                             })*@
+ //.Scrollable())
+
+ .Editable(editable => editable.Mode(GridEditMode.InCell))
+                    //.Filterable()
+                    //.Sortable(sortable => sortable
+                    // .AllowUnsort(true)
+                    // .SortMode(GridSortMode.MultipleColumn))
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.SN);
+                                    model.Field(p => p.StudentName).Editable(false);
+                                    model.Field(p => p.FullMarksTheory).Editable(false);
+                                    model.Field(p => p.FullMarksPractical).Editable(false);
+                                    model.Field(p => p.PassMarksTheory).Editable(false);
+                                    model.Field(p => p.PassMarksPractical).Editable(false);
+                                    model.Field(p => p.CreditPoint).Editable(false);
+                                    model.Field(p => p.ObtainedMarksTheory).Editable(false).DefaultValue(0);
+                                    model.Field(p => p.ObtainedMarksPractical).Editable(false).DefaultValue(0);
+                                    model.Field(p => p.ObtainedGradeTheory).Editable(false);
+                                    model.Field(p => p.ObtaindedGradePractical).Editable(false);
+                                    model.Field(p => p.FinalGrade).Editable(false);
+                                    model.Field(p => p.GradePoint).Editable(false);
+                                })
+                  .Read(read => read.Action("GetAll", "MarksEntryEdit").Data("ParamToMarksEditList"))// Action invoked when the user saves a new data item
+                  .PageSize(100)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+//.Events(ev => ev.Save("Save"))
+
+)
+
+
+
+
+
+
+
+

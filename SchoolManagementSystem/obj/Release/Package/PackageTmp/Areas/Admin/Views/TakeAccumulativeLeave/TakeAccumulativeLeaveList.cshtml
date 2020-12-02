@@ -1,0 +1,97 @@
+﻿
+@model DomainEntities.TakeLeave
+<div class="x_panel">
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.OrganisationIDSearch, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.LeaveTypeIDsearch, Enumerable.Empty<SelectListItem>(), "--LeaveType--", new { @class = "form-control" })
+    </div>
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.EmployerIDSearch, Enumerable.Empty<SelectListItem>(), "--Employer--", new { @class = "form-control", required = "required" })
+    </div>
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.YearSearch, (SelectList)ViewBag.sessionList, "--Year--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.MonthSearch, ViewBag.monthList as SelectList, "--Month--", new { @class = "form-control" })
+    </div>
+
+
+
+    <div class="col-sm-2">
+
+        <button class="btn btn-danger" style="margin-top:3px" id="takeleaveSearch">Search</button>
+    </div>
+
+
+</div>
+
+
+
+
+                @using Kendo.Mvc.UI
+                @(Html.Kendo().Grid<DomainEntities.TakeLeave>()
+    .Name("TakeAccumulativeLeaveListGrid")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.EmployeeID).Hidden();
+                columns.Bound(c => c.OrganisationID).Hidden();
+                columns.Bound(c => c.DateFrom).Hidden();
+                columns.Bound(c => c.DateTo).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                columns.Bound(c => c.Organisation).Title("Organisation").Width(150);
+                columns.Bound(c => c.LeaveTypeName).Title("Leave Type").Width(100);
+                columns.Bound(c => c.EmployeeName).Title("Name").Width(100);
+                columns.Bound(c => c.Days).Title("Days").Width(10);
+                columns.Bound(c => c.Statuss).Title("Status").Width(100);
+                columns.Bound(c => c.ApprovedBy).Title("By").Width(100);
+               // columns.Bound(c => c.AddedOn).Title("AddedOn").Width(50).Format("{0:MM-dd-yyyy}");
+
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+                   
+
+                }).Width(70).Title("Action");
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "TakeAccumulativeLeave").Data("ParamToTakeLeaveList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+                .Events(ev => ev.DataBound("resetRowNumberTakeLeave"))
+
+                )
+       

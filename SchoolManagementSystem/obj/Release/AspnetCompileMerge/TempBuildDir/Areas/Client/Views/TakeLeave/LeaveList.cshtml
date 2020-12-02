@@ -1,0 +1,116 @@
+﻿
+@model DomainEntities.ClientTakeLeave
+<div class="x_panel">
+
+    <div class="col-md-2">
+        @Html.DropDownListFor(model => model.LeaveTypeIDsearch, Enumerable.Empty<SelectListItem>(), "--LeaveType--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-md-2">
+
+        @Html.DropDownListFor(model => model.YearSearch, (SelectList)ViewBag.sessionListAll, "--Year--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-md-2">
+
+        @Html.DropDownListFor(model => model.MonthSearch, ViewBag.monthList as SelectList, "--Month--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-md-2">
+        @Html.DropDownListFor(model => model.StatusSearch,
+new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Approved", Value = "0" },
+                   new SelectListItem { Text = "Rejected", Value = "1"},
+                 new SelectListItem { Text = "Pending", Value = "2" },
+
+}, "Value", "Text"), "--Status--", new { @class = "form-control" })
+
+
+    </div>
+
+    <div class="col-md-2">
+
+        <button class="btn btn-danger maintain" id="takeleaveSearch">Search</button>
+    </div>
+
+
+</div>
+       
+           
+            <div class="row">
+                <div class="col-md-12">
+                 
+
+                        @using Kendo.Mvc.UI
+                        @(Html.Kendo().Grid<DomainEntities.ClientTakeLeave>()
+    .Name("TakeLeaveListGridClient")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.EmployeeID).Hidden();
+                columns.Bound(c => c.OrganisationID).Hidden();
+                columns.Bound(c => c.DateFrom).Hidden();
+                columns.Bound(c => c.DateTo).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                columns.Bound(c => c.EmployeeName).Title("Name").Width(100);
+                columns.Bound(c => c.LeaveTypeName).Title("Leave Type").Width(100);             
+                columns.Bound(c => c.Days).Title("Days").Width(10);
+                                               if((bool)Session["CheckNepaliDate"] == false)
+                                               {
+                                               columns.Bound(c => c.DateFrom).Title("Date From").Width(100).Format("{0:yyyy-MM-dd}");
+                                               columns.Bound(c => c.DateTo).Title("Date To").Width(100).Format("{0:yyyy-MM-dd}");  }
+                                               else
+                                               {
+                                               columns.Bound(c => c.NepaliDateFrom).Title("Date From").Width(100).Format("{0:yyyy-MM-dd}");
+                                               columns.Bound(c => c.NepaliDateTo).Title("Date To").Width(100).Format("{0:yyyy-MM-dd}");
+                                               }
+
+                                               columns.Bound(c => c.Days).Title("Days").Width(10);
+                                               columns.Bound(o => o.Statuss).Width(20).Title("Status")
+                                               .ClientTemplate("#= LineItems_Databound(Statuss) #"); 
+              
+                columns.Bound(c => c.ApprovedBy).Title("Approved By").Width(100);
+                //columns.Bound(c => c.AddedOn).Title("AddedOn").Width(50).Format("{0:MM-dd-yyyy}");
+
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                // { columns.Command(command =>
+
+                //command.Custom("Edit").Text(" ").Click("Edit");
+                //command.Custom("Delete").Text(" ").Click("Delete");
+                //command.Custom("Details").Text(" ").Click("Details");
+                //command.Custom("Approve").Text(" ").Click("Approve");
+
+                //  }).Width(70).Title("Action");
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                   .Read(read => read.Action("GetAll", "TakeLeave").Data("ParamToTakeLeaveList"))// Action invoked when the user saves a new data item
+                  .PageSize(20)
+             )
+                .Events(ev => ev.DataBound("resetRowNumberTakeLeave"))
+
+                        )
+                    </div>
+
+                </div>
+           

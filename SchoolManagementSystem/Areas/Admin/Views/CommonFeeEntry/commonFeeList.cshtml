@@ -1,0 +1,72 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            @using Kendo.Mvc.UI
+            @(Html.Kendo().Grid<DomainEntities.CommonFee>()
+    .Name("commonFeeGrid")
+
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.Session).Title("Session").Width(75);
+                columns.Bound(c => c.Faculty).Title("Faculty").Width(75);
+                columns.Bound(c => c.Class).Title("Class").Width(75);
+                columns.Bound(c => c.Section).Title("Section").Width(50);
+                columns.Bound(c => c.Type).Title("Fee Type").Width(75);
+                columns.Bound(c => c.Month).Title("Month").Width(75);
+                columns.Bound(c => c.Fee).Title("Fee").Width(75);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+                     .ToolBar(toolbar =>
+                     {
+                         toolbar.Template(@<text>
+
+
+                <div class="right-inner-addon row" style="width:800px">
+                    
+                        <input type="search"
+                               class="form-control col-lg-4" style="margin-left:20px;  width:40%"
+                               placeholder="Search By Class" id="FieldFilterClass" />
+                        <input type="search"
+                               class="form-control form-inline col-lg-4" style="margin-left:20px; width:40%"
+                               placeholder="Search By Fee Type" id="FieldFilterType" />
+                    
+                </div>
+
+                        </text>);
+                     })
+                     
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Field(p => p.Type).Editable(false);
+
+                                })
+                 .Read(read => read.Action("GetAll", "CommonFeeEntry"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+            )
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/Content/JS/BackEnd/SalaryCalculation.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/DashBoard">Payroll Management</a></li>
+            <li><a href="/Admin/SalaryCalculation">Calculate Salary</a></li>
+        </ol>
+    </div>
+</div>
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/SalaryCalculation/SalaryCalculationList.cshtml")
+    </div>
+</div>
+
+@Html.Partial("~/Areas/Admin/Views/SalaryCalculation/SalaryList.cshtml")
+
+<style>
+    #modelcontent{
+        border-radius:0 !important;       
+    }
+</style>

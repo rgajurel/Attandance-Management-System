@@ -1,0 +1,89 @@
+﻿
+@model DomainEntities.LeaveEntry
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/LeaveEntry.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">HR/Payroll</a></li>
+            <li><a href="/Admin/OrganisationType">Leave Entry</a></li>
+           
+        </ol>
+    </div>
+</div>
+
+
+
+                           @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formLeaveEntry", name = "formLeaveEntry", onSubmit = "return false;" }))
+                           {
+                                @Html.AntiForgeryToken()
+                            <div class="x_panel">
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.LeaveTypeID)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.LeaveTypeID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.LeaveTypeID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.YearID)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.YearID, (SelectList)ViewBag.sessionList, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.YearID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="pulldown">
+                                        <button class="btn btn-danger" name="Save" id="Search" type="button">Search</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                           }
+                      
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "LeaveEntryDays", name = "LeaveEntryDays", onSubmit = "return false;" }))
+{
+<div class="x_panel">
+    <div class="col-sm-2">
+
+        @Html.LabelFor(model => model.TotalDayInMonth)<span style="color:red">*</span>
+        @Html.TextBoxFor(model => model.TotalDayInMonth, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.TotalDayInMonth, String.Empty, new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-2">
+        
+        @Html.LabelFor(model => model.TotalDays)<span style="color:red">*</span>
+        @Html.TextBoxFor(model => model.TotalDays, new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.TotalDays, String.Empty, new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-8">
+        <div class="pulldown">
+            <button class="btn btn-danger" id="addTotalDays">Add</button>            
+        </div>
+
+    </div>
+
+</div>
+                }
+
+
+
+
+    
+        @Html.Partial("~/Areas/Admin/Views/LeaveEntry/LeaveEntryList.cshtml")
+   
+
+
+
+
+
+<div class="row col-lg-6" style="margin-top:5px">
+    <input class="btn btn-danger" name="leaveEntryAdd" id="leaveEntryAdd" value="Save" type="submit">
+    <input class="btn" name="leaveEntryCancel" id="leaveEntryCancel" value="Cancel" type="reset">
+</div>
+<script>
+        var checkedIds = {};
+</script>

@@ -1,0 +1,75 @@
+﻿
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.ManagePublicHoliday>()
+    .Name("ManagePublicHolidaysListGrid")
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+               
+
+
+                columns.Bound(c => c.EmployeeID).Hidden();
+                columns.Bound(c => c.Year).Hidden();
+                columns.Bound(c => c.Month).Hidden();
+                //columns.Bound(c => c.Organisation).Title("Organisation").Width(150);
+                columns.Bound(c => c.Employee).Title("Employee").Width(150);
+                columns.Bound(c => c.Years).Title("Year").Width(70);
+                columns.Bound(c => c.Months).Title("Month").Width(50);
+                if((bool)Session["CheckNepaliDate"] == false)
+                {
+                columns.Bound(c => c.DateFrom).Title("Date From").Format("{0:yyyy-MM-dd}").Width(50);
+                columns.Bound(c => c.DateTo).Title("Date To").Width(30).Format("{0:yyyy-MM-dd}");
+                }
+             else
+               {
+                columns.Bound(c => c.NepaliDateFrom).Title("Date From").Format("{0:yyyy-MM-dd}").Width(50);
+                columns.Bound(c => c.NepaliDateTo).Title("Date To").Width(30).Format("{0:yyyy-MM-dd}");
+           }
+                columns.Bound(c => c.IsAttend).ClientTemplate("<input type='checkbox' name='chkbx' class='chkbx' ></input>").Title("<input type='checkbox' class='chkSelectAll' onclick='checkAll(this)'>All</>").Width(20);
+
+
+            })
+
+
+
+                    //.Editable(editable => editable.Mode(GridEditMode.InCell))
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] {10,20,30,50,100,200 })
+              .PreviousNext(true))
+                    //   .PersistSelection(true)
+                    // .Reorderable(reorder => reorder.Columns(true))
+
+                    //.Navigatable()
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.SN);
+                                    model.Field(p => p.SN).Editable(false);
+                                    model.Field(p => p.Description).Editable(true);
+
+                                })
+                  .Read(read => read.Action("GetAll", "ManagePublicHolidayAndSaturday").Data("ParamToManageHolidayList"))// Action invoked when the user saves a new data item
+                    .Events(e => e.Error("onError"))
+                  .PageSize(10)
+
+             )
+.Events(ev => ev.DataBound("resetRowNumberManagePublicHolidayLeave"))
+
+
+
+
+)
+
+
+
+
+
+
+
+

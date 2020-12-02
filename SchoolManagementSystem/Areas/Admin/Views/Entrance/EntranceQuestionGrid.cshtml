@@ -1,0 +1,40 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.EntranceQuestionEntity>()
+            .Name("EntranceQuestionGrid")
+            .AutoBind(false)
+            .Columns(columns =>
+            {
+                columns.Template(x => { }).ClientTemplate("<input type='checkbox' name='checkbox' class='multiSelect'/></text>").Title("<input type='checkbox' class='chkSelectAll' onclick='checkAll(this)'>").Width(40);
+                columns.Bound(c => c.QuestionID).Hidden();
+                columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Hidden();
+                columns.Bound(c => c.EntranceQuestion).Title("Question").Width(200);
+                columns.Bound(c => c.DifficultyLevel).Title("Difficulty").Width(100);
+                columns.Template(t => { }).Title("Mandatory").ClientTemplate("#= FormatMandatory(IsMandatory) #").Width(100);
+            })
+             .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                        .PreviousNext(true))
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .ServerOperation(true)
+    .Model(model =>
+    {
+        model.Id(p => p.QuestionID);
+        model.Field(p => p.RowNum);
+        model.Field(p => p.EntranceQuestion);
+        model.Id(p => p.WeightageID);
+        model.Field(p => p.QuestionWeight);
+        model.Field(p => p.AddedOn);
+        model.Id(p => p.UpdatedOn);
+        model.Field(p => p.DifficultyLevel);
+        model.Id(p => p.DifficultyLevelID);
+        model.Field(p => p.StatusName);
+        model.Field(p => p.IsMandatory);
+    })
+   .Read(read => read.Action("GetAllEntranceQuestion", "Entrance").Data("ParamToLoadEntranceQuestionList"))
+      .PageSize((int)ViewBag.ItemPerPage)
+   ).Events(ev => ev.DataBound("onDatabound"))
+)
+

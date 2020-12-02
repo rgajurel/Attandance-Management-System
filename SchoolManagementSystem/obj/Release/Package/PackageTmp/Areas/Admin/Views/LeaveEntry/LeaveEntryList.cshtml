@@ -1,0 +1,55 @@
+﻿
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.LeaveEntry>()
+    .Name("LeaveEntryList")
+            .Columns(columns =>
+            {       
+
+            columns.Bound(c => c.ID).Hidden();
+            columns.Bound(c => c.EmployeeID).Hidden();
+            columns.Bound(c => c.SN).Width(20);
+            columns.Bound(c => c.Name).Title("Employee Name").Width(70);;         
+            columns.Bound(c => c.LeaveTypeName).Width(150);
+            columns.Bound(c => c.TotalDayInMonth).Title("Total Days in Month").Width(150);
+            columns.Bound(c => c.TotalDays).Title("Total Days in Year").Width(50);            
+            columns.Template(@<text></text>).ClientTemplate("<input type='checkbox' #= IsMonthRule ? checked='checked':'' # class='chkbx' />").Title("<input type='checkbox' class='chkSelectAll' onclick='checkAll(this)'>Apply Month Rule</>").Width(40);
+            })
+                   .Editable(editable => editable.Mode(GridEditMode.InCell))
+
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100,150,200 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+             .Navigatable()
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.SN);
+                                    model.Field(p => p.TotalDays).Editable(true);
+                                    model.Field(p => p.Name).Editable(false);
+                                    model.Field(p => p.OrganisationName).Editable(false);
+                                    model.Field(p => p.LeaveTypeName).Editable(false);
+
+
+                                })
+                   .Read(read => read.Action("GetAll", "LeaveEntry").Data("ParamToLeaveEntryList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumberLeaveEntry"))
+.Events(ev => ev.Save("Save"))
+
+)
+
+
+
+
+
+
+
+

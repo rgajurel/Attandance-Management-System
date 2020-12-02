@@ -1,0 +1,678 @@
+﻿@model DomainEntities.QuizEntity
+@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pageHeaderBox11">
+                <h1 class="page-header">Quiz Report</h1>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row" id="divSearchContainer">
+        <div class="form-group">
+            <div class="col-md-2">
+                <label>Search</label>
+                <input class="form-control" placeholder="Enter Quiz Title" id="txtSearchQuizTitle" />
+            </div>
+            <div class="col-md-2">
+                <label>All Status</label>
+                @Html.DropDownList("ddlSearchStatus", new SelectList(new List<SelectListItem> {
+                 new SelectListItem { Text = "Active", Value = "1" },
+                 new SelectListItem { Text = "InActive", Value = "0" }
+}, "Value", "Text"), " All Status", new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                <label>Started From</label>
+                @(Html.Kendo().DatePicker().Name("txtSearchQuizStartedFrom").Format(ViewBag.settingDateFormat).HtmlAttributes(new { @class = "datepicker datepicker-readonly", @type = "text", @placeholder = "Started Date From" }))
+            </div>
+            <div class="col-md-2">
+                <label>Started To</label>
+                @(Html.Kendo().DatePicker().Name("txtSearchQuizStartedTo").Format(ViewBag.settingDateFormat).HtmlAttributes(new { @class = "datepicker datepicker-readonly", @type = "text", @placeholder = "Started Date To" }))
+            </div>
+            <div class="col-md-2">
+                <label>User Group</label>
+                @Html.DropDownList("ddlUserGroup", (SelectList)ViewBag.userGroupList, new { @multiple = "true", @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                <label>Ended From</label>
+                @(Html.Kendo().DatePicker().Name("txtSearchQuizEndFrom").Format(ViewBag.settingDateFormat).HtmlAttributes(new { @class = "datepicker datepicker-readonly", @type = "text", @placeholder = "Ended Date From" }))
+            </div>
+            <div class="col-md-2">
+                <label>Ended To</label>
+                @(Html.Kendo().DatePicker().Name("txtSearchQuizEndTo").Format(ViewBag.settingDateFormat).HtmlAttributes(new { @class = "datepicker datepicker-readonly", @type = "text", @placeholder = "Ended Date To" }))
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-default btnCustom" id="btnSearch">Search</button>
+                <button type="submit" class="btn btn-default btnCancle ResetInputField" id="btnReset">Reset</button>
+            </div>
+            @*<div class="col-md-2"></div>
+            <div class="col-md-2"></div>*@
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+
+    <div class="row" style="display:none" id="divDetailsContainer">
+        @*<div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Detail
+                        <button type="reset" class="btn btn-default btn-xs btnCustom pull-right" id="btnBackToGrid">Back</button>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="row panel-body">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Quiz Title</label>
+                                <p class="form-control-static" id="QuiztitleDesc"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <p class="form-control-static" id="QuizStartDate"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <p class="form-control-static" id="QuizEndDate"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Question</label>
+                                <p class="form-control-static" id="QuizTotalQuestion"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Quiz Appearing Points</label>
+                                <p class="form-control-static" id="QuizAppearingPoints"></p>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-group">
+                                <label>Start Page Description</label>
+                                <p class="form-control-static" id="StartPageDescription"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>End Page Description</label>
+                                <p class="form-control-static" id="EndPageDescription"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Status</label>
+                                <p class="form-control-static" id="QuizStatus"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>User Group</label>
+                                <p class="form-control-static" id="QuizUserGroup"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>Show Correct Answer</label>
+                                <p class="form-control-static" id="QuizShowCorrectAnswer"></p>
+                            </div>
+
+
+
+                        </div>
+                        <div class="clearfix ptb-sm" id="divDynamicQuestionContainer" style="display:none">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divTotalMandatoryQuestion">
+                                        <label>Mandatory Question</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divTotalOptionalQuestion">
+                                        <label>Optional Question</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divQuestionCategory">
+                                        <label>Quiz Category</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divQuestionDifficulty">
+                                        <label>Quiz Difficulty</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+
+                            <div class="quitzInfo clearfix">
+                                <div class="col-lg-6 col-md-6 col-sm-12 centered">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> <span>Total Users:</span></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"><label id="NoofUser"></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> <span>Correct Answer Percentage</span></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"><label id="AvgCorrectAnswer"></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> <span>InCorrect Answer Percentage</span></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"><label id="AvgIncorrectAnswer"></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6"> <span>Avergage Time For Quiz(Sec)</span></div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6"><label id="AvgQuizTimeSpent"></label></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.panel -->
+            </div>*@
+
+        <div class="col-lg-12">
+            <div class="">
+                <div class="report-details">
+                    <div class="detail-info">
+                        <div class="col-lg-6">
+                            <h4><strong>     Detail</strong></h4>
+                        </div>
+                        <div class="col-lg-6">
+                            <button type="submit" class="btn btn-default btn-xs mtb-sm btnCancle pull-right" id="btnBackToGrid">Close</button>
+                        </div>
+                    </div>
+                    <div class="detail-contain">
+                        <div class="clearfix col-lg-12">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Quiz Title</label>
+                                    <p class="form-control-static" id="QuiztitleDesc"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Start Date</label>
+                                    <p class="form-control-static" id="QuizStartDate"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>End Date</label>
+                                    <p class="form-control-static" id="QuizEndDate"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Quiz Appearing Points</label>
+                                    <p class="form-control-static" id="QuizAppearingPoints"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <p class="form-control-static" id="QuizStatus"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Show Correct Answer</label>
+                                    <p class="form-control-static" id="QuizShowCorrectAnswer"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix ptb-sm" id="divDynamicQuestionContainer" style="display:none">
+                            <div class="col-lg-12">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divTotalMandatoryQuestion">
+                                        <label>Mandatory Question</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divTotalOptionalQuestion">
+                                        <label>Optional Question</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divQuestionCategory">
+                                        <label>Quiz Category</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="form-group" id="divQuestionDifficulty">
+                                        <label>Quiz Difficulty</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="report-group">
+                    <ul>
+                        <li>
+                            <div class="form-group">
+                                <label>User Group</label>
+                                <p class="form-control-static" id="QuizUserGroup"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group">
+                                <label>Start Page Description</label>
+                                <p class="form-control-static" id="StartPageDescription"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="form-group">
+                                <label>End Page Description</label>
+                                <p class="form-control-static" id="EndPageDescription"></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="flex-container divWrapper">
+
+                        <div class="flex-dashboard displayBox">
+                            <div class="panel panelWidget">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span class="widgetIcon">
+                                                <i class="fa fa-user fa-fw"></i>
+                                            </span>
+
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge" id="NoofUser">50</div>
+
+                                        </div>
+                                        <div class="col-xs-12 text-left clearfix pt-sm">Total Users</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="flex-dashboard displayBox">
+                            <div class="panel panelWidget">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span class="widgetIcon">
+                                                <i class="fa fa-file-o fa-fw"></i>
+                                            </span>
+
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge" id="AvgCorrectAnswer">8.33%</div>
+
+                                        </div>
+                                        <div class="col-xs-12 text-left clearfix pt-sm">Correct Answer</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="flex-dashboard displayBox">
+                            <div class="panel panelWidget">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span class="widgetIcon">
+                                                <i class="fa fa-book fa-fw"></i>
+                                            </span>
+
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge" id="AvgIncorrectAnswer">8.33%</div>
+
+
+                                        </div>
+                                        <div class="col-xs-12 text-left clearfix pt-sm">InCorrect Answer</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex-dashboard displayBox">
+                            <div class="panel panelWidget">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <span class="widgetIcon">
+                                                <i class="fa fa-lightbulb-o fa-fw"></i>
+                                            </span>
+
+                                        </div>
+                                        <div class="col-xs-9 text-right">
+                                            <div class="huge" id="AvgQuizTimeSpent"></div>
+
+                                        </div>
+                                        <div class="col-xs-12 text-left clearfix pt-sm">Avergage Time </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-12 ManualGridParentContainer">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Quiz Question
+                </div>
+                <div id="ManualGrid">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    User Report
+                    <div class="btnCOntainer pull-right">
+                        <a class="btn btnCustom btn-xs" href="#" role="button" id="btn_ExportPDFUserQuizInfo"><i class="fa fa-download" aria-hidden="true"></i> Extract to PDF</a>
+                        <a class="btn btn-default btnLining btn-xs" href="#" role="button" id="btn_ExportExcelUserQuizInfo"><i class="fa fa-download" aria-hidden="true"></i> Extract to Excel</a>
+                    </div>
+                </div>
+                <div id="UserQuizInfo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="display:none" id="divUserDetailsContainer">
+        <div class="row" id="DetailContainer">
+            <div class="col-lg-12">
+                <div class="content-wrapper">
+                    <div class="report-details">
+                        <div class="detail-info">
+                            <div class="col-lg-6">
+                                <h4><strong>User Details</strong></h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-default btn-xs mtb-sm btnCancle pull-right" id="btnBackToGrid">Close</button>
+                            </div>
+                            <!-- <button type="submit" class="btn btn-default btn-xs btnCancle" id="close">Close</button> -->
+                        </div>
+                        <div class="detail-contain">
+                            <div class="clearfix">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Quiz Title</label>
+                                        <p class="form-control-static" id="DescQuizTitle"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>User</label>
+                                        <p class="form-control-static" id="DescUserFullName"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Joined Date</label>
+                                        <p class="form-control-static" id="DescJoinedDate"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Completion Date</label>
+                                        <p class="form-control-static" id="DescCompletionDate"></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <p class="form-control-static" id="DescQuizStatus"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-group">
+                        <div class="flex-container divWrapper">
+
+                            <div class="flex-dashboard displayBox">
+                                <div class="panel panelWidget">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <span class="widgetIcon">
+                                                    <i class="fa fa-user fa-fw"></i>
+                                                </span>
+
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge" id="DescTotalQuestion">50</div>
+
+                                            </div>
+                                            <div class="col-xs-12 text-left clearfix pt-sm">Total Question</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="flex-dashboard displayBox">
+                                <div class="panel panelWidget">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <span class="widgetIcon">
+                                                    <i class="fa fa-file-o fa-fw"></i>
+                                                </span>
+
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge" id="DescCompletedTime">8.33%</div>
+
+                                            </div>
+                                            <div class="col-xs-12 text-left clearfix pt-sm">Completion Time </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="flex-dashboard displayBox">
+                                <div class="panel panelWidget">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <span class="widgetIcon">
+                                                    <i class="fa fa-book fa-fw"></i>
+                                                </span>
+
+                                            </div>
+                                            <div class="col-xs-9 text-right">
+                                                <div class="huge" id="DescCorrectAnswer">8.33%</div>
+
+
+                                            </div>
+                                            <div class="col-xs-12 text-left clearfix pt-sm"> Correct Answer </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="MarkSheetContainer">
+            <div class="col-lg-12">
+                <div class="content-wrapper">
+                    <div class="report-details">
+                        <div class="detail-info">
+                            <div class="col-lg-6">
+                                <h4><strong>Mark Sheet</strong></h4>
+                            </div>
+                        </div>
+                        <div class="detail-contain">
+                            <div class="clearfix">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>User Name</label>
+                                        <p class="form-control-static" id="MarkSheetUserName">Shreeti Tuladhar</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Score</label>
+                                        <p class="form-control-static" id="MarkSheetQuizCurrentScore">Shreeti Tuladhar</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Joinned Date</label>
+                                        <p class="form-control-static" id="MarkSheetJoinedDate">Shreeti Tuladhar</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Completion Date</label>
+                                        <p class="form-control-static" id="MarkSheetCompletedDate">Shreeti Tuladhar</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>Completion Time</label>
+                                        <p class="form-control-static" id="MarkSheetCompletionTime">Shreeti Tuladhar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="report-group">
+                        <div class="table-responsive table-bordered askQuestion">
+                            <div class="col-lg-12">
+                                <table class="table bordertable" border="1">
+                                    <h4>Questions<a href="#" id="btnExportPDF" class="btn btn-default btnCustom pull-right mb-xsm"><strong>Download In PDF</strong></a></h4>
+                                    <tbody id="tblUserQuizQuestion"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col-lg-6 -->
+        </div>
+    </div>
+    <div class="row" id="divQuizGrid">
+        <div class="col-lg-12">
+            <div class="table-responsive-scroll">@Html.Partial("~/Areas/Admin/Views/QuizReport/QuizListing.cshtml")</div>
+        </div>
+    </div>
+}
+
+@*@section JS
+    {*@
+<script src="~/Content/JS/backend/QuizReport.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Content/vendor/multiselectdropdown/js/jquery.sumoselect.js" type="text/javascript"></script>
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css" rel="stylesheet" type="text/css" />
+@*<link href="~/Content/dist/css/custom.css" rel="stylesheet" />*@
+<script src="@Url.Content("~/Content/vendor/ckeditor/ckeditor.js")"></script>
+<script src="@Url.Content("~/Content/vendor/ckeditor/adapters/jquery.js")"></script>
+<script src="~/Content/lib/kendo/jszip.min.js"></script>
+<script src="~/Content/lib/kendo/kendo.all.min.js"></script>
+
+<script>
+    var CustomDateFormat = '@ViewBag.settingDateFormat';
+    var CustomRecordPerPage = '@ViewBag.ItemPerPage';
+</script>
+@*}*@
+
+
+<style>
+    .content-wrapper {
+        margin: 10px 0 20px 0;
+        box-shadow: 0 1px 13px rgba(0,0,0,0.3);
+    }
+
+    .report-details {
+        background-color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        background: #f0f0f0;
+    }
+
+    .detail-contain p {
+        color: #c9064c;
+    }
+
+    .detail-contain label {
+        color: #696464;
+    }
+
+    .report-group {
+        background: #fff;
+        padding: 20px;
+    }
+    /*.report-group div {
+        padding: 0px;
+    }*/
+    tr.score-point {
+        background: #ddefd7;
+    }
+
+    .success {
+        background: #f1fff1;
+        border: 1px solid green;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    form h4 span.success {
+        padding: 3px;
+        float: right;
+        font-size: 12px;
+    }
+
+    .error-msg {
+        background: #f5d4d4;
+        border: 1px solid red;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+        .error-msg label i {
+            color: red;
+        }
+
+        .error-msg p {
+            margin: 0px;
+        }
+</style>

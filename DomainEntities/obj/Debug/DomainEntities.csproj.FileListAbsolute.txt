@@ -1,0 +1,226 @@
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementSystem\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\Ultimate Way\Ultifinal\CollegeAndSchoolManagement\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\CTS Project\NGOPayroll\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\CTS Project\SchoolManagementWithNewMarksheet\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Ultimate Way\CollegeAndSchoolManagement\SchoolManagementWithNewMarksheetGentella\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Http.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\Newtonsoft.Json.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Http.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojResolveAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll.config
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\Newtonsoft.Json.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Http.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.xml
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojAssemblyReference.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csproj.CoreCompileInputs.cache
+E:\Global IT Solutions\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll.config
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\DomainEntities.pdb
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\FoolproofValidation.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\Newtonsoft.Json.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Helpers.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Http.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Mvc.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Web.WebPages.Razor.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\bin\Debug\System.Net.Http.Formatting.xml
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csprojAssemblyReference.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csproj.CoreCompileInputs.cache
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.csproj.CopyComplete
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.dll
+E:\VolgaAI\Attandance Management System\SchoolManagementSystem\SchoolManagementSystem\DomainEntities\obj\Debug\DomainEntities.pdb

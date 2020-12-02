@@ -1,0 +1,75 @@
+﻿
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.ClassType>()
+    .Name("ClassTypeGrid")
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Tit le("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.Type).Title("Name").Width(150);
+
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+                     .ToolBar(toolbar =>
+                     {
+                     toolbar.Template(@<text>
+
+
+        <div class="right-inner-addon" style="width:200px">
+
+            <input type="search"
+                   class="form-control"
+                   placeholder="Search By Name" id="FieldFilter" />
+
+        </div>
+                    </text>);
+                     })
+
+
+                    //.Filterable()
+                    //.Sortable(sortable => sortable
+                    // .AllowUnsort(true)
+                    // .SortMode(GridSortMode.MultipleColumn))
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Field(p => p.Type).Editable(false);
+
+                                })
+                  .Read(read => read.Action("GetAll", "ClassType"))// Action invoked when the user saves a new data item
+                  .PageSize(5)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+)
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+﻿
+
+@model DomainEntities.Attandance
+<div class="x_panel">
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.OrganisationIDSearch, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control" })
+    </div>
+
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.EmployerIDSearch, Enumerable.Empty<SelectListItem>(), "--Employer--", new { @class = "form-control", required = "required" })
+    </div>
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.YearSearch, (SelectList)ViewBag.sessionListAll, "--Year--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.DropDownListFor(model => model.MonthSearch, ViewBag.monthList as SelectList, "--Month--", new { @class = "form-control" })
+    </div>
+
+    <div class="col-sm-2">
+       
+        @(Html.Kendo().DateTimePickerFor(m => m.DateSearch)
+        .Name("DateSearch")
+         //.Value(DateTime.Now)
+         .Format("MM-dd-yyyy")
+                                          .HtmlAttributes(new { @class = "form-control" })
+        )
+    </div>
+
+
+    <div class="col-sm-2">
+
+        <button class="btn btn-danger maintain" id="takeleaveSearch">Search</button>
+    </div>
+
+
+</div>
+
+<div>
+   
+                @using Kendo.Mvc.UI
+                @(Html.Kendo().Grid<DomainEntities.Attandance>()
+    .Name("ManualAttandanceListGrid")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.EmployeeID).Hidden();
+                columns.Bound(c => c.DateTo).Hidden();
+                columns.Bound(c => c.DateFrom).Hidden();
+                columns.Bound(c => c.OrganisationID).Hidden();                
+                columns.Bound(c => c.EmployeeName).Title("Name").Width(110);
+               
+                columns.Bound(c => c.EntryTime).Title("En-Time").Width(50);
+                columns.Bound(c => c.ExitTime).Title("Ex-Time").Width(50);
+                                       columns.Bound(o => o.Statuss).Width(20).Title("Status")
+                                       .ClientTemplate("#= LineItems_Databound(Statuss) #");
+
+                if((bool)Session["CheckNepaliDate"] == false)
+                {
+                columns.Bound(c => c.DateFrom).Width(50).Title("From").Format("{0:yyyy-MM-dd}");
+                columns.Bound(c => c.DateTo).Width(50).Title("To").Format("{0:yyyy-MM-dd}");
+                }
+                else
+                {
+                columns.Bound(c => c.NepaliDateFrom).Width(50).Title("From").Format("{0:yyyy-MM-dd}");
+                columns.Bound(c => c.NepaliDateTo).Width(50).Title("To").Format("{0:yyyy-MM-dd}");
+                }
+                columns.Bound(c => c.Days).Title("Days").Width(10);
+
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(20).Title("Action");
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10,20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "ManualAttandance").Data("ParamToManualAttandanceList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+                .Events(ev => ev.DataBound("resetRowNumberManualAttandance"))
+
+                )
+            </div>

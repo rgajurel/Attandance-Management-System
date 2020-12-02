@@ -1,0 +1,99 @@
+﻿
+@model DomainEntities.StudentAssignmentsDetails
+<div class="row" style="margin-bottom:10px">
+    
+    <div class="col-sm-2">
+
+        @Html.LabelFor(model => model.SearchClassID)<span style="color:red">*</span>
+        @Html.DropDownListFor(model => model.SearchClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.SearchClassID, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-3">
+
+        @Html.LabelFor(model => model.SearchFacultyID)<span style="color:red">*</span>
+        @Html.DropDownListFor(model => model.SearchFacultyID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+        @Html.ValidationMessageFor(model => model.SearchFacultyID, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-2">
+
+        @Html.LabelFor(model => model.SectionSearch)<span style="color:red">*</span>
+        @Html.DropDownListFor(model => model.SectionSearch, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SectionSearch, String.Empty, new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+
+        @Html.LabelFor(model => model.SearchSubjectID)<span style="color:red">*</span>
+        @Html.DropDownListFor(model => model.SearchSubjectID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SearchSubjectID, String.Empty, new { @class = "text-danger" })
+    </div>
+
+    <div class="col-sm-2" style="margin-top:23px">      
+      <button type="button" class="btn btn-primary" id ="Search">Search</button>
+       
+    </div>
+
+
+</div>
+
+
+
+
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.StudentAssignmentsDetails>()
+    .Name("StudentsAssignmentsGrid")
+            .Columns(columns =>
+            {
+
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.Class).Title("Class").Width(100);
+                columns.Bound(c => c.Faculty).Title("Faculty").Width(100);
+                columns.Bound(c => c.Section).Title("Section").Width(20);
+                columns.Bound(c => c.Subject).Title("Subject").Width(100);
+                columns.Bound(c => c.file).Title("File").Width(100);
+                columns.Bound(c => c.AddedOn).Title("AddedOn").Width(100).Format("{0:MM-dd-yyyy}");
+                columns.Bound(c => c.Deadline).Title("Deadline").Width(100).Format("{0:MM-dd-yyyy}");
+                columns.Bound(c => c.AddedBy).Title("AddeBy").Width(100);
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+                    command.Custom("Download").Text(" ").Click("Download");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+                                })
+                 .Read(read => read.Action("GetAll", "StudentsAssignments").Data("ParamToStudentsAssignmentsList"))// Action invoked when the user saves a new data item
+                  .PageSize(5)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+)
+
+
+
+
+
+
+
+

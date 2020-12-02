@@ -1,0 +1,76 @@
+﻿
+@model DomainEntities.MarksEntry
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/Client Scripts/mvcfoolproof.unobtrusive.min.js"></script>
+
+<script src="~/Scripts/ExportToExcelLedger.js"></script>
+<script src="~/Content/JS/BackEnd/MarksSheetLedger.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Exam</a></li>
+            <li><a href="/Admin/OrganisationType">Marks Sheet Ledger</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" id="exportExport" type="submit">Export</button></li>
+        </ol>
+    </div>
+</div>
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formMarksSheetLedger", name = "formMarksSheetLedger", onSubmit = "return false;" }))
+{
+    <div class="x_panel">
+        <div class="row">
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.SessionID)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.SessionID, (SelectList)ViewBag.sessionList, "--Select-", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.SessionID, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.ClassID)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.ClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.ClassID, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.FacultyID)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.FacultyID, Enumerable.Empty<SelectListItem>(), "-Select--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.FacultyID, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.Section)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.Section, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Section, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-2">
+                @Html.LabelFor(model => model.TermID)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.TermID, (SelectList)ViewBag.termList, "--Select--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.TermID, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-2">
+                <div class="pulldown">
+                    <button class="btn btn-danger" id="loadGrid">Load Grid</button>
+                </div>
+            </div>
+            </div>                    
+        </div>
+
+       
+        }
+
+        <div class="row" id="leftSubjectForMarksEntry" style="margin-top:10px">
+
+
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+
+            <table class="MarksSheetLedger table table-bordered table-striped" id="divMarksSheetLedger" style="width:100%"></table>
+        </div>
+

@@ -1,0 +1,1194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0343A58B-9B96-4AB0-98FA-A26D0B8C4E8B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SchoolManagementSystem</RootNamespace>
+    <AssemblyName>SchoolManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CaptchaMvc">
+      <HintPath>..\..\..\SchoolWebAnand\WebSchool\school management\SchoolManagementSystem\SchoolManagementSystem\bin\CaptchaMvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.90.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.90.0\lib\net452\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\..\..\..\..\Braindigit projects\NcellLms\Source\TechtonneMS\bin\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\..\..\..\..\Braindigit projects\NcellLms\Source\TechtonneMS\bin\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.0.0.9, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.Signed.1.1.0\lib\net40\FastMember.Signed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\..\..\..\Braindigit projects\NcellLms\Source\TechtonneMS\kendo dll\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Braindigit projects\NcellLms\Source\TechtonneMS\bin\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.ChildKernel, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.ChildKernel.3.3.0\lib\net45\Ninject.Extensions.ChildKernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NotFoundMvc, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NotFoundMvc.1.5.0\lib\net40\NotFoundMvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\..\..\..\..\Braindigit projects\NcellLms\Source\TechtonneMS\bin\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc5, Version=1.2.3.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Mvc5.1.2.3\lib\net45\Unity.Mvc5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Unity.WebApi">
+      <HintPath>..\..\..\..\Braindigit projects\TraceSell\TraceSell\Web\SalesExecutive.Web\SalesExecutive.Web\bin\Unity.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="WebApiContrib.IoC.Ninject, Version=0.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebApiContrib.IoC.Ninject.0.9.3.0\lib\net40\WebApiContrib.IoC.Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\MobileAuthorize.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccumulativeLeaveController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AllowanceTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BusInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ClassController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ClassMasterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ClassTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CommonFeeDiscountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CommonFeeEntryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DailyAttandanceReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DeviceAttandanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployeeDailyAttandanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashBoardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DesignaitonController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DropDownController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EmployerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntranceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntranceQuestionCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntranceQuestionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntranceQuestionReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EntranceUserReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FacultyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FeeCollectionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FeeDailyCollectionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FeeTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GradeMasterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HostelInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HouseInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\JobTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LanguageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LanguageParameterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LeaveDaysController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LeaveEntryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LeaveTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LocationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManageCalendarController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagePublicHolidayAndSaturdayController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManualAttandanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarksEntryCaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarksEntryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarksEntryEditController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarkSheetPrintController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MarksSheetLedgerController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MonthlySummaryReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MonthsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NotificationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OfficialLeaveController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganisationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganisationEventsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PersonalFeeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuizController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuizQuestionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuizQuestionReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuizReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuizUserReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalaryCalculationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalaryHeadAmountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalaryHeadingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalaryHeadingSettingsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganisationInformationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\OrganisationTypeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalaryReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SalarySlipController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SavingsReportController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SectionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SessionInfoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsAssignmentsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsAttandanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsDailyAttandanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentsSubjectController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SubjectsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SubSubjectController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TakeAccumulativeLeaveController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TakeAdvanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TakeLeaveController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TaxMasterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TermMasterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TermMasterDynamicController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TravellingAllowanceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserGroupController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserRoleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\YearlyHolidayEntryController.cs" />
+    <Compile Include="Areas\Client\ClientAreaRegistration.cs" />
+    <Compile Include="Areas\Client\Controllers\AttandanceReportController.cs" />
+    <Compile Include="Areas\Client\Controllers\ChangePassword1Controller.cs" />
+    <Compile Include="Areas\Client\Controllers\DailyManualAttandanceController.cs" />
+    <Compile Include="Areas\Client\Controllers\DashBoardController.cs" />
+    <Compile Include="Areas\Client\Controllers\EntranceClientController.cs" />
+    <Compile Include="Areas\Client\Controllers\EntranceDetailController.cs" />
+    <Compile Include="Areas\Client\Controllers\FeeDetailsController.cs" />
+    <Compile Include="Areas\Client\Controllers\ForgotPasswordController.cs" />
+    <Compile Include="Areas\Client\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Client\Controllers\MyQuizController.cs" />
+    <Compile Include="Areas\Client\Controllers\ParentsController.cs" />
+    <Compile Include="Areas\Client\Controllers\QuizClientController.cs" />
+    <Compile Include="Areas\Client\Controllers\QuizDetailController.cs" />
+    <Compile Include="Areas\Client\Controllers\ResultController.cs" />
+    <Compile Include="Areas\Client\Controllers\StudentProfileController.cs" />
+    <Compile Include="Areas\Client\Controllers\TakeLeaveController.cs" />
+    <Compile Include="Areas\Client\Controllers\TravellRequestController.cs" />
+    <Compile Include="Controllers\API\AccountController.cs" />
+    <Compile Include="Controllers\API\ListController.cs" />
+    <Compile Include="Controllers\API\MobileController.cs" />
+    <Compile Include="Controllers\ChangePasswordController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="CustomExceptionHandler.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Crypto.cs" />
+    <Compile Include="Helper\DateConversion.cs" />
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\GeoCodingHelper.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NotificationMessage.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\CaptchaMvc.dll" />
+    <Content Include="bin\ClosedXML.dll" />
+    <Content Include="bin\ClosedXML.pdb" />
+    <Content Include="bin\ClosedXML.xml" />
+    <Content Include="bin\Common.Logging.Core.dll" />
+    <Content Include="bin\Common.Logging.dll" />
+    <Content Include="bin\Dapper.dll" />
+    <Content Include="bin\Dapper.xml" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.xml" />
+    <Content Include="bin\DomainEntities.dll" />
+    <Content Include="bin\DomainEntities.pdb" />
+    <Content Include="bin\DomainInterface.dll" />
+    <Content Include="bin\DomainInterface.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\FastMember.dll" />
+    <Content Include="bin\FastMember.Signed.dll" />
+    <Content Include="bin\FoolproofValidation.dll" />
+    <Content Include="bin\Infrastructure.dll" />
+    <Content Include="bin\Infrastructure.pdb" />
+    <Content Include="bin\Kendo.Mvc.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.Client.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.Client.xml" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.SignalR.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.pdb" />
+    <Content Include="bin\Microsoft.Practices.ServiceLocation.xml" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.Configuration.xml" />
+    <Content Include="bin\Microsoft.Practices.Unity.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+    <Content Include="bin\Microsoft.Practices.Unity.RegistrationByConvention.xml" />
+    <Content Include="bin\Microsoft.Practices.Unity.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Ninject.dll" />
+    <Content Include="bin\Ninject.Extensions.ChildKernel.dll" />
+    <Content Include="bin\Ninject.Extensions.ChildKernel.xml" />
+    <Content Include="bin\Ninject.xml" />
+    <Content Include="bin\NotFoundMvc.dll" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\Quartz.dll" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\SchoolManagementSystem.dll" />
+    <Content Include="bin\SchoolManagementSystem.pdb" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.Owin.dll" />
+    <Content Include="bin\System.Web.Http.Owin.xml" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\Unity.Mvc5.dll" />
+    <Content Include="bin\Unity.WebApi.dll" />
+    <Content Include="bin\WebApiContrib.IoC.Ninject.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\CSS\admin.css" />
+    <Content Include="Content\CSS\AdminCommon.css" />
+    <Content Include="Content\CSS\bootstrap-progressbar-3.3.4.css" />
+    <Content Include="Content\CSS\bootstrap-theme.css" />
+    <Content Include="Content\CSS\bootstrap-theme.min.css" />
+    <Content Include="Content\CSS\bootstrap.css" />
+    <Content Include="Content\CSS\bootstrap.min.css" />
+    <Content Include="Content\CSS\colors.css" />
+    <Content Include="Content\CSS\components.css" />
+    <Content Include="Content\CSS\core.css" />
+    <Content Include="Content\CSS\css.css" />
+    <Content Include="Content\CSS\custom.css" />
+    <Content Include="Content\CSS\custom.min.css" />
+    <Content Include="Content\CSS\customClient.css" />
+    <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\CSS\glyph.css" />
+    <Content Include="Content\CSS\green.css" />
+    <Content Include="Content\CSS\grid.css" />
+    <Content Include="Content\CSS\images\loaderload .gif" />
+    <Content Include="Content\CSS\images\login.png" />
+    <Content Include="Content\CSS\images\loginimage.png" />
+    <Content Include="Content\CSS\images\ndp_bg_wave.png" />
+    <Content Include="Content\CSS\images\ndp_buttons.png" />
+    <Content Include="Content\CSS\images\ndp_date_bg.png" />
+    <Content Include="Content\CSS\images\Preloader_3.gif" />
+    <Content Include="Content\CSS\jquery-ui.css" />
+    <Content Include="Content\CSS\jquery.timepicker.css" />
+    <Content Include="Content\CSS\jquery.timepicker.min.css" />
+    <Content Include="Content\CSS\jqvmap.min.css" />
+    <Content Include="Content\CSS\nepali.datepicker.v2.1.min.css" />
+    <Content Include="Content\CSS\nprogress.css" />
+    <Content Include="Content\CSS\Site.css" />
+    <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\CSS\style123.css" />
+    <Content Include="Content\CSS\styles.css" />
+    <Content Include="Content\CSS\styles_002.css" />
+    <Content Include="Content\CSS\toastr.min.css" />
+    <Content Include="Content\Images\School\013A772B-A3D0-4E53-B91B-4EAC5B6876F6.jpg" />
+    <Content Include="Content\Images\School\1001.jpg" />
+    <Content Include="Content\Images\School\123.jpg" />
+    <Content Include="Content\Images\School\2.jpg" />
+    <Content Include="Content\Images\School\20180831_191743.jpg" />
+    <Content Include="Content\Images\School\35289472_1694703097311405_8469437179976744960_n.jpg" />
+    <Content Include="Content\Images\School\att.png" />
+    <Content Include="Content\Images\School\attandance.jpg" />
+    <Content Include="Content\Images\School\attandance.png" />
+    <Content Include="Content\Images\School\attt.png" />
+    <Content Include="Content\Images\School\hat.jpg" />
+    <Content Include="Content\Images\School\hat.svg" />
+    <Content Include="Content\Images\School\IMG_0006.jpg" />
+    <Content Include="Content\Images\School\Mv2.png" />
+    <Content Include="Content\Images\School\noimage.png" />
+    <Content Include="Content\Images\School\School.png" />
+    <Content Include="Content\Images\Students\1002.jpg.jpg" />
+    <Content Include="Content\Images\Students\11057368_10206243683999302_7287246275195631584_n.jpg.jpg" />
+    <Content Include="Content\Images\Students\12359921_986764611397282_7257285258954196629_n.jpg.jpg" />
+    <Content Include="Content\Images\Students\14938386_1841014692783698_8735381224782748727_n.jpg.jpg" />
+    <Content Include="Content\Images\Students\23758375_1452670524845806_1480431821_n %283%29.jpg.jpg" />
+    <Content Include="Content\Images\Students\25285970_1504459359669114_1879118377_o.jpg.jpg" />
+    <Content Include="Content\Images\Students\Screenshot %281%29.png.png" />
+    <Content Include="Content\Images\Students\Students.png" />
+    <Content Include="Content\Images\Teachers\1.jpg" />
+    <Content Include="Content\Images\Teachers\1.jpg.jpg" />
+    <Content Include="Content\Images\Teachers\2.jpg" />
+    <Content Include="Content\Images\Teachers\27393733_1543083615798950_1009486457_o.jpg" />
+    <Content Include="Content\Images\Teachers\30856276_426573627800453_5863698577536057344_n.jpg" />
+    <Content Include="Content\Images\Teachers\attandance.png" />
+    <Content Include="Content\Images\Teachers\Picture-of-person.png" />
+    <Content Include="Content\Images\Teachers\School.jpg" />
+    <Content Include="Content\Images\Teachers\Screenshot %281%29.png" />
+    <Content Include="Content\JS\BackEnd\AccumulativeLeave.js" />
+    <Content Include="Content\JS\BackEnd\BusInfo.js" />
+    <Content Include="Content\JS\BackEnd\Class.js" />
+    <Content Include="Content\JS\BackEnd\ClassMaster.js" />
+    <Content Include="Content\JS\BackEnd\ClassType.js" />
+    <Content Include="Content\JS\BackEnd\CommonFee.js" />
+    <Content Include="Content\JS\BackEnd\CommonFeeDiscount.js" />
+    <Content Include="Content\JS\BackEnd\DashBoard.js" />
+    <Content Include="Content\JS\BackEnd\Department.js" />
+    <Content Include="Content\JS\BackEnd\Designation.js" />
+    <Content Include="Content\JS\BackEnd\DeviceAttandance.js" />
+    <Content Include="Content\JS\BackEnd\Employee.js" />
+    <Content Include="Content\JS\BackEnd\EmployeeDailyAttandance.js" />
+    <Content Include="Content\JS\BackEnd\EntranceAdmin.js" />
+    <Content Include="Content\JS\BackEnd\EntranceQuestion.js" />
+    <Content Include="Content\JS\BackEnd\EntranceQuestionCategory.js" />
+    <Content Include="Content\JS\BackEnd\EntranceUserReport.js" />
+    <Content Include="Content\JS\BackEnd\Faculty.js" />
+    <Content Include="Content\JS\BackEnd\FeeCollection.js" />
+    <Content Include="Content\JS\BackEnd\FeeDailyCollection.js" />
+    <Content Include="Content\JS\BackEnd\FeeType.js" />
+    <Content Include="Content\JS\BackEnd\GradeMaster.js" />
+    <Content Include="Content\JS\BackEnd\HostelInfo.js" />
+    <Content Include="Content\JS\BackEnd\houseInfo.js" />
+    <Content Include="Content\JS\BackEnd\JobType.js" />
+    <Content Include="Content\JS\BackEnd\Language.js" />
+    <Content Include="Content\JS\BackEnd\LanguageParameter.js" />
+    <Content Include="Content\JS\BackEnd\LeaveDays.js" />
+    <Content Include="Content\JS\BackEnd\LeaveEntry.js" />
+    <Content Include="Content\JS\BackEnd\LeaveType.js" />
+    <Content Include="Content\JS\BackEnd\Location.js" />
+    <Content Include="Content\JS\BackEnd\ManageCalendar.js" />
+    <Content Include="Content\JS\BackEnd\ManagePublicHoliday.js" />
+    <Content Include="Content\JS\BackEnd\ManualAttandance.js" />
+    <Content Include="Content\JS\BackEnd\MarksEntry.js" />
+    <Content Include="Content\JS\BackEnd\MarksEntryCase.js" />
+    <Content Include="Content\JS\BackEnd\MarksEntryEdit.js" />
+    <Content Include="Content\JS\BackEnd\MarksSheetLedger.js" />
+    <Content Include="Content\JS\BackEnd\MarksSheetPrint.js" />
+    <Content Include="Content\JS\BackEnd\MonthlySummaryReport.js" />
+    <Content Include="Content\JS\BackEnd\Months.js" />
+    <Content Include="Content\JS\BackEnd\Notification.js" />
+    <Content Include="Content\JS\BackEnd\OfficialLeave.js" />
+    <Content Include="Content\JS\BackEnd\OrganisationEvents.js" />
+    <Content Include="Content\JS\BackEnd\PersonalFee.js" />
+    <Content Include="Content\JS\BackEnd\QuizAdmin.js" />
+    <Content Include="Content\JS\BackEnd\QuizCategory.js" />
+    <Content Include="Content\JS\BackEnd\QuizCategoryReport.js" />
+    <Content Include="Content\JS\BackEnd\QuizQuestion.js" />
+    <Content Include="Content\JS\BackEnd\QuizQuestionCategory.js" />
+    <Content Include="Content\JS\BackEnd\QuizQuestionReport.js" />
+    <Content Include="Content\JS\BackEnd\QuizReport.js" />
+    <Content Include="Content\JS\BackEnd\QuizUserReport.js" />
+    <Content Include="Content\JS\BackEnd\SalaryCalculation.js" />
+    <Content Include="Content\JS\BackEnd\SalaryHeadAmount.js" />
+    <Content Include="Content\JS\BackEnd\SalaryHeadings.js" />
+    <Content Include="Content\JS\BackEnd\SalaryHeadingSettings.js" />
+    <Content Include="Content\JS\BackEnd\SalaryReport.js" />
+    <Content Include="Content\JS\BackEnd\SalarySlip.js" />
+    <Content Include="Content\JS\BackEnd\SavingsReport.js" />
+    <Content Include="Content\JS\BackEnd\SchoolInformation.js" />
+    <Content Include="Content\JS\BackEnd\SchoolType.js" />
+    <Content Include="Content\JS\BackEnd\Section.js" />
+    <Content Include="Content\JS\BackEnd\SessionInfo.js" />
+    <Content Include="Content\JS\BackEnd\Students.js" />
+    <Content Include="Content\JS\BackEnd\StudentsAssignments.js" />
+    <Content Include="Content\JS\BackEnd\StudentsAttandance.js" />
+    <Content Include="Content\JS\BackEnd\StudentsCategory.js" />
+    <Content Include="Content\JS\BackEnd\StudentsDailyAttdance.js" />
+    <Content Include="Content\JS\BackEnd\Subjects.js" />
+    <Content Include="Content\JS\BackEnd\SubSubject.js" />
+    <Content Include="Content\JS\BackEnd\TakeAccumulativeLeave.js" />
+    <Content Include="Content\JS\BackEnd\TakeAdvance.js" />
+    <Content Include="Content\JS\BackEnd\TakeLeave.js" />
+    <Content Include="Content\JS\BackEnd\TaxMaster.js" />
+    <Content Include="Content\JS\BackEnd\TermMaster.js" />
+    <Content Include="Content\JS\BackEnd\TermMastertable.js" />
+    <Content Include="Content\JS\BackEnd\TravellingAllowance.js" />
+    <Content Include="Content\JS\BackEnd\UserGroup.js" />
+    <Content Include="Content\JS\BackEnd\UserRole.js" />
+    <Content Include="Content\JS\BackEnd\Users.js" />
+    <Content Include="Content\JS\BackEnd\YearlyHolidaysEntry.js" />
+    <Content Include="Content\JS\Common.js" />
+    <Content Include="Content\JS\FrontEnd\DashBoard.js" />
+    <Content Include="Content\JS\FrontEnd\DailyManualAttandance.js" />
+    <Content Include="Content\JS\FrontEnd\EntranceClient.js" />
+    <Content Include="Content\JS\FrontEnd\EntranceDetail.js" />
+    <Content Include="Content\JS\FrontEnd\MyQuiz.js" />
+    <Content Include="Content\JS\FrontEnd\QuizClient.js" />
+    <Content Include="Content\JS\FrontEnd\QuizDetail.js" />
+    <Content Include="Content\JS\FrontEnd\sideBarClick.js" />
+    <Content Include="Content\JS\FrontEnd\TakeLeaveClient.js" />
+    <Content Include="Content\JS\FrontEnd\TravellRequestClient.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\StudentsAssignments\1.jpg" />
+    <Content Include="Content\StudentsAssignments\1001.jpg" />
+    <Content Include="Content\StudentsAssignments\1002.jpg" />
+    <Content Include="Content\StudentsAssignments\1013.jpg" />
+    <Content Include="Content\StudentsAssignments\2.jpg" />
+    <Content Include="Content\vendor\css\font-awesome.css" />
+    <Content Include="Content\vendor\css\font-awesome.min.css" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\vendor\kendo\css\kendo.common.min.css" />
+    <Content Include="Content\vendor\kendo\css\kendo.silver.min.css" />
+    <Content Include="Content\vendor\kendo\css\Silver\loading-image.gif" />
+    <Content Include="Content\vendor\kendo\css\Silver\loading.gif" />
+    <Content Include="Content\vendor\kendo\css\Silver\sprite.png" />
+    <Content Include="Content\vendor\kendo\js\kendo.all.min.js" />
+    <Content Include="Content\vendor\multiselectdropdown\css\dropdownliststyle.css" />
+    <Content Include="Content\vendor\multiselectdropdown\img\bags.png" />
+    <Content Include="Content\vendor\multiselectdropdown\img\bg.png" />
+    <Content Include="Content\vendor\multiselectdropdown\img\octocat.png" />
+    <Content Include="Content\vendor\multiselectdropdown\img\spinner.gif" />
+    <Content Include="Content\vendor\multiselectdropdown\js\jquery.sumoselect.js" />
+    <Content Include="Content\vendor\multiselectdropdown\js\jquery.sumoselect.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\Admin\Views\OfficialLeave\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OfficialLeave\OfficialLeaveList.cshtml" />
+    <Content Include="Areas\Admin\Views\OfficialLeave\View.cshtml" />
+    <Content Include="Areas\Admin\Views\DeviceAttandance\DeviceAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\DeviceAttandance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DeviceAttandance\View.cshtml" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\SchoolManagementSystem.dll.config" />
+    <Content Include="Areas\Admin\Views\Language\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Language\LanguageList.cshtml" />
+    <Content Include="Areas\Admin\Views\Language\View.cshtml" />
+    <Content Include="Areas\Admin\Views\LanguageParameter\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LanguageParameter\LanguageParameterList.cshtml" />
+    <Content Include="Areas\Admin\Views\LanguageParameter\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalarySlip\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalarySlip\View.cshtml" />
+    <Content Include="Areas\Client\Views\AttandanceReport\AttandanceReport.cshtml" />
+    <Content Include="Areas\Client\Views\AttandanceReport\Index.cshtml" />
+    <Content Include="Areas\Client\Views\AttandanceReport\View.cshtml" />
+    <Content Include="Areas\Client\Views\ChangePassword\_ChangePassword.cshtml" />
+    <Content Include="Areas\Client\Views\DailyManualAttandance\DailyManualAttandanceList.cshtml" />
+    <Content Include="Areas\Client\Views\DailyManualAttandance\Index.cshtml" />
+    <Content Include="Areas\Client\Views\DailyManualAttandance\View.cshtml" />
+    <Content Include="Areas\Client\Views\DashBoard\Index.cshtml" />
+    <Content Include="Areas\Client\Views\EntranceClient\Index.cshtml" />
+    <Content Include="Areas\Client\Views\EntranceDetail\Index.cshtml" />
+    <Content Include="Areas\Client\Views\FeeDetails\Index.cshtml" />
+    <Content Include="Areas\Client\Views\ForgotPassword\_ForgotPassword.cshtml" />
+    <Content Include="Areas\Client\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Client\Views\Home\SideBar.cshtml" />
+    <Content Include="Areas\Client\Views\MyQuiz\Index.cshtml" />
+    <Content Include="Areas\Client\Views\Parents\Parents.cshtml" />
+    <Content Include="Areas\Client\Views\QuizClient\Index.cshtml" />
+    <Content Include="Areas\Client\Views\QuizDetail\Index.cshtml" />
+    <Content Include="Areas\Client\Views\Result\Index.cshtml" />
+    <Content Include="Areas\Client\Views\StudentProfile\Index.cshtml" />
+    <Content Include="Areas\Client\Views\TakeLeave\Index.cshtml" />
+    <Content Include="Areas\Client\Views\TakeLeave\LeaveList.cshtml" />
+    <Content Include="Areas\Client\Views\TakeLeave\View.cshtml" />
+    <Content Include="Areas\Client\Views\TravellRequest\Index.cshtml" />
+    <Content Include="Areas\Client\Views\TravellRequest\TravellRequestList.cshtml" />
+    <Content Include="Areas\Client\Views\TravellRequest\View.cshtml" />
+    <Content Include="Areas\Client\Views\web.config" />
+    <Content Include="Areas\Admin\Views\AccumulativeLeave\AccumulativeLeaveList.cshtml" />
+    <Content Include="Areas\Admin\Views\AccumulativeLeave\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AccumulativeLeave\View.cshtml" />
+    <Content Include="Areas\Admin\Views\AllowanceType\AllowanceTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\AllowanceType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AllowanceType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\BusInfo\BusInfoList.cshtml" />
+    <Content Include="Areas\Admin\Views\BusInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\BusInfo\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Class\ClassList.cshtml" />
+    <Content Include="Areas\Admin\Views\Class\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Class\View.cshtml" />
+    <Content Include="Areas\Admin\Views\DashBoard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DashBoard\View.cshtml" />
+    <Content Include="Areas\Admin\Views\EmployeeDailyAttandance\EmployeeDailyAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\EmployeeDailyAttandance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Employer\EmployerList.cshtml" />
+    <Content Include="Areas\Admin\Views\Employer\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Employer\View.cshtml" />
+    <Content Include="Areas\Admin\Views\JobType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\JobType\JobTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\JobType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveDays\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveDays\LeaveDaysList.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveDays\View.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveEntry\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveEntry\LeaveEntryList.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveEntry\View.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveType\LeaveTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\LeaveType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageCalendar\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageCalendar\ManageCalendarList.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageCalendar\View.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagePublicHolidayAndSaturday\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagePublicHolidayAndSaturday\ManagePubicHolidaysList.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagePublicHolidayAndSaturday\View.cshtml" />
+    <Content Include="Areas\Admin\Views\ManualAttandance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManualAttandance\ManualAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\ManualAttandance\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntry\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntry\MarksEntryList.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntry\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Menu\AdminMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Menu\ClientMenu.cshtml" />
+    <Content Include="Areas\Admin\Views\Months\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Months\MonthsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Months\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Notification\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Notification\NotificationsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Notification\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Organisation\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationEvents\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationEvents\OrganisationEventsList.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationEvents\View.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationInformation\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationInformation\SchoolInformationList.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationInformation\View.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationType\SchoolTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\OrganisationType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryCalculation\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryCalculation\SalaryCalculationList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryCalculation\SalaryList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryCalculation\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadAmount\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadAmount\SalaryHeadAmountList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadAmount\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadings\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadings\SalaryHeadingList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadings\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadingSettings\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadingSettings\SalaryHeadingSettingsList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryHeadingSettings\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryReport\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryReport\SalaryReportList.cshtml" />
+    <Content Include="Areas\Admin\Views\SalaryReport\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAccumulativeLeave\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAccumulativeLeave\TakeAccumulativeLeaveList.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAccumulativeLeave\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAdvance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAdvance\TakeAdvanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeAdvance\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeLeave\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeLeave\TakeLeaveList.cshtml" />
+    <Content Include="Areas\Admin\Views\TakeLeave\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TaxMaster\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TaxMaster\TaxMasterList.cshtml" />
+    <Content Include="Areas\Admin\Views\TaxMaster\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TravellingAllowance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserGroup\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserGroup\UserGroupList.cshtml" />
+    <Content Include="Areas\Admin\Views\UserGroup\View.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserRole\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\UsersList.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\View.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Content\CSS\bootstrap-theme.css.map" />
+    <Content Include="Content\CSS\bootstrap.css.map" />
+    <Content Include="Content\DownloadFile\StudentsUpload.xlsx" />
+    <Content Include="Content\StudentsAssignments\5th-sem.pdf" />
+    <Content Include="Content\StudentsAssignments\9-26-2017.xls" />
+    <Content Include="Content\StudentsAssignments\Chapter 1.docx" />
+    <Content Include="Content\StudentsAssignments\chapter4.xlsx" />
+    <Content Include="Content\StudentsAssignments\_Content_StudentsAssignments_5th-sem %285%29.pdf" />
+    <Content Include="Content\StudentsAssignments\_Content_StudentsAssignments_5th-sem.pdf" />
+    <Content Include="Content\vendor\css\font-awesome.css.map" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\vendor\fonts\FontAwesome.otf" />
+    <Content Include="Content\vendor\multiselectdropdown\less\bootstrap-multiselect.less" />
+    <Content Include="fonts\fontawesome-webfont - Copy.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <Content Include="NOT_A_VALID_FILESYSTEM_PATH" />
+    <Content Include="Areas\Client\Views\DashBoard\View.cshtml" />
+    <Content Include="Areas\Admin\Views\YearlyHolidayEntry\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\YearlyHolidayEntry\View.cshtml" />
+    <Content Include="Areas\Admin\Views\YearlyHolidayEntry\YearlyHolidayList.cshtml" />
+    <Content Include="Areas\Admin\Views\SavingsReport\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SavingsReport\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SavingsReport\SalarySavingsList.cshtml" />
+    <Content Include="Areas\Admin\Views\ClassType\ClassTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\ClassType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ClassType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeDiscount\commonFeeDiscount.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeDiscount\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeDiscount\View.cshtml" />
+    <Content Include="Areas\Admin\Views\DailyAttandanceReport\DailyAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\DailyAttandanceReport\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DailyAttandanceReport\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\DepartmentList.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Designaiton\DesignaitonList.cshtml" />
+    <Content Include="Areas\Admin\Views\Designaiton\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Designaiton\View.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeEntry\commonFeeList.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeEntry\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CommonFeeEntry\View.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceQuestionCategory\EntranceQuestionCategoryTree.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceQuestionCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceQuestion\EntranceQuestion.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceQuestion\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceUserReport\EntranceUserReportGrid.cshtml" />
+    <Content Include="Areas\Admin\Views\EntranceUserReport\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Entrance\EntranceListing.cshtml" />
+    <Content Include="Areas\Admin\Views\Entrance\EntranceQuestionGrid.cshtml" />
+    <Content Include="Areas\Admin\Views\Entrance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Faculty\FacultyList.cshtml" />
+    <Content Include="Areas\Admin\Views\Faculty\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Faculty\View.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeCollection\FeeTopicList.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeCollection\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeCollection\StudentsList.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeCollection\View.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeDailyCollection\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeDailyCollection\View.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeType\FeeTypeList.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeType\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\FeeType\View.cshtml" />
+    <Content Include="Areas\Admin\Views\GradeMaster\GradeMasterList.cshtml" />
+    <Content Include="Areas\Admin\Views\GradeMaster\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GradeMaster\View.cshtml" />
+    <Content Include="Areas\Admin\Views\HostelInfo\HostelInfoList.cshtml" />
+    <Content Include="Areas\Admin\Views\HostelInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\HostelInfo\View.cshtml" />
+    <Content Include="Areas\Admin\Views\HouseInfo\HouseInfoList.cshtml" />
+    <Content Include="Areas\Admin\Views\HouseInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\HouseInfo\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Location\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Location\LocationList.cshtml" />
+    <Content Include="Areas\Admin\Views\Location\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryCase\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryCase\MarksEntryList.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryCase\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryEdit\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryEdit\MarksEntryEditList.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksEntryEdit\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MarkSheetPrint\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MarkSheetPrint\MarkSheetPrintList.cshtml" />
+    <Content Include="Areas\Admin\Views\MarkSheetPrint\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksSheetLedger\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksSheetLedger\MarkSheetLedgerList.cshtml" />
+    <Content Include="Areas\Admin\Views\MarksSheetLedger\View.cshtml" />
+    <Content Include="Areas\Admin\Views\MonthlySummaryReport\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MonthlySummaryReport\MonthlySummaryReportList.cshtml" />
+    <Content Include="Areas\Admin\Views\MonthlySummaryReport\View.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonalFee\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonalFee\PersonalFee.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonalFee\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Section\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Section\SectionList.cshtml" />
+    <Content Include="Areas\Admin\Views\Section\View.cshtml" />
+    <Content Include="Areas\Admin\Views\SessionInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SessionInfo\SessionInfoList.cshtml" />
+    <Content Include="Areas\Admin\Views\SessionInfo\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsAssignments\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsAssignments\StudentsAssignmentsList.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsAttandance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsAttandance\StudentsAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsAttandance\View.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsCategory\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsCategory\StudentsCategoryList.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsCategory\View.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsDailyAttandance\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsDailyAttandance\StudentsDailyAttandanceList.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsDailyAttandance\View.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsSubject\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsSubject\StudentsSubjectList.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentsSubject\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Students\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Students\StudentsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Students\View.cshtml" />
+    <Content Include="Areas\Admin\Views\Subjects\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Subjects\SubjectsList.cshtml" />
+    <Content Include="Areas\Admin\Views\Subjects\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMaster\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMaster\TermMasterList.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMaster\View.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMasterDynamic\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMasterDynamic\TermMasterDynamicList.cshtml" />
+    <Content Include="Areas\Admin\Views\TermMasterDynamic\View.cshtml" />
+    <None Include="Properties\PublishProfiles\dreamland.pubxml" />
+    <None Include="Properties\PublishProfiles\payrollnwcsc.pubxml" />
+    <None Include="Properties\PublishProfiles\PayrollUAT.pubxml" />
+    <None Include="Properties\PublishProfiles\school.pubxml" />
+    <None Include="Properties\PublishProfiles\schoolfinal.pubxml" />
+    <None Include="Properties\PublishProfiles\schoolultimate.pubxml" />
+    <Content Include="Scripts\analytics.js" />
+    <Content Include="Scripts\anytime.js" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\AttandancentryError.js" />
+    <Content Include="Scripts\bar.js" />
+    <Content Include="Scripts\blockui.js" />
+    <Content Include="Scripts\bootstrap-progressbar.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap_multiselect.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart_002.js" />
+    <Content Include="Scripts\Chart_003.js" />
+    <Content Include="Scripts\Client Scripts\mvcfoolproof.unobtrusive.js" />
+    <Content Include="Scripts\Client Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Scripts\Client Scripts\MvcFoolproofJQueryValidation.js" />
+    <Content Include="Scripts\Client Scripts\MvcFoolproofJQueryValidation.min.js" />
+    <Content Include="Scripts\Client Scripts\MvcFoolproofValidation.js" />
+    <Content Include="Scripts\Client Scripts\MvcFoolproofValidation.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\custom.min.js" />
+    <Content Include="Scripts\datepaginator.js" />
+    <Content Include="Scripts\datepicker.js" />
+    <Content Include="Scripts\daterangepicker.js" />
+    <Content Include="Scripts\echarts.js" />
+    <Content Include="Scripts\effects.js" />
+    <Content Include="Scripts\excel-gen.js" />
+    <Content Include="Scripts\ExportToExcel.js" />
+    <Content Include="Scripts\ExportToExcelLedger.js" />
+    <Content Include="Scripts\FileSaver.js" />
+    <Content Include="Scripts\FileSaver.min.js" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="Scripts\jgrowl.js" />
+    <Content Include="Scripts\jqPaginator.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.canvasjs.min.js" />
+    <Content Include="Scripts\jquery.countdown.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.plugin.js" />
+    <Content Include="Scripts\jQuery.print.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Scripts\jquery.sumoselect.js" />
+    <Content Include="Scripts\jquery.sumoselect.min.js" />
+    <Content Include="Scripts\jquery.table2excel.js" />
+    <Content Include="Scripts\jquery.timepicker.js" />
+    <Content Include="Scripts\jquery.timepicker.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery_002.js" />
+    <Content Include="Scripts\jquery_003.js" />
+    <Content Include="Scripts\legacy.js" />
+    <Content Include="Scripts\limitless.js" />
+    <Content Include="Scripts\line.js" />
+    <Content Include="Scripts\MarksEntryCase.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\mvcfoolproof.unobtrusive.min.js" />
+    <Content Include="Scripts\nepali.datepicker.v2.1.min.js" />
+    <Content Include="Scripts\nprogress.js" />
+    <Content Include="Scripts\pace.js" />
+    <Content Include="Scripts\picker.js" />
+    <Content Include="Scripts\picker_002.js" />
+    <Content Include="Scripts\picker_003.js" />
+    <Content Include="Scripts\picker_date.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\printThis.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Routing.js" />
+    <Content Include="Scripts\sammy-0.7.6.min.js" />
+    <Content Include="Scripts\sammy.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\spin.min.js" />
+    <Content Include="Scripts\switchery.js" />
+    <Content Include="Scripts\tableexport.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\uniform.js" />
+    <Content Include="Scripts\user_pages_profile.js" />
+    <Content Include="Scripts\xlsx.core.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\ChangePassword\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\Index1.cshtml" />
+    <Content Include="Views\Shared\AdminLayout.cshtml" />
+    <Content Include="Views\Shared\AdminLayout1.cshtml" />
+    <Content Include="Views\Shared\BatchUploadStudents.cshtml" />
+    <Content Include="Views\Shared\ClientLayout.cshtml" />
+    <Content Include="Views\Shared\ClientLayout1.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\KendoDeleteWindow.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\LoginLayout.cshtml" />
+    <Content Include="Views\Shared\MenuView.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
+    <Content Include="Views\Shared\_ClientLayout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\ClassMaster\" />
+    <Folder Include="Areas\Admin\Views\DailyAttandance\" />
+    <Folder Include="Areas\Admin\Views\DropDown\" />
+    <Folder Include="Areas\Admin\Views\EntranceQuestionReport\" />
+    <Folder Include="Areas\Admin\Views\SubSubject\" />
+    <Folder Include="Areas\Client\Models\" />
+    <Folder Include="Areas\Client\Views\MailSend\" />
+    <Folder Include="Areas\Client\Views\Shared\" />
+    <Folder Include="Content\Images\Language\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainEntities\DomainEntities.csproj">
+      <Project>{121b8e42-440f-467e-9dab-8b9ad6dc0cc9}</Project>
+      <Name>DomainEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainInterface\DomainInterface.csproj">
+      <Project>{c76d038a-0a66-451f-ac35-a706d217b1b1}</Project>
+      <Name>DomainInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{3689fdb7-e3a5-4399-94b4-125296cc49e9}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="zkemkeeper">
+      <Guid>{FE9DED34-E159-408E-8490-B720A5E632C7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27498</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

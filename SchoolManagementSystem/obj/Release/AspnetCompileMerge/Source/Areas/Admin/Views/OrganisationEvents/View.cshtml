@@ -1,0 +1,153 @@
+﻿
+@using Kendo.Mvc.UI
+@model DomainEntities.OrganisationEvents
+<script src="~/Content/vendor/multiselectdropdown/js/jquery.sumoselect.js"
+        type="text/javascript"></script>
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css"
+      rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/OrganisationEvents.js"></script>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Events Management</a></li>
+            <li><a href="/Admin/OrganisationType">Organisation Events</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Organisation Events</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data",autocomplete="off", id = "formOrganisationEvent", name = "formOrganisationEvent", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            @Html.HiddenFor(model => model.ID)
+                                            @Html.LabelFor(model => model.EventName)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.EventName, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.EventName, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-md-3">
+
+                                            @Html.LabelFor(model => model.NotificationType)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.NotificationType, (SelectList)ViewBag.allNotificationTypes, new { @class = "form-control", required = "required" })
+                                            @Html.ValidationMessageFor(model => model.NotificationType, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.OrganisationID, (SelectList)ViewBag.allOrganisation, "--Organisation--", new { @class = "form-control", required = "required" })
+                                            @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.GroupID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.GroupID, Enumerable.Empty<SelectListItem>(), "--GroupID--", new { @class = "form-control", @multiple = "multiple" })
+                                            @Html.ValidationMessageFor(model => model.GroupID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                                                                                      
+                                                            <div class="col-md-3">
+                                                                @Html.LabelFor(model => model.DateFrom)
+                                                                @(Html.Kendo().DateTimePickerFor(m => m.DateFrom)
+       .Name("DateFrom")
+        .Value(DateTime.Now)
+        .Format("MM-dd-yyyy")
+                                         .HtmlAttributes(new { @class = "form-control" })
+                                                                )
+                                                                @Html.ValidationMessageFor(model => model.DateFrom, String.Empty, new { @class = "text-danger" })
+                                                            </div>
+                                                           
+                                                            <div class="col-md-3" id="expirydate">
+                                                                @Html.LabelFor(model => model.DateTo)
+                                                                @(Html.Kendo().DateTimePickerFor(m => m.DateTo)
+       .Name("DateTo")
+        .Value(DateTime.Now)
+        .Format("MM-dd-yyyy")
+                                         .HtmlAttributes(new { @class = "form-control" })
+                                                                )
+                                                                @Html.ValidationMessageFor(model => model.DateTo, String.Empty, new { @class = "text-danger" })
+
+                                                            </div>
+
+
+
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+
+                                                            <div class="col-md-12">
+                                                                @Html.LabelFor(model => model.EventDescription)
+                                                                @Html.TextAreaFor(model => model.EventDescription, new { @class = "form-control" })
+                                                                @Html.ValidationMessageFor(model => model.EventDescription, String.Empty, new { @class = "text-danger" })
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="row">
+
+                                                            <div class="col-md-4">
+                                                                <input class="btn btn-danger" name="organisationEventsSubmit" id="organisationEventsSubmit" value="Save" type="submit" />
+                                                                <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                            }
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+              
+<div class="row" id="show">
+    <div class="col-md-12">
+       @Html.Partial("~/Areas/Admin/Views/OrganisationEvents/OrganisationEventsList.cshtml")
+    </div>
+</div> 
+
+<style>
+    #EventDescription {
+        height: 100px;
+        overflow-y: scroll;
+    }
+
+    select[multiple], select[size] {
+        height: 30px;
+        /* padding: 7px; */
+    }
+
+    }
+</style>

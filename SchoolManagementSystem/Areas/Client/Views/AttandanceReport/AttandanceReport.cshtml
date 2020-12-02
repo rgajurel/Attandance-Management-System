@@ -1,0 +1,233 @@
+﻿
+@{
+    ViewBag.Title = "AttandanceReport";
+    Layout = "~/Views/Shared/ClientLayout.cshtml";
+}
+<button>Print</button>
+<table border="1" style="border-collapse:collapse" id="table" align="center">
+    <caption class="text-center" style="color:brown;font-size:19px">
+        @TempData["Organisation"]
+                <br />
+        @TempData["MonthYear"]
+    </caption>
+
+    <thead>  
+        <tr>
+            <td class="text-center" colspan="11"><b style="color:brown">Daily Attandance(Attandance Done With Login)</b></td>
+        </tr>      
+        <tr class="text-danger">
+            <th class="text-center">SN</th>   
+            <th class="text-center">Name</th>           
+            <th class="text-center"> EntryTime</th>
+            <th class="text-center">ExitTime</th>          
+            <th class="text-center">Date From</th>
+            <th class="text-center">Date To</th>
+            <th class="text-center">Days</th>          
+            <th class="text-center">Satus</th> 
+            <th class="text-center">Description</th> 
+            <th class="text-center">Added By</th> 
+             
+
+        </tr>
+    </thead>
+    
+    <tbody>
+    @{int i = 1;}
+    @if (ViewBag.dailyattandance != null)
+            {
+                foreach (var att in ViewBag.dailyattandance)
+                {
+            <tr>
+                <td class="text-center">
+                    @i
+                    @{i++;}
+                </td>
+                <td class="text-center">@att.EmployeeName</td>
+               
+                <td class="text-center">@att.EntryTime</td>
+                <td class="text-center">@att.ExitTime</td>
+                <td class="text-center">@att.DateFrom.ToString("MM/dd/yyyy")</td>
+                <td class="text-center">@att.DateTo.ToString("MM/dd/yyyy")</td>
+                <td class="text-center">@att.Days</td>
+                <td class="text-center">@att.Statuss</td>
+                <td class="text-center">@att.Description</td>
+                <td class="text-center">@att.AddedBy</td>
+
+            </tr>
+                            }
+
+                        }
+        
+       
+                              <tr>
+            <td class="text-center" colspan="11"><b style="color:brown">Manual Attandance(Attandance Done By Admin)</b></td>
+        </tr>
+        <tr>
+            @{int j = 1;}
+            @if (ViewBag.manualattandance != null)
+
+            {
+                foreach (var att in ViewBag.manualattandance)
+                {
+                
+                    <tr>
+
+                    <td class="text-center">
+                        @j
+                        @{j++;}
+                    </td>
+                    <td class="text-center">@att.EmployeeName</td>
+                   
+                    <td class="text-center">@att.EntryTime</td>
+                    <td class="text-center">@att.ExitTime</td>
+                        <td class="text-center">@att.DateFrom.ToString("MM/dd/yyyy")</td>
+                        <td class="text-center">@att.DateTo.ToString("MM/dd/yyyy")</td>
+                    <td class="text-center">@att.Days</td>
+                    <td class="text-center">@att.Statuss</td> 
+                        <td class="text-center">@att.Description</td>
+                        <td class="text-center">@att.AddedBy</td>  
+                </tr>
+
+                            }
+                                                          
+
+                            }
+
+        <tr>
+            <td class="text-center" colspan="11"><b style="color:brown">Official Work Attandance</b></td>
+        </tr>
+        @{int k = 1;}
+        @if (ViewBag.iskaalattandance != null)
+            {
+                foreach (var att in ViewBag.iskaalattandance)
+                {
+                <tr>
+                    <td class="text-center">
+                        @k
+                        @{k++;}
+                    </td>
+                    <td class="text-center">@att.EmployeeName</td>
+                   
+                    <td class="text-center">@att.EntryTime</td>
+                    <td class="text-center">@att.ExitTime</td>
+                    <td class="text-center">@att.DateFrom.ToString("MM/dd/yyyy")</td>
+                    <td class="text-center">@att.DateTo.ToString("MM/dd/yyyy")</td>
+                    <td class="text-center">@att.Days</td>
+                    <td class="text-center">@att.Statuss</td>
+                    <td class="text-center">@att.Description</td>
+                    <td class="text-center">@att.AddedBy</td>
+
+                </tr>
+                                }
+                            }
+
+        <tr>
+            <td class="text-center" colspan="11"><b style="color:brown">Leave Summary</b></td>
+        </tr>
+        
+        <tr class="text-danger">
+            <th class="text-center">SN</th>
+            <th class="text-center">Name</th>
+            <th colspan="2" class="text-center">Leave Type</th>            
+            <th class="text-center">Date From</th>
+            <th class="text-center">Date To</th>
+            <th class="text-center">Days</th>
+            <th class="text-center">Satus</th>
+            <th class="text-center">Description</th>
+            <th class="text-center">Added By</th>
+            
+
+        </tr>
+        @{int l = 1;}
+        @if (ViewBag.Leave != null)
+        {
+        foreach (var att in ViewBag.Leave)
+        {
+        <tr>
+            <td class="text-center">
+                @l
+                @{l++;}
+            </td>
+            <td class="text-center">@att.EmployeeName</td>
+            <td colspan="2" class="text-center">@att.LeaveTypeName</td>           
+            <td class="text-center">@att.DateFrom.ToString("MM/dd/yyyy")</td>
+            <td class="text-center">@att.DateTo.ToString("MM/dd/yyyy")</td>
+            <td class="text-center">@att.Days</td>
+            <td class="text-center">@att.Statusss</td>
+            <td class="text-center">@att.Description</td>  
+            <td class="text-center">@att.AddedBy</td>           
+
+        </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td class="text-center" colspan="11">No Records Availiable</td>
+                        </tr>
+
+                    }
+        
+
+        <tr>
+            <td class="text-center" colspan="11"><b style="color:brown">Public Holiday And Saturday</b></td>
+        </tr>
+
+        
+        @{int m = 1;}
+        @if (ViewBag.PublicHoliday != null)
+        {
+        foreach (var att in ViewBag.PublicHoliday)
+        {
+        <tr>
+            <td class="text-center">
+                @m
+                @{m++;}
+            </td>
+            <td class="text-center">@att.EmployeeName</td>
+            <td colspan="2" class="text-center">@att.LeaveTypeName</td>
+            <td class="text-center">@att.DateFrom.ToString("MM/dd/yyyy")</td>
+            <td class="text-center">@att.DateTo.ToString("MM/dd/yyyy")</td>
+            <td class="text-center">@att.Days</td>
+            <td class="text-center">@att.Statusss</td>
+            <td class="text-center">@att.Description</td>
+            <td class="text-center">@att.AddedBy</td>
+
+        </tr>
+        }
+        }
+        else
+        {
+        <tr>
+            <td class="text-center" colspan="11">No Records Availiable</td>
+        </tr>
+       
+        }
+
+
+        </tbody>
+
+
+
+    </table>
+
+
+<style>
+    #table {
+        width: 100%;
+        background-color: antiquewhite;
+    }
+</style>
+<script>
+    function printData() {
+        var divToPrint = document.getElementById("table");
+        newWin = window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    }
+
+    $('button').on('click', function () {
+        printData();
+    })
+</script>

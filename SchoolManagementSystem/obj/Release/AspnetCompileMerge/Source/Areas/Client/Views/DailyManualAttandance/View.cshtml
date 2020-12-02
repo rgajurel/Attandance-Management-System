@@ -1,0 +1,119 @@
+﻿
+@model DomainEntities.Attandance
+@using Kendo.Mvc.UI
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/FrontEnd/DailyManualAttandance.js"></script>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Client/DailyManualAttandance">Attandance</a></li>
+            <li><a href="/Admin/OrganisationType">Daily Attandance</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Do Attandance</button></li>
+        </ol>
+    </div>
+</div>
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-flat">
+                    <div class="panel-body">
+                        @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formEmployeeDailyAttandanceEntry", autocomplete = "off", name = "formEmployeeDailyAttandanceEntry", onSubmit = "return false;" }))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), new { @class = "form-control", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-4">
+                                    @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, new { @class = "form-control", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.Year, String.Empty, new { @class = "text-danger" })
+                                </div>
+
+                                <div class="col-md-4">
+                                    @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.Month, (SelectList)ViewBag.monthList, new { @class = "form-control", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+                                </div>
+
+
+
+                            </div>
+                            <div class="row">
+
+
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.NepaliDateFrom)
+                                    @Html.TextBoxFor(model => model.NepaliDateFrom, new { @class = "form-control" })
+
+                                    @Html.ValidationMessageFor(model => model.NepaliDateFrom, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.DateFrom)
+                                    @(Html.Kendo().DateTimePickerFor(m => m.DateFrom)
+                                    .Name("DateFrom")
+                                    .Value(DateTime.Now)
+                                    .Format("yyyy-MM-dd")
+                                    .HtmlAttributes(new { @class = "form-control" })
+                                    )
+                                    @Html.ValidationMessageFor(model => model.DateFrom, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.NepaliDateTo)
+                                    @Html.TextBoxFor(model => model.NepaliDateTo, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.NepaliDateTo, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.DateTo)
+                                    @(Html.Kendo().DateTimePickerFor(m => m.DateTo)
+                                    .Name("DateTo")
+                                    .Value(DateTime.Now)
+                                    .Format("yyyy-MM-dd")
+                                    .HtmlAttributes(new { @class = "form-control" })
+                                    )
+                                    @Html.ValidationMessageFor(model => model.DateTo, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Attandance</label><span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.LeaveDaysID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.LeaveDaysID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-3">
+                                    @Html.LabelFor(model => model.Days)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.Days, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Days, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-3">
+                                    <button class="btn btn-danger" id="EmployeeDailyAttandanceSave">Save</button>
+                                    <button class="btn Cancel">Cancel</button>
+
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Client/Views/DailyManualAttandance/DailyManualAttandanceList.cshtml")
+    </div>
+</div> 

@@ -1,0 +1,126 @@
+﻿
+<div class="page-header">
+    <div class="breadcrumb-line">
+        <ul class="breadcrumb">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Parents</li>
+            <li class="active">Student Profile</li>
+        </ul>
+
+    </div>
+</div>
+<br />
+<div class="row" style="margin:0px !important">
+            @foreach (var students in ViewBag.StudentsProfile)
+            {
+                var name = students.StudentName;
+
+                <div class="row" style="margin:0px !important">                    
+                 <img class="img img-rounded img-responsive" alt="StudentsImage" style="margin:0 auto; max-height:80px; width:auto;" src="@students.Image" />
+                    
+                </div>
+                <div class="row" style="margin:0px !important">
+                    <h3 style="text-transform:uppercase;font-weight:bold" class="text-center">@name</h3>
+                    <hr />
+                </div>
+                <div class="row" style="margin:0px !important">
+                    <div class="col-lg-6 col-md-6">
+                        <table class="table table-responsive table-condensed table-striped">
+                            <tr>
+                                <td>Fathers Name</td>
+                                <td>@students.FatherName</td>
+                            </tr>
+                            <tr>
+                                <td>Attendance</td>
+                                <td>@students.PresentDays / @students.TotalDays</td>
+                            </tr>
+                            <tr>
+                                <td>Registration No</td>
+                                <td>@students.RegistrationNo</td>
+                            </tr>
+                            <tr>
+                                <td>Joining Date(AD)</td>
+                                <td>@students.EnglishJoinningDate</td>
+                            </tr>
+                            <tr>
+                                <td>Joining Date(BS)</td>
+                                <td>@students.NepaliJoinningDate</td>
+                            </tr>
+                            <tr>
+                                <td>Faculty</td>
+                                <td>@students.Faculty</td>
+                            </tr>
+                            <tr>
+                                <td>Class</td>
+                                <td>@students.Class</td>
+                            </tr>
+                            <tr>
+                                <td>Section</td>
+                                <td>@students.Section</td>
+                            </tr>
+                            <tr>
+                                <td>Roll No</td>
+                                <td>@students.RollNo</td>
+                            </tr>
+                            <tr>
+                                <td>Batch</td>
+                                <td>@students.Batch</td>
+                            </tr>
+                            <tr>
+                                <td>House Name</td>
+                                <td>@students.HouseName</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <table class="table table-responsive table-condensed table-striped">
+                            <tr>
+                                <td>Mothers Name</td>
+                                <td>@students.MotherName</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td>@students.MobileNo</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>@students.PhoneNo</td>
+                            </tr>
+                            <tr>
+                                <td>Date Of Birth (AD)</td>
+                                <td>@students.EnglishDateOfBirth</td>
+                            </tr>
+                            <tr>
+                                <td>Date Of Birth(BS)</td>
+                                <td>@students.NepaliDateOfBirth</td>
+                            </tr>
+                            <tr>
+                                <td>Blood Group</td>
+                                <td>@students.BloodGroup</td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>@students.StudentsCategory</td>
+                            </tr>
+                            <tr>
+                                <td>Religion</td>
+                                <td>@students.Relegion</td>
+                            </tr>
+                            <tr>
+                                <td>Cast</td>
+                                <td>@students.CasteName</td>
+                            </tr>
+                            <tr>
+                                <td>Address (Temporary)</td>
+                                <td>@students.TemporaryAddress</td>
+                            </tr>
+                            <tr>
+                                <td>Address(Permanent)</td>
+                                <td>@students.PermanentAddress</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            }
+            
+</div>

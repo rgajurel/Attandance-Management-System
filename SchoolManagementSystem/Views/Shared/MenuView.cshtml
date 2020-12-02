@@ -1,0 +1,647 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/styles_002.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/jquery-ui.css">
+    <script async src="~/Scripts/analytics.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.js"></script>
+    <script type="text/javascript" src="~/Scripts/Chart.js"></script>
+    <title>School Management System</title>
+    <!-- Global stylesheets -->
+    <link href="~/Content/CSS/css.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/colors.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/fullcalendar.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/fullcalendar_002.css" rel="stylesheet" type="text/css" media="print">
+    <link href="~/Content/CSS/glyph.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/CSS/nepali.datepicker.v2.1.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/AdminCommon.css" rel="stylesheet" />
+    <!-- fullcalendar -->
+    <!--<link rel="stylesheet" href="/js/lib/fullcalendar/fullcalendar.css">-->
+    <!-- /global stylesheets -->
+    <!-- Load jQuery -->
+    <script type="text/javascript" src="~/Scripts/jquery_002.js"></script>
+
+    <!-- Load Moment extension -->
+    <script type="text/javascript" src="~/Scripts/moment.js"></script>
+
+    <!-- Load plugin -->
+    <script type="text/javascript" src="~/Scripts/datepaginator.js"></script>
+    <!-- Load base -->
+    <script type="text/javascript" src="~/Scripts/picker_002.js"></script>
+
+    <!-- Load date picker -->
+    <script type="text/javascript" src="~/Scripts/picker_003.js"></script>
+    <!-- Load time picker -->
+    <script type="text/javascript" src="~/Scripts/picker.js"></script>
+    <script type="text/javascript" src="~/Scripts/custom.js"></script>
+    <script src="~/Scripts/nepali.datepicker.v2.1.min.js"></script>
+    <script data-require-id="echarts/theme/limitless" src="limitless.htm" async></script>
+</head>
+<body class="pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="navbar navbar-default header-highlight">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Welcome ! To School</a>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+
+            <p class="navbar-text"><span class="label bg-info">Academic Year: ( 2016 - 2017 )</span></p>
+            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left" action="/index.php/core/institution/search" target="_blank" method="POST">
+                    <div class="form-group">
+                        <input placeholder="Search Student..." class="form-control ui-autocomplete-input" id="user" name="user" autocomplete="off" type="text">
+                        <input id="hidden-field" name="output" value="" type="hidden">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                </form>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-comments-o" style="color:black"></i> <span class="visible-xs-inline-block position-right">Messages</span> <span class="badge bg-warning-400" id="envelope">0</span> </a>
+                    <div class="dropdown-menu dropdown-content width-350">
+                        <div class="dropdown-content-heading"> Messages </div>
+                        <ul class="media-list dropdown-content-body"></ul>
+                        <div class="dropdown-content-footer"> <a href="javascript:void(0);" data-popup="tooltip" title="" data-original-title="All messages"><i class="fa fa-envelope display-block"></i></a> </div>
+                    </div>
+                </li>
+
+                <li class="dropdown dropdown-user">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="#" /> <span style="color:black"> WELCOME Admin</span> <i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);"><i class="fa fa-user"></i>Profile</a></li>
+                        <li><a href="Login.htm"><i class="fa fa-sign-out"></i>Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-container" style="min-height:611px">
+        <div class="page-content">
+            <div class="sidebar sidebar-main">
+                <div class="sidebar-content">
+                    <div class="sidebar-user">
+                        @*<div class="category-content">
+                                <div class="media">
+                                    <a href="#" class="media-left"><img src="#" class="img-circle img-sm" alt=""></a>
+                                    <div class="media-body"> <span class="media-heading text-semibold">Web School</span></div>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Dashboard</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" data-index="0" style="display: none;">
+                                        <li class="active">
+                                            @Html.ActionLink("DashBoard", "Index", "DashBoard", new { Area = "Admin" }, null)
+                                            @*<a href="@Url.Action("Main","Dashboard")" class="active">Dashboard</a>*@
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                                        <span>Organisation</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li>@Html.ActionLink("School Type", "Index", "SchoolType", new { Area = "Admin" }, null)</li>
+                                        @*<li><a href="@Url.Action("School Type","SchoolType")">Institution Details</a></li>*@
+                                        <li><a href="@Url.Action("state","SchoolInfo")">State Setting</a></li>
+                                        <li><a href="@Url.Action("academicDetails","Hostel Info")">Academic Details</a></li>
+                                        <li><a href="@Url.Action("studentImport","House Info")">Student Import</a></li>
+                                        <li><a href="@Url.Action("employeeImport","Setting")">Employee Import</a></li>
+                                        <li><a href="@Url.Action("privilege","Setting")">Privileges</a></li>
+                                        <li><a href="@Url.Action("assignClass","Setting")">Assign Courses</a></li>
+                                        <!--<li><a href="/index.php/site/users"></a></li>-->
+                                        <li><a href="@Url.Action("onlineEnquiry","Setting")">Enquiry List</a></li>
+                                        <li><a href="@Url.Action("loginFormSettings","Setting")">Login Page</a></li>
+                                        <li><a href="@Url.Action("feeAllocationImport","Setting")">Fees Allocation Import</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-users"></i><span>Academic</span>
+                                        <span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li>
+                                            <a href="#" class="has-ul">Course &amp; Batch</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("course","Academic_CourseNBatch")">Course</a></li>
+                                                <li><a href="@Url.Action("batch","Academic_CourseNBatch")">Batch</a></li>
+                                                <li><a href="@Url.Action("classteacherallocation","Academic_CourseNBatch")">Class teacher Allocation</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Subjects</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("subject","Academic_Subjects")">Subjects</a></li>
+                                                <li><a href="@Url.Action("assignsubject","Academic_Subjects")">Assign Subjects</a></li>
+                                                <li><a href="@Url.Action("subjectallocation","Academic_Subjects")">Subject Allocation</a></li>
+                                                <li><a href="@Url.Action("electivesubjects","Academic_Subjects")">Elective Subject</a></li>
+                                                <li><a href="@Url.Action("subjectallocationimport","Academic_Subjects")">Subject Allocation Import</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Lesson Planning</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="lessonplanning.html">Lesson Planning</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Time Table</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("timetable","Academic_TimeTable")"> Set Time Table</a></li>
+                                                <li><a href="@Url.Action("timetable_active","Academic_TimeTable")">Active Timetable</a></li>
+                                                <li><a href="@Url.Action("viewtimetable","Academic_TimeTable")">View Batch Timetable</a></li>
+                                                <li><a href="@Url.Action("viewteachertt","Academic_TimeTable")">View Teacher Timetable</a></li>
+                                                <li><a href="@Url.Action("proxy","Academic_TimeTable")">Search Proxy</a></li>
+                                                <li><a href="@Url.Action("workinghours","Academic_TimeTable")">Teacher Working Hours</a></li>
+                                                <li><a href="@Url.Action("timetableexport","Academic_TimeTable")"> Time Table Export</a></li>
+                                                <li><a href="@Url.Action("timetableimport","Academic_TimeTable")">Time Table Import</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Exams</a>
+                                            <ul class="hidden-ul">
+                                                <li>
+                                                    <a href="#" class="has-ul">GPA</a>
+                                                    <ul class="hidden-ul">
+                                                        <li><a href="@Url.Action("subjectmaster","Academic_Exams_GPA")">Subject Master</a></li>
+                                                        <li><a href="@Url.Action("examType","Academic_Exams_GPA")">Exam Type</a></li>
+                                                        <li><a href="@Url.Action("examEntry","Academic_Exams_GPA")">Exam Entry</a></li>
+                                                        <li><a href="@Url.Action("termMaster","Academic_Exams_GPA")">Term Master</a></li>
+                                                        <li><a href="@Url.Action("gradeMaster","Academic_Exams_GPA")">Grade Master</a></li>
+                                                        <li><a href="@Url.Action("marksEntry","Academic_Exams_GPA")">Marks Entry</a></li>
+                                                        <li><a href="@Url.Action("marksheetLedger","Academic_Exams_GPA")">Marksheet Ledger</a></li>
+                                                        <li><a href="@Url.Action("finalLedger","Academic_Exams_GPA")">Final Ledger</a></li>
+
+
+
+                                                        @*<li><a href="@Url.Action("term","Academic_Exams_GPA")">Set Term</a></li>
+                                                            <li><a href="@Url.Action("term","Academic_Exams_GPA")">Create Exam</a></li>
+                                                            <li><a href="@Url.Action("gpaskills","Academic_Exams_GPA")">GPA Skill</a></li>
+                                                            <li><a href="@Url.Action("gpaskillsmark","Academic_Exams_GPA")">GPA Skill Mark </a></li>
+                                                            <li><a href="@Url.Action("gradescale","Academic_Exams_GPA")">Set Grade Scale</a></li>
+                                                            <li><a href="@Url.Action("subjectcreditpoint","Academic_Exams_GPA")">Subject Credit Point</a></li>
+                                                            <li><a href="@Url.Action("totalmark","Academic_Exams_GPA")">Total mark %</a></li>
+                                                            <li><a href="@Url.Action("assessment","Academic_Exams_GPA")">Set Assessment</a></li>
+                                                            <li><a href="@Url.Action("setexam","Academic_Exams_GPA")">Set Exam</a></li>
+                                                            <li><a href="@Url.Action("setmarklist","Academic_Exams_GPA")">Set Mark List</a></li>
+                                                            <li><a href="@Url.Action("teachermarklist","Academic_Exams_GPA")">Teacher Score Card</a></li>
+                                                            <li><a href="@Url.Action("boardsheet","Academic_Exams_GPA")">Broad Sheet</a></li>
+                                                            <li><a href="@Url.Action("reportcard","Academic_Exams_GPA")">Generate Report Card</a></li>
+                                                            <li><a href="@Url.Action("gpamarkimport","Academic_Exams_GPA")">GPA Mark Import</a></li>
+                                                            <li><a href="@Url.Action("gparemarks","Academic_Exams_GPA")">Remarks Import</a></li>*@
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="has-ul">CCE</a>
+                                                    <ul class="hidden-ul">
+                                                        <li>
+                                                            <a href="#" class="has-ul">Initial Settings</a>
+                                                            <ul class="hidden-ul">
+                                                                <li><a href="@Url.Action("ccecategory","Academic_Exams_Cce_Initial")">CCE Category</a></li>
+                                                                <li><a href="@Url.Action("cceterm","Academic_Exams_Cce_Initial")">CCE Assessment Terms</a></li>
+                                                                <li><a href="@Url.Action("cceassessment","Academic_Exams_Cce_Initial")">CCE Assessment</a></li>
+                                                                <li><a href="@Url.Action("ccesubjectsub","Academic_Exams_Cce_Initial")">CCE Subject Sub</a></li>
+                                                                <li><a href="@Url.Action("cceskills","Academic_Exams_Cce_Initial")">CCE Skills</a></li>
+                                                                <li><a href="@Url.Action("cceindicators","Academic_Exams_Cce_Initial")">CCE Indicators</a></li>
+                                                                <li><a href="@Url.Action("ccegradeset","Academic_Exams_Cce_Initial")">CCE Grade Set</a></li>
+                                                                <li><a href="@Url.Action("ccegrades","Academic_Exams_Cce_Initial")">CCE Grades</a></li>
+                                                                <li><a href="@Url.Action("ccegradeskillmap","Academic_Exams_Cce_Initial")">CCE Grade Skill Mapping</a></li>
+                                                                <li><a href="@Url.Action("courseindicator","Academic_Exams_Cce_Initial")">CCE Course Indicators Relation</a></li>
+                                                                <li><a href="@Url.Action("ccereportcardsettings","Academic_Exams_Cce_Initial")">CCE Report Card Settings</a></li>
+                                                                <li><a href="@Url.Action("cceassigngrade","Academic_Exams_Cce_Initial")">CCE Grade Description Class 1-5</a></li>
+                                                                <li><a href="@Url.Action("ccemarkimport","Academic_Exams_Cce_Initial")">Cce Mark Import</a></li>
+                                                                <li><a href="@Url.Action("cceremarks","Academic_Exams_Cce_Initial")">Remarks Import</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="has-ul">CCE Exam</a>
+                                                            <ul class="hidden-ul">
+                                                                <li><a href="@Url.Action("cceexamscheme","Academic_Exams_Cce_CceExams")">CCE Exam Scheme </a></li>
+                                                                <li><a href="@Url.Action("ccesetexam","Academic_Exams_Cce_CceExams")"> CCE Set Exam</a></li>
+                                                                <li><a href="@Url.Action("ccemarklist","Academic_Exams_Cce_CceExams")">CCE Scholastic Mark List</a></li>
+                                                                <li><a href="@Url.Action("ccecoscholasticmark","Academic_Exams_Cce_CceExams")">CCE Co-Scholastic Mark List</a></li>
+                                                                <li><a href="@Url.Action("ccemarklist_boardsheet","Academic_Exams_Cce_CceExams")">Broad Sheet</a></li>
+                                                                <li><a href="@Url.Action("ccemarklist_reportcard","Academic_Exams_Cce_CceExams")">Generate Report Card</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="has-ul">Exam Hall</a>
+                                                    <ul class="hidden-ul">
+                                                        <li><a href="@Url.Action("examhall","Academic_Exams_ExamHall")"> Exam Hall</a></li>
+                                                        <li><a href="@Url.Action("seatarrangement","Academic_Exams_ExamHall")"> Hall Arrangement</a></li>
+                                                        <li><a href="@Url.Action("invigilationduties","Academic_Exams_ExamHall")">Invigilation Duties</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="has-ul">Online Exam</a>
+                                                    <ul class="hidden-ul">
+                                                        <li><a href="@Url.Action("onlineexam","Academic_Exams_OnlineExams")"> New Online Exam</a></li>
+                                                        <li><a href="@Url.Action("onlineexam_view_exam","Academic_Exams_OnlineExams")"> View Exam Details</a></li>
+                                                        <li><a href="@Url.Action("onlineexamassign","Academic_Exams_OnlineExams")">View Exam Results</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="@Url.Action("setmarklist_publishresult","Academic_Exams_Setting")"> Settings</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Assignments &amp; Notes</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("assignment","Academic_AssignmentsAndNotes")">Add Assignment</a></li>
+                                                <li><a href="@Url.Action("addnotes","Academic_AssignmentsAndNotes")">Add Notes</a></li>
+                                                <li><a href="@Url.Action("assignmentimport", "Academic_AssignmentsAndNotes")">Assignments Import</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Certifications</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("certificatetype", "Academic_Certifications")">Certificate Type</a></li>
+                                                <li><a href="@Url.Action("customcertificate", "Academic_Certifications")">Custom Certificate</a></li>
+                                                <li><a href="@Url.Action("generatecertificate", "Academic_Certifications")">Generate Certificate</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Placements</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("placedetails", "Academic_Placements")">Placement Cell Members</a></li>
+                                                <li><a href="@Url.Action("placementattendees", "Academic_Placements")">Placement Vendors</a></li>
+                                                <li><a href="@Url.Action("placementcellmembers", "Academic_Placements")">Attendees</a></li>
+                                                <li><a href="@Url.Action("placementvendors", "Academic_Placements")">Placed Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Promotion &amp; Alumni</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("alumnimembers", "Academic_PromotionAndAlumni")">Promotion &amp; Alumni</a></li>
+                                                <li><a href="@Url.Action("promotion", "Academic_PromotionAndAlumni")">Alumni Members</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Occurrence</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("occurance", "Academic_Occurrence")">Occurrence Register </a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Circular</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("circular", "Academic_Circular")">Circular</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                        <span>HR/Payroll</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <!--<li><a href="/index.php/core/employeemaster/adminusers">Admin Users</a></li>-->
+                                        <li>
+                                            <a href="#" class="has-ul">Employee Management</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("userType", "Payroll_EmployeeMgmt")">Add User Type</a></li>
+                                                <li><a href="@Url.Action("department", "Payroll_EmployeeMgmt")">Add Department</a></li>
+                                                <li><a href="@Url.Action("designation", "Payroll_EmployeeMgmt")">Add Designation</a></li>
+                                                <li><a href="@Url.Action("employeeDetails", "Payroll_EmployeeMgmt",new { id = "" })">Add Employee</a></li>
+                                                <li><a href="@Url.Action("employeeDetailsList", "Payroll_EmployeeMgmt")">Employee List</a></li>
+                                                <li><a href="@Url.Action("bankDetails", "Payroll_EmployeeMgmt")">Add Bank Details</a></li>
+                                                <li><a href="@Url.Action("employeeDetailsReports", "Payroll_EmployeeMgmt")">Print List</a> </li>
+                                                <li><a href="@Url.Action("employeeMaster_Withdrawal", "Payroll_EmployeeMgmt")">Withdrawal</a> </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Payroll</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("payheadmaster", "Payroll_Payroll")">Pay Head</a></li>
+                                                <li><a href="@Url.Action("payabletype", "Payroll_Payroll")">Payment  Types</a></li>
+                                                <!--<li><a href="/index.php/payroll/leaveallowed/create">Allowed Leaves</a></li>-->
+                                                <li><a href="@Url.Action("salarydetails", "Payroll_Payroll")">Salary Settings</a></li>
+                                                <li><a href="@Url.Action("employeesalary", "Payroll_Payroll")">Employee Salary</a></li>
+                                                <li><a href="@Url.Action("generatepayslip", "Payroll_Payroll")">Generate Pay Slip</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!--<li><a href="#">Working Days</a></li>-->
+                                        <li>
+                                            <a href="#" class="has-ul">Leave Management</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("leavecategory", "Payroll_LeaveMgmt")">Leave Category</a></li>
+                                                <li><a href="@Url.Action("leavedetails", "Payroll_LeaveMgmt")">Leave Details</a></li>
+                                                <li><a href="@Url.Action("leaveapplicationapprove", "Payroll_LeaveMgmt")">Leave Application</a></li>
+                                                <li><a href="@Url.Action("leaveapplication", "Payroll_LeaveMgmt")">Leave Approvals</a></li>
+                                            </ul>
+                                        </li>
+                                        <!--                            <li><a href="#">Attendance</a>
+                                                                                                      <ul>-->
+                                        <li><a href="@Url.Action("studentabsent", "Payroll_Attendance")">Attendance</a></li>
+                                        <!--                                    <li><a href="#">Attendance Report</a></li>
+                                                                                                      </ul>
+                                                                                                  </li>-->
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-user"></i><span>Student</span>
+                                        <span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("studentcategory", "Student_Category")">Student Category</a></li>
+                                        <li><a href="@Url.Action("studentadmission", "Student_Admission")">Student Admission</a></li>
+                                        <li><a href="@Url.Action("studentList", "Student_List")">Student List</a></li>
+                                        <li><a href="@Url.Action("studentPrintList", "Student_PrintList")">Print List</a> </li>
+                                        <li><a href="@Url.Action("studentGuardianDetails", "Student_GuardianList")">Guardian List</a></li>
+                                        <li><a href="@Url.Action("student_rollno", "student_rollno")">Roll Number</a></li>
+                                        <li><a href="@Url.Action("studentattendanceimport", "Student_AttendanceImport")">Student Attendance Import</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-money" aria-hidden="true"></i>
+                                        <span>Finance</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li>
+                                            <a href="#" class="has-ul">Fees</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("feeCategory", "Finance_Fees")">Fee Category</a></li>
+                                                <li><a href="@Url.Action("feessubcategory", "Finance_Fees")">Fee Sub Category</a></li>
+                                                <li><a href="@Url.Action("feewaiver", "Finance_Fees")">Fee Waiver</a></li>
+                                                <li><a href="@Url.Action("feetemplate", "Finance_Fees")">Fee Template</a></li>
+                                                <li><a href="@Url.Action("feesallocation", "Finance_Fees")">Fee Allocation</a></li>
+                                                <li><a href="@Url.Action("feesallocation_collection", "Finance_Fees")">Fee Collection</a></li>
+                                                <li><a href="@Url.Action("feesallocation_quickpayment", "Finance_Fees")">Quick Payment</a></li>
+                                                <!--                                                        <li><a href="/index.php/core/feesallocation/feeduewithdate"></a></li>-->
+                                                <li><a href="@Url.Action("feesallocation_reports", "Finance_Fees")">Reports</a></li>
+                                                <li><a href="@Url.Action("feeimport", "Finance_Fees")">Fee Import</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">Accounting</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("accountgroup", "Finance_Accounting")">Account Group</a></li>
+                                                <li><a href="@Url.Action("vouchermaster", "Finance_Accounting")">Voucher Master</a></li>
+                                                <li><a href="@Url.Action("voucherhead", "Finance_Accounting")">Voucher Head</a></li>
+                                                <li><a href="@Url.Action("voucher", "Finance_Accounting")">Create Voucher</a></li>
+                                                <li><a href="@Url.Action("voucherdaybook", "Finance_Accounting")">Day Book</a></li>
+                                                <li><a href="@Url.Action("vouchercashbook", "Finance_Accounting")">Cash Book</a></li>
+                                                <li><a href="@Url.Action("voucherbankbook", "Finance_Accounting")">Bank Book</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-book" aria-hidden="true"></i>
+                                        <span>Library</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("bookCategory", "Library")">Add Category</a></li>
+                                        <li><a href="@Url.Action("library_librarybooks", "Library")">Add Books</a></li>
+                                        <li><a href="@Url.Action("library_bookissue", "Library")">Issue Book</a></li>
+                                        <li><a href="@Url.Action("library_requestdetails", "Library")">Request Details</a></li>
+                                        <li><a href="@Url.Action("library_bookreturn", "Library")">Book Return</a></li>
+                                        <li><a href="@Url.Action("library_reports", "Library")">Reports</a></li>
+                                        <li><a href="@Url.Action("library_import", "Library")">Import</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-truck" aria-hidden="true"></i>
+                                        <span>Transport</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("transportvehicle", "Transport")">Add Vehicle</a></li>
+                                        <li><a href="@Url.Action("transportdriver", "Transport")">Add Driver</a></li>
+                                        <li><a href="@Url.Action("transport_routedetails", "Transport")">Add Route</a></li>
+                                        <li><a href="@Url.Action("designation", "Transport")">Add Destination</a></li>
+                                        <li><a href="@Url.Action("transportAllocation", "Transport")">Transport Allocation </a></li>
+                                        <li><a href="@Url.Action("transportFeecollection", "Transport")">Fee Collection</a></li>
+                                        <li><a href="@Url.Action("transportAllocationimport", "Transport")">Import</a></li>
+                                        <li><a href="@Url.Action("smsAlert", "Transport")">SMS Alert</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-bed" aria-hidden="true"></i>
+                                        <span>Hostel</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+
+                                        <li><a href="@Url.Action("hostelDetails", "Hostel")">Hostel Details</a></li>
+                                        <li><a href="@Url.Action("hostelRoom", "Hostel")">Hostel Room</a></li>
+                                        <li><a href="@Url.Action("hostelAllocation", "Hostel")">Hostel Allocation</a></li>
+                                        <li><a href="@Url.Action("hostelRequestdetails", "Hostel")">Request Details</a></li>
+                                        <li><a href="@Url.Action("hostelTransfer", "Hostel")">Hostel Transfer/Vacate</a></li>
+                                        <li><a href="@Url.Action("hostelRegister", "Hostel")">Hostel Register</a></li>
+                                        <li><a href="@Url.Action("hostelVisitor", "Hostel")">Hostel Visitors</a></li>
+                                        <li><a href="@Url.Action("hostelFeecollection", "Hostel")">Hostel Fee Collection</a></li>
+                                        <li>
+                                            <a href="#" class="has-ul">Reports</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("hostelRoom", "Hostel_Report")">Hostel Details Report </a></li>
+                                                <li><a href="@Url.Action("availableRoomreport", "Hostel_Report")">Room Availability Report</a></li>
+                                                <li><a href="@Url.Action("roomRequestreport", "Hostel_Report")">Room Request Report</a></li>
+                                                <li><a href="@Url.Action("roomOccupiedreport", "Hostel_Report")">Room Occupancy Report</a></li>
+                                                <li><a href="@Url.Action("hostelFeereport", "Hostel_Report")">Fee Reports</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>Messages/SMS</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("messageBox", "MessageSms")">Mailbox</a></li>
+                                        <li><a href="@Url.Action("smsSetting", "MessageSms")">SMS Settings</a></li>
+                                        <li><a href="@Url.Action("bulkSms", "MessageSms")">Bulk SMS</a></li>
+                                        <li>
+                                            <a href="#" class="has-ul">Email</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("emailsettings", "MessageSms_Email")">Email Settings</a></li>
+                                                <li><a href="@Url.Action("createEmailTemplate", "MessageSms_Email")">Create Template</a></li>
+                                                <li><a href="@Url.Action("sendEmail", "MessageSms_Email")">Send email</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-list" aria-hidden="true"></i>
+                                        <span>Store Management</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("vendor", "StoreManagement")">Vendors</a></li>
+                                        <li><a href="@Url.Action("inventoryCategory", "StoreManagement")">Inventory Category</a></li>
+                                        <li><a href="@Url.Action("inventoryItem", "StoreManagement")">Inventory Item</a></li>
+                                        <li><a href="@Url.Action("inventoryIssue", "StoreManagement")">Inventory Issue</a></li>
+                                        <li><a href="@Url.Action("stockRegister", "StoreManagement")">Stock Register</a></li>
+                                        <li><a href="@Url.Action("inventoryIssuedReport", "StoreManagement")">Issued Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                        <span>Performance</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li>
+                                            <a href="#" class="has-ul">GPA</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("gpa_stuPerformance", "PerformanceGpa")">Student Performance</a></li>
+                                                <li><a href="@Url.Action("gpa_coursePerformance", "PerformanceGpa")">Course Performance</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-ul">CCE</a>
+                                            <ul class="hidden-ul">
+                                                <li><a href="@Url.Action("cce_stuPerformance", "PerformanceCce")">Student Performance</a></li>
+                                                <li><a href="@Url.Action("cce_coursePerformance", "PerformanceCce")">Course Performance</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <span>Events</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("eventType", "Event")"> Event Types</a></li>
+                                        <li><a href="@Url.Action("addEvent", "Event")"> Add Events</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        <span>Task Manager</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("tm_assignTask", "TaskManager")">Assign Task</a></li>
+                                        <li><a href="@Url.Action("tm_taskDetails", "TaskManager")">Task Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-files-o" aria-hidden="true"></i>
+                                        <span>Reports</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("studentReport", "Reports")">Student Reports</a> </li>
+                                        <li><a href="@Url.Action("studentDetails", "Reports")">Student Details</a> </li>
+                                        <li><a href="@Url.Action("feeDueReport", "Reports")">Fee Due Reports</a> </li>
+                                        <li><a href="@Url.Action("paidReport", "Reports")">Fee Paid Reports</a> </li>
+                                        <li><a href="@Url.Action("absenteesReport", "Reports")"> Absentees Reports</a> </li>
+                                        <li><a href="@Url.Action("classReport", "Reports")"> Class Report</a> </li>
+                                        <li><a href="@Url.Action("feesConsolidatedReport", "Reports")">Fees Consolidated Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                        <span>Withdrawal</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="javascript:void(0);">Withdrawal</a> </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="has-ul active">
+                                        <i class="fa fa-database" aria-hidden="true"></i>
+                                        <span>Data Export</span><span class="pull-right"><i class="fa fa-angle-right"></i></span>
+                                    </a>
+                                    <ul class="hidden-ul" style="display: none;">
+                                        <li><a href="@Url.Action("deExport", "DataExport")">Export</a> </li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <br>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container body-content" id="loadcontent">
+                @*@RenderBody()*@
+
+            </div>
+
+            <div class="navbar navbar-default navbar-sm navbar-fixed-bottom">
+                <ul class="nav navbar-nav no-border visible-xs-block">
+                    <li> <a data-target="#navbar-second" data-toggle="collapse" class="text-center collapsed"> <i class="icon-circle-up2"></i> </a> </li>
+                </ul>
+                <div id="navbar-second" class="navbar-collapse collapse">
+                    <div class="navbar-text"> © Copyright @DateTime.Now.Year. All Right Reserved-Creative Techno SolutionsA</div>
+                </div>
+            </div>
+
+
+
+
+            <script type="text/javascript" src="~/Scripts/jquery-ui.js"></script>
+
+            <script type="text/javascript" src="~/Scripts/pace.js"></script>
+            <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+            <script type="text/javascript" src="~/Scripts/blockui.js"></script>
+            <!-- /core JS files -->
+            <!-- Theme JS files -->
+
+            <script type="text/javascript" src="~/Scripts/switchery.js"></script>
+            <script type="text/javascript" src="~/Scripts/uniform.js"></script>
+            <script type="text/javascript" src="~/Scripts/bootstrap_multiselect.js"></script>
+            <script type="text/javascript" src="~/Scripts/daterangepicker.js"></script>
+
+            <!--<script type="text/javascript" src="/css/assets/js/pages/dashboard.js"></script>-->
+
+            <script type="text/javascript" src="~/Scripts/fullcalendar.js"></script>
+            <script type="text/javascript" src="~/Scripts/select2.js"></script>
+            <script type="text/javascript" src="~/Scripts/echarts.js"></script>
+            <script type="text/javascript" src="~/Scripts/app.js"></script>
+            <script type="text/javascript" src="~/Scripts/user_pages_profile.js"></script>
+            <script type="text/javascript" src="~/Scripts/legacy.js"></script>
+            <script type="text/javascript" src="~/Scripts/picker_date.js"></script>
+            <script type="text/javascript" src="~/Scripts/datepicker.js"></script>
+            <script type="text/javascript" src="~/Scripts/effects.js"></script>
+            <script type="text/javascript" src="~/Scripts/jgrowl.js"></script>
+            <script type="text/javascript" src="~/Scripts/anytime.js"></script>
+            <script type="text/javascript" src="~/Scripts/limitless.js"></script>
+            <script type="text/javascript" src="~/Scripts/bar.js"></script>
+            <script type="text/javascript" src="~/Scripts/line.js"></script>
+            <script src="~/Content/JS/Common.js"></script>
+
+</body>
+</html>
+<!-- Core JS files -->

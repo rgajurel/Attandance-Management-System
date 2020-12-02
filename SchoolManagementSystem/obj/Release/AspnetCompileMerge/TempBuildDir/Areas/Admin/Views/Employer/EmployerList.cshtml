@@ -1,0 +1,91 @@
+﻿
+@model DomainEntities.EmployeeSearch
+
+    <div class="x_panel">
+                    
+                <div class="col-md-2">
+                    @Html.TextBoxFor(model => model.EmployerSearchName, new { @class = "form-control", @Placeholder = "Enter Name" })
+                </div>
+                <div class="col-md-2">
+
+                    @Html.TextBoxFor(model => model.UserIDSearch, new { @class = "form-control", @Placeholder = "Enter UserID" })
+                </div>
+                <div class="col-md-2">
+
+                    @Html.DropDownListFor(model => model.OrganisationSearchID, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control", required = "required" })
+                </div>
+                <div class="col-md-2">
+
+                    @Html.DropDownListFor(model => model.DepartmentSearchID, Enumerable.Empty<SelectListItem>(), "--Department--", new { @class = "form-control", required = "required" })
+                </div>
+
+
+                <div class="col-md-2">
+
+                    @Html.DropDownListFor(model => model.DesignationSearchID, Enumerable.Empty<SelectListItem>(), " --Designation-- ", new { @class = "form-control" })
+                </div>
+
+
+                <div class="col-md-2">
+                    <button class="btn btn-danger maintain" id="employeeSearch">Search</button>
+                </div>
+
+
+            </div>
+       
+    
+
+                @using Kendo.Mvc.UI
+                @(Html.Kendo().Grid<DomainEntities.EmployeeSearch>()
+    .Name("EmployeeListGrid")
+
+            .Columns(columns =>
+            {
+                
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.Name).Title("Name").Width(150);
+                columns.Bound(c => c.Image).Hidden().Title("Name").Width(150);  
+                columns.Bound(c => c.Organisation).Title("Organisation").Width(150);   
+               
+                //columns.Bound(c => c.DepartmentName).Title("Department").Width(100);
+                columns.Bound(c => c.Designation).Title("Designation").Width(100);
+                columns.Bound(c => c.UserIDSearch).Title("User ID").Width(50);
+                columns.Bound(c => c.EntryimeString).Title("Entry Time").Width(50);
+                columns.Bound(c => c.ExitimeString).Title("Exit Time").Width(50);
+                columns.Bound(c => c.Status).Title("Status").Width(50);
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                     //command.Custom("Details").Text(" ").Click("Details");
+
+                }).Width(50).Title("Action");
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] {10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Field(p => p.Name).Editable(false);
+
+                                })
+                  .Read(read => read.Action("GetAll", "Employer").Data("ParamToEmployeeList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+                )
+          
+
+ 

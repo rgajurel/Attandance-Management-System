@@ -1,0 +1,65 @@
+﻿<div class="row" id="CourseFeeDiscountPanel">
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            @using Kendo.Mvc.UI
+            @(Html.Kendo().Grid<DomainEntities.CommonFeeDiscount>()
+    .Name("commonFeeDiscountGrid")
+
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.StudentId).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(50);
+                columns.Bound(c => c.RollNo).Title("Roll No").Width(50);
+                columns.Bound(c => c.StudentName).Title("Student Name").Width(100);
+                columns.Bound(c => c.Fee).Title("Fee").Width(50);
+                columns.Bound(c => c.Discount).Title("Discount Amount").Width(50);
+
+
+            })
+
+
+                     .ToolBar(toolbar =>
+                     {
+                         toolbar.Template(@<text>
+
+
+                <div class="right-inner-addon row" style="width:800px">
+
+                    <input type="search"
+                           class="form-control col-lg-4" style="margin-left:20px;  width:40%"
+                           placeholder="Search By Student" id="FieldFilterStudent" />
+                </div>
+
+                        </text>);
+                     })
+                     .Editable(editable => editable.Mode(GridEditMode.InCell))
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 50, 100, 150, 200, 250, 300, 400, 500 })
+              .PreviousNext(true))
+            .Navigatable()
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Field(p => p.RollNo).Editable(false);
+                                    model.Field(p => p.SN).Editable(false);
+                                    model.Field(p => p.StudentName).Editable(false);
+                                    model.Field(p => p.Fee).Editable(false);
+                                    model.Field(p => p.Discount).Editable(true);
+                                })
+                 .Read(read => read.Action("GetAll", "CommonFeeDiscount").Data("ParamToDiscountList"))// Action invoked when the user saves a new data item
+                 .Events(e => e.Error("onError"))
+                 .PageSize(50)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+.Events(ev => ev.Save("checkDiscountAmount"))
+            )
+        </div>
+    </div>
+</div>
+

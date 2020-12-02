@@ -1,0 +1,106 @@
+﻿@model DomainEntities.ChangePassword
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="icon" href="~/Content/Images/School/attandance.png" type="image/x-icon" />
+    <link rel='stylesheet prefetch' href='~/Content/vendor/css/font-awesome.css'>
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+
+        </div>
+    </div>
+    <div class="form">
+        @*<div class="thumbnail"><img src="~/Content/Images/School/attandance.png" /></div>*@
+        <div class="text-center" style="margin-bottom:15px;color:#EF3B3A;font-weight:bold;font-size:20px">Change Password</div>
+        @using (Html.BeginForm("ChangePassword", "ChangePassword", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(model => model.oldPassword, String.Empty, new { @style = "color:#ef3b3a;font-size:12px"})
+                        @Html.PasswordFor(model => model.oldPassword, new { @class = "form-control", @Required = "Required", placeholder = "Old Password" })
+
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(model => model.newPassword, String.Empty, new { @style = "color:#ef3b3a;font-size:12px" })
+                        @Html.PasswordFor(model => model.newPassword, new { @class = "form-control", @Required = "Required", Placeholder = "New Password" })
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        @Html.ValidationMessageFor(model => model.comparenewPassword, String.Empty, new { @style = "color:#ef3b3a;font-size:12px" })
+                        @Html.PasswordFor(model => model.comparenewPassword, new { @class = "form-control", @Required = "Required", Placeholder = " Confirm Password" })
+
+                    </div>
+                </div>
+
+
+            </div>
+            <button>Change Password</button>
+            <p class="message" style="font-weight:bold"><a style="font-weight:bold" href="/Login/Index">Click To Login</a></p>
+            <div class="col-lg-12">
+                <h5 style="text-align:center;color:#ef3b3a">@TempData["Error"]</h5>
+                <h5 style="text-align:center;color:#ef3b3a">@TempData["Failure"]</h5>
+                <h5 style="text-align:center;color:#ef3b3a">@TempData["Success"]</h5>
+            </div>
+        }
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+<style>
+    .form .thumbnail {
+        background: #EF3B3A;
+        background-image: initial;
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: initial;
+        background-repeat-x: initial;
+        background-repeat-y: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: rgb(239, 59, 58);
+        width: 152px;
+        height: 146px;
+        margin: 0 auto 30px;
+        padding: 35px 30px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        box-sizing: border-box;
+    }
+
+    .text-danger {
+        color: orangered;
+    }
+
+    body:before {
+        background: rgba(174, 63, 63, 0.8);
+    }
+</style>

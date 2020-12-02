@@ -1,0 +1,52 @@
+﻿
+
+            @using Kendo.Mvc.UI
+            @(Html.Kendo().Grid<DomainEntities.UserGroup>()
+    .Name("UserGroupList")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.GroupName).Title("Name").Width(150);
+                columns.Bound(c => c.Name).Title("Organisation").Width(150);
+                columns.Bound(c => c.ActiveOrNot).Title("Status").Width(150);
+                columns.Bound(c => c.AddedBy).Title("AddedBy").Width(150);
+                columns.Bound(c => c.AddedOn).Title("AddedOn").Width(150).Format("{0:MM-dd-yyyy}");
+
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    command.Custom("Delete").Text(" ").Click("Delete");
+
+                }).Width(50).Title("Action");
+
+            })
+
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 10, 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+
+
+                                })
+                  .Read(read => read.Action("GetAll", "UserGroup").Data("ParamToUserGroupList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+            )
+    

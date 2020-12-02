@@ -1,0 +1,75 @@
+﻿
+
+
+
+@model DomainEntities.Department
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/Content/JS/BackEnd/Department.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">HR/Payroll</a></li>
+            <li><a href="/Admin/OrganisationType">Department</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div> 
+    
+
+
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Class Type</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                           @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formDepartment",autocomplete="off", name = "formDepartment", onSubmit = "return false;" }))
+                           {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        @Html.HiddenFor(model => model.ID)
+                                        @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "Select", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-4">
+                                        @Html.LabelFor(model => model.DepartmentName)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.DepartmentName, new { @class = "form-control", @style = "text-transform:uppercase" })
+                                        @Html.ValidationMessageFor(model => model.DepartmentName, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="pulldown">
+                                            <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit">
+                                            <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div> 
+     
+
+<div class="row" id="show">
+    <div class="col-md-12">
+       @Html.Partial("~/Areas/Admin/Views/Department/DepartmentList.cshtml")
+    </div>
+</div>  

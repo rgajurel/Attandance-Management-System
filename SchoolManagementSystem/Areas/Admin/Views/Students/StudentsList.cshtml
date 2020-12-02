@@ -1,0 +1,119 @@
+﻿@model DomainEntities.StudentsSearch
+
+<div class="x_panel">
+    <div class="row">
+        <div class="col-md-3">
+
+            @(Html.Kendo().AutoCompleteFor(model => model.StudentsSearchName)
+          .Name("StudentsSearchName")
+          .DataTextField("StudentsSearchName")
+          .Filter("contains")
+          .Placeholder("Search Students")
+          .MinLength(0)
+          .Height(200)
+          .HtmlAttributes(new { style = "width:100%" })
+          .DataSource(source =>
+          {
+              source.Read(read =>
+              {
+                  read.Action("AutoComplete", "Students")
+                      .Data("onAdditionalData");
+
+              })
+              .ServerFiltering(true);
+
+          })
+            )
+
+            @*@Html.TextBoxFor(model => model.StudentsSearchName, new { @class = "form-control",@Placeholder="Enter Student Name" })*@
+        </div>
+        <div class="col-md-3">
+
+
+            @Html.DropDownListFor(model => model.ClassSearchID, (SelectList)ViewBag.classList, "--Select Class--", new { @class = "form-control", required = "required" })
+        </div>
+        <div class="col-md-3">
+
+            @Html.DropDownListFor(model => model.FacultySearchID, Enumerable.Empty<SelectListItem>(), "--Select Faculty--", new { @class = "form-control", required = "required" })
+        </div>
+
+        <div class="col-md-3">
+            @Html.DropDownListFor(model => model.SectionSearch, Enumerable.Empty<SelectListItem>(), "--Select Section--", new { @class = "form-control" })
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            @Html.TextBoxFor(model => model.RegistratioNoSearch, new { @class = "form-control", @Placeholder = "Enter Registration No" })
+        </div>
+
+        <div class="col-md-3">
+            @Html.TextBoxFor(model => model.BatchSearch, new { @class = "form-control", @Placeholder = "Enter Batch" })
+        </div>
+
+        <div class="col-md-3">
+            
+                <button class="btn btn-danger" id="studentSearch">Search</button>
+                <button class="btn" id="studentCancel">Cancel</button>
+          
+        </div>
+    </div>
+
+</div>
+
+          
+      
+
+
+
+                @using Kendo.Mvc.UI
+                @(Html.Kendo().Grid<DomainEntities.StudentsSearch>()
+    .Name("StudentsGrid")
+
+            .Columns(columns =>
+            {
+                // columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                //columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Width(50);
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.SN).Title("S.N").Width(20);
+                columns.Bound(c => c.StudentName).Title("Student Name").Width(150);
+                //columns.Bound(c => c.Faculty).Title("Faculty").Width(150);
+                columns.Bound(c => c.ClassName).Title("Class").Width(150);
+                columns.Bound(c => c.Section).Title("Section").Width(150);
+                columns.Bound(c => c.RollNo).Title("Roll No").Width(150);
+                columns.Bound(c => c.RegistrationNo).Title("Registration No").Width(150);
+                columns.Bound(c => c.Batch).Title("Batch").Width(150);
+                columns.Bound(c => c.Status).Title("Status").Width(150);
+                //columns.Bound(c => c.Type).Title("Modified On").Width(50).ClientTemplate("#= customDate(data) #").Format(ViewBag.settingDateFormat);
+
+                columns.Command(command =>
+                {
+                    command.Custom("Edit").Text(" ").Click("Edit");
+                    //command.Custom("Details").Text(" ").Click("Details");
+
+                }).Width(50).Title("Action");
+
+            })
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 20, 40, 60, 80, 100 })
+              .PreviousNext(true))
+
+            .Reorderable(reorder => reorder.Columns(true))
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.ID);
+                                    model.Field(p => p.StudentName).Editable(false);
+
+                                })
+                  .Read(read => read.Action("GetAll", "Students").Data("ParamToStudentsList"))// Action invoked when the user saves a new data item
+                  .PageSize(10)
+             )
+.Events(ev => ev.DataBound("resetRowNumber"))
+
+                )
+          

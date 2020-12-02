@@ -1,0 +1,98 @@
+﻿@model DomainEntities.CommonFeeDiscount
+
+<link href="~/Content/vendor/multiselectdropdown/css/dropdownliststyle.css" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/CommonFeeDiscount.js"></script>
+@using Kendo.Mvc.UI
+<div style="" id="commonFeeDiscount">
+    <div class="page-header col-lg-12">
+        <div class="breadcrumb-line">
+            <ul class="breadcrumb">
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home position-left"></i>Home</li>
+                <li>Students</li>
+                <li class="active">Common Fee Discount</li>
+            </ul>
+        </div>
+    </div>
+    <br />
+    <div class="content" style="margin-top:35px">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Set Common Fee Discount</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formCommonFeeDiscount", name = "formCommonFeeDiscount", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+
+                                    @Html.HiddenFor(model => model.ID)
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Session)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Session, (SelectList)ViewBag.sessionList,"--Select--",new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Session, String.Empty, new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Class)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Class, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Class, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Faculty)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Faculty, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+                                            @Html.ValidationMessageFor(model => model.Faculty, String.Empty, new { @class = "text-danger" })
+</div>
+                                   
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Section)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Section, Enumerable.Empty<SelectListItem>(),"--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Section, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Type)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Type, Enumerable.Empty<SelectListItem>(),"--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Type, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-sm-3 success">
+                                        @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+                                        @Html.DropDownListFor(model => model.Month, Enumerable.Empty<SelectListItem>(),"--Select--", new { @class = "form-control", required = "required" })
+                                        @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group col-sm-6 error pull-right">
+                                        <br />
+                                        @*<button class="btn btn-primary" onclick="checkData()">Enter Discount</button>*@
+
+                                        <input class="btn btn-primary" name="commonFeeDiscountSave" id="commonFeeDiscountSave"  value="Save Discount" type="submit">
+                                        <button class="btn refresh" onclick="location.href='@Url.Action("Index", "CommonFeeDiscount")';return false;">Refresh</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="studentsList">@Html.Partial("~/Areas/Admin/Views/CommonFeeDiscount/commonFeeDiscount.cshtml")</div>
+
+
+
+
+
+
+
+

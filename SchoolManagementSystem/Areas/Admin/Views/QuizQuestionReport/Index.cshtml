@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Quiz Question Report";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pageHeaderBox11">
+                <h1 class="page-header">Quiz Question Report</h1>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+
+        <div class="form-group">
+            <div class="col-md-6">
+                <label>Question</label>
+                <input class="form-control" placeholder="Enter Question" id="txtSearchQuestion">
+            </div>
+            <div class="col-md-6">
+                <br />
+                <button type="submit" class="btn btn-default btnCustom" id="btnSearch">Search</button>
+                <button type="submit" class="btn btn-default btnCancle ResetInputField" id="btnReset">Reset</button>
+            </div>
+
+        </div>
+
+        <!-- /.col-lg-4 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="pull-right">
+                <a class="btn btnCustom" href="#" role="button" id="btn_ExportPDF"><i class="fa fa-download" aria-hidden="true"></i> Extract to PDF</a>
+                <a class="btn btn-default btnLining" href="#" role="button" id="btn_ExportExcel"><i class="fa fa-download" aria-hidden="true"></i> Extract to Excel</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive-scroll">@Html.Partial("~/Areas/Admin/Views/QuizQuestionReport/QuizQuestionReportGrid.cshtml")</div>
+        </div>
+    </div>
+
+}
+<script src="~/Content/JS/backend/QuizQuestionReport.js"></script>
+<script src="~/Content/lib/kendo/jszip.min.js"></script>
+<script src="~/Content/lib/kendo/kendo.all.min.js"></script>
+

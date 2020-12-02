@@ -1,0 +1,102 @@
+﻿@model DomainEntities.SalaryHeading
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/SalaryHeadings.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/DashBoard">Payroll Management</a></li>
+            <li><a href="/Admin/AccumulativeLeave">Salary Heading Settings</a></li>
+            @*<li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>*@
+        </ol>
+    </div>
+</div>
+
+    
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Salary Headings</h4>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formSalaryHead", name = "formSalaryHead",autocomplete="off", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        @Html.HiddenFor(model => model.ID)
+                                        @Html.LabelFor(model => model.HeadName)<span style="color:red">*</span>
+                                        @Html.TextBoxFor(model => model.HeadName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.HeadName, String.Empty, new { @class = "text-danger" })
+                                    </div>
+                                   
+                                        <div class="col-md-4">
+                                            @Html.LabelFor(model => model.SortOrder)<span style="color:red">*</span>
+                                            @Html.TextBoxFor(model => model.SortOrder, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.SortOrder, String.Empty, new { @class = "text-danger" })
+                                        </div>
+                                    
+                                      <div class="col-md-4 pulldown">
+                                        <input class="btn btn-danger" name="salaryHeadAdd" id="salaryHeadAdd" value="Save" type="submit">
+                                        <input class="btn" name="salaryHeadCancel" id="salaryHeadCancel" value="Cancel" type="reset">
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Is Basic Salary </label>
+                                            @Html.CheckBoxFor(m => m.IsBasicSalary)
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Is Add </label>
+                                            @Html.CheckBoxFor(m => m.IsAdd)
+                                        </div>
+
+                                       
+                                        <div class="form-group">
+                                            <label>Is Saving </label>
+                                            @Html.CheckBoxFor(m => m.IsSaving)
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Is Tax </label>
+                                            @Html.CheckBoxFor(m => m.IsTax)
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Is Salary Calculate Point </label>
+                                            @Html.CheckBoxFor(m => m.IsSalaryCalculatePoint)
+                                        </div>
+                                    </div>
+                                   
+
+                              
+
+                                   
+                            }
+                        </div>
+
+
+
+                            
+                                
+
+                              
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>   
+
+  
+   
+           @Html.Partial("~/Areas/Admin/Views/SalaryHeadings/SalaryHeadingList.cshtml")
+       

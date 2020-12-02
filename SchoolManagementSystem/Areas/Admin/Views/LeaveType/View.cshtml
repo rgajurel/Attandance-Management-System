@@ -1,0 +1,103 @@
+﻿
+
+@model DomainEntities.LeaveType
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/LeaveType.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">HR/Payroll</a></li>
+            <li><a href="/Admin/OrganisationType">Leave Type Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+           
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Leave Type Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                           @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formLeaveType",autocomplete="off", name = "formLeaveType", onSubmit = "return false;" }))
+                           {
+                                @Html.AntiForgeryToken()
+                            <div class="row">
+                                <div class="col-md-6">
+                                    @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                                    @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control", required = "required" })
+                                    @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+                                </div>
+                                <div class="col-md-6">
+                                    @Html.HiddenFor(model => model.ID)
+                                    @Html.LabelFor(model => model.LeaveTypeName)<span style="color:red">*</span>
+                                    @Html.TextBoxFor(model => model.LeaveTypeName, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.LeaveTypeName, String.Empty, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="margin-top:10px">
+                                    <label>Is Saved Leave </label>
+                                    @Html.CheckBoxFor(m => m.IsAccumulativeLeave)
+                                    @Html.ValidationMessageFor(model => model.IsAccumulativeLeave, String.Empty, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="margin-top:10px">
+                                    <label>Is Expire Leave </label>
+                                    @Html.CheckBoxFor(m => m.IsExpireLeave)
+                                    @Html.ValidationMessageFor(model => model.IsExpireLeave, String.Empty, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="margin-top:10px">
+                                    <label>Is Official Work Leave(Travel Leave)</label>
+                                    @Html.CheckBoxFor(m => m.IsAttandanceLeave)
+                                    @Html.ValidationMessageFor(model => model.IsAttandanceLeave, String.Empty, new { @class = "text-danger" })
+                                </div>
+                            </div>
+                                                                  
+
+                                <div class="row">
+                                    <div class="col-md-3" style="margin-top:10px">
+                                        <input class="btn btn-danger" name="Save" id="Save" value="Save" type="submit">
+                                        <button type="button" class="btn cancel" name="Cancel">Cancel</button>
+
+                                    </div>
+                                </div>
+
+
+                            }
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+ 
+
+
+
+    
+<div class="row" id="show">
+    <div class="col-md-12">
+       @Html.Partial("~/Areas/Admin/Views/LeaveType/LeaveTypeList.cshtml")
+    </div>
+</div> 

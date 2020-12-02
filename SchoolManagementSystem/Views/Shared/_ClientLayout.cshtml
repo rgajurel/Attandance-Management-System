@@ -1,0 +1,162 @@
+﻿
+@model IEnumerable<DomainEntities.ParentsChild>
+@{
+    try
+    {
+        if (Session["parentEmail"].ToString() == "")
+        {
+            Response.Redirect("~/Areas/Client/Views/Home/Index.cshtml");
+        }
+    }
+    catch
+    {
+        Response.Redirect("~/Areas/Client/Views/Home/Index.cshtml");
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/Content/CSS/jquery-ui.css">
+    <link href="~/Content/CSS/styles.css" rel="stylesheet" />
+
+
+    <title>Parents Panel</title>
+    <!-- Global stylesheets -->
+    <link href="~/Content/vendor/kendo/css/kendo.common.min.css" rel="stylesheet">
+    <link href="~/Content/vendor/kendo/css/kendo.silver.min.css" rel="stylesheet">
+    <link href="~/Content/CSS/css.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/CSS/colors.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/vendor/jquery/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Content/vendor/kendo/js/kendo.all.min.js"></script>
+    <script src="~/Scripts/spin.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/custom.js"></script>
+    <link href="~/Content/CSS/jquery.timepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/nepali.datepicker.v2.1.min.js"></script>
+    <link href="~/Content/CSS/nepali.datepicker.v2.1.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/custom.css" rel="stylesheet" />
+</head>
+
+
+
+<body class="pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="navbar navbar-default header-highlight">
+        <div class="modal pull-right" id="message">
+
+        </div>
+
+        <div class="navbar-header">
+            
+            <a class="navbar-brand" href="http://www.creativetechno.com.np/">Creative Techno Solutions</a>
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-angle-double-down"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="fa fa-align-justify" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+
+            <p class="navbar-text">You are logged in from : <span class="bg-info">&nbsp; @Session["parentEmail"].ToString() &nbsp;</span></p>
+            <ul class="nav navbar-nav navbar-right">
+            
+                @*<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-comments-o" style="color:black"></i> <span class="visible-xs-inline-block position-right">Messages</span> <span class="badge bg-warning-400" id="envelope">5</span> </a>
+                    <div class="dropdown-menu dropdown-content width-350">
+                        <div class="dropdown-content-heading"> Messages </div>
+                        <ul class="media-list dropdown-content-body">a</ul>
+                        <ul class="media-list dropdown-content-body">s</ul>
+                        <ul class="media-list dropdown-content-body">d</ul>
+                        <ul class="media-list dropdown-content-body">f</ul>
+                        <div class="dropdown-content-footer"> <a href="javascript:void(0);" data-popup="tooltip" title="" data-original-title="All messages"><i class="fa fa-envelope display-block"></i></a> </div>
+                    </div>
+                </li>*@
+
+                <li class="dropdown dropdown-user">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> <img src="~/Content/Images/School/School.png" /> <span style="color:black">Admin</span> <i class="fa fa-angle-down" aria-hidden="true" style="color:black"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal"><i class="fa fa-user"></i>Change Password</a></li>
+                        <li><a href="@Url.Action("Logout", "Parents", new { area = "Client" })"><i class="fa fa-sign-out"></i>Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    @{ Html.RenderAction("Index", "ChangePassword", new { area = "Client" }); }
+
+    <div class="page-container" style="min-height:611px;background-color:#f5f5f5 !important;">
+        <div class="page-content">
+            @{ Html.RenderAction("GetSideBar", "Home", new { area = "Client" }); }
+            <div class="container-fluid body-content" id="loadcontent" style="margin:0px !important">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/Scripts/app.js"></script>
+    <script type="text/javascript" src="~/Scripts/effects.js"></script>
+    <script src="~/Content/JS/Common.js"></script>
+    <script src="~/Scripts/jquery.timepicker.min.js"></script>
+</body>
+
+
+</html>
+<!-- Core JS files -->
+<script>
+
+    function ShowNowLoading() {
+        debugger;
+        var html = '<div id="nowLoading" class="showbox">' +
+                  '<div class="loader">' +
+                  '<svg class="circular" viewBox="25 25 50 50">' +
+                  '<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>' +
+                  '</svg>' +
+                  '</div>' +
+                '</div>';
+        //var html = '<div id="nowLoading"><div class="now-showing-loader"></div><div class="now-text-loader font-class">Working ...</div></div>';
+        $('body').append(html);
+        $('body').addClass('loading-active');
+    }
+
+    function HideNowLoading() {
+        $('body').find('div#nowLoading').remove();
+        $('body').removeClass('loading-active');
+    }
+</script>
+<style>
+    #loader {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: #666;
+        background-image: url('../../Content/CSS/images/loaderload.gif');
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 2147483647;
+        opacity: 0.4;
+        filter: alpha(opacity=40); /* For IE8 and earlier */
+    }
+</style>
+

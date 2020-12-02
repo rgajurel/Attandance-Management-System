@@ -1,0 +1,72 @@
+﻿
+
+@model DomainEntities.ClassMaster
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/ClassMaster.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Students</a></li>
+            <li><a href="/Admin/OrganisationType">Class Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+
+
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Class Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                            @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", id = "formClassMaster", name = "formClassMaster", onSubmit = "return false;" }))
+                            {
+                                @Html.AntiForgeryToken();
+                                @Html.HiddenFor(model => model.ID)
+                                <table id="container" style="border-spacing:10px;border-collapse:separate;">
+                                    <tr>
+                                        <td>
+                                            <input class="form-control col-md-6 comment" data-val="true" style="text-transform:uppercase" data-val-required="Required" id="Name[0].Name" name="Name[0].Name" type="text" value="">
+                                            <span class="field-validation-valid text-danger" data-valmsg-for="Name[0].Name" data-valmsg-replace="true"></span>
+                                        </td>
+                                        
+                                    </tr>
+                                </table>
+                                            <div class="pull-left" style="margin-left:9px">
+
+                                                <button class="btn btn-danger" name="schooltype" id="sectionSubmit">Save</button>
+                                                <button class="btn btn-danger" name="sectionAdd" id="sectionAdd">+Add</button>
+                                                <button class="btn" name="sectionCancel" id="sectionCancel">Cancel</button>
+
+                                            </div>
+                            }
+                        </div>
+                        @*<span class="field-validation-valid text-danger pull-right" data-valmsg-for="Name[0].Name" data-valmsg-replace="true" id="duplicatemessage"></span></td>*@
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/ClassMaster/ClassMasterList.cshtml")
+    </div>
+</div>  

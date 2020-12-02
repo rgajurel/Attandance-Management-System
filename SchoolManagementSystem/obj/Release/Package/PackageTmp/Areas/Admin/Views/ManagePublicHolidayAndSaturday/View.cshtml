@@ -1,0 +1,125 @@
+﻿
+@model DomainEntities.ManagePublicHoliday
+@using Kendo.Mvc.UI
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/ManagePublicHoliday.js"></script>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/AccumulativeLeave">HR/Payroll</a></li>
+            <li><a href="/Admin/AccumulativeLeave">Public Public Holidays And Saturday</a></li>
+        </ol>
+    </div>
+</div>
+
+    @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", id = "formStudentsDailyAttandanceEntry", name = "formStudentsDailyAttandanceEntry", onSubmit = "return false;" }))
+    {
+        <div class="x_panel">
+            <div class="col-sm-2">
+                @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", required = "required" })
+                    @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+</div>
+
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Year, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-2">
+
+                @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+                @Html.DropDownListFor(model => model.Month, (SelectList)ViewBag.monthList, "--Select--", new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-2 nepalishow">
+                @Html.LabelFor(model => model.NepaliDateFrom)
+                @Html.TextBoxFor(model => model.NepaliDateFrom, new { @class = "form-control" })
+
+                @Html.ValidationMessageFor(model => model.NepaliDateFrom, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2 englishshow">
+                @Html.LabelFor(model => model.DateFrom)
+                @(Html.Kendo().DateTimePickerFor(m => m.DateFrom)
+                .Name("DateFrom")
+                .Value(DateTime.Now)
+                .Format("yyyy-MM-dd")
+                .HtmlAttributes(new { @class = "form-control" })
+                )
+                @Html.ValidationMessageFor(model => model.DateFrom, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2 nepalishow">
+                @Html.LabelFor(model => model.NepaliDateTo)
+                @Html.TextBoxFor(model => model.NepaliDateTo, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NepaliDateTo, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2 englishshow">
+                @Html.LabelFor(model => model.DateTo)
+                @(Html.Kendo().DateTimePickerFor(m => m.DateTo)
+                .Name("DateTo")
+                .Value(DateTime.Now)
+                .Format("yyyy-MM-dd")
+                .HtmlAttributes(new { @class = "form-control" })
+                )
+                @Html.ValidationMessageFor(model => model.DateTo, String.Empty, new { @class = "text-danger" })
+            </div>
+            <div class="col-md-2">
+                <button style="margin-top:26px" class="btn btn-danger" id="StudentsDailyAttandanceSearch">Search</button>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    }
+
+        
+
+
+    @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", id = "formStudentsTotalAttandanceEntry", name = "formStudentsTotalAttandanceEntry", onSubmit = "return false;" }))
+    {
+        <div class="x_panel">
+            <div class="col-sm-4">
+                @Html.LabelFor(model => model.Description)<span style="color:red">*</span>
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", required = "required" })
+                @Html.ValidationMessageFor(model => model.Description, String.Empty, new { @class = "text-danger" })
+            </div>
+
+            <div class="col-sm-8">
+                @*<button style="margin-top:26px" class="btn btn-primary" id="addTotalDays">Add Description </button>*@
+                <button class="btn btn-danger" style="margin-top:26px" id="marksSaveRecords">Save Records</button>
+                @*<button style="margin-top:23px" class="btn refresh" onclick="location.href='@Url.Action("Index", "MarksEntry")';return false;">Refresh</button>*@
+
+            </div>
+
+        </div>
+
+    }
+        
+
+
+
+
+
+
+    @Html.Partial("~/Areas/Admin/Views/ManagePublicHolidayAndSaturday/ManagePubicHolidaysList.cshtml")
+
+
+
+
+<div class="divAttandanceError" style="display:none">
+
+
+</div>
+<script>
+    var checkedIds = {};
+</script>

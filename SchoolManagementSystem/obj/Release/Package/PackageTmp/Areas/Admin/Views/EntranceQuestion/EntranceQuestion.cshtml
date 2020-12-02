@@ -1,0 +1,68 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.EntranceQuestionEntity>()
+            .Name("EntranceQuestionGrid")
+            .AutoBind(false)
+            .Columns(columns =>
+            {
+                columns.Template(x => { }).ClientTemplate("<input type='checkbox' name='checkbox' class='multiSelect'/></text>").Title("<input type='checkbox' class='chkSelectAll' onclick='checkAll(this)'>").Hidden().Width(50);
+                columns.Bound(c => c.QuestionID).Hidden();
+                columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Hidden();
+                columns.Template(t => { }).Title("Question").ClientTemplate("#= trimQuestion(EntranceQuestion) #").Width(200);
+                columns.Bound(c => c.DifficultyLevel).Title("Difficulty").Width(100);
+                columns.Template(t => { }).Title("Mandatory").ClientTemplate("#= FormatMandatory(IsMandatory) #").Width(100);
+                // columns.Bound(c => c.IsMandatory).Title("Mandatory").Width(100);
+                columns.Bound(c => c.AddedOn).Title("Created On").Format(ViewBag.settingDateFormat).Width(100);
+                columns.Template(t => { }).Title("Modified On").ClientTemplate("#= FormatModifiedDate(UpdatedOn) #").Width(100);
+                columns.Bound(c => c.IsActive).Title("Status").Width(100);
+                columns.Command(command =>
+                {
+                    //if (ViewBag.editAccess == true)
+                    //{
+                    command.Custom("Edit").Text(" ").Click("EditEntranceQuestion");
+                    //  }
+                    //    if (ViewBag.deleteAccess == true)
+                    //{
+                    command.Custom("Delete").Text(" ").Click("DeleteEntranceQuestion");
+                    // }
+                }).Title("Action").Width(100);
+            })
+             .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                        .PreviousNext(true))
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .ServerOperation(true)
+    .Model(model =>
+    {
+        model.Id(p => p.QuestionID);
+        model.Field(p => p.RowNum);
+        model.Field(p => p.EntranceQuestion);
+        model.Field(p => p.WeightageID);
+        model.Field(p => p.AddedOn);
+        model.Id(p => p.UpdatedOn);
+        model.Field(p => p.StatusName);
+        model.Field(p => p.QuestionWeight);
+        model.Field(p => p.DifficultyLevel);
+    })
+   .Read(read => read.Action("GetAllEntranceQuestion", "EntranceQuestion").Data("ParamToLoadEntranceQuestionList"))
+   .PageSize((int)ViewBag.ItemPerPage)
+   //.Read(read => read.Url(Url.HttpRouteUrl("DefaultApi", new { controller = "QuizQuestionAdmin", action = "GetAllQuiz" })).Data("ParamToLoadQuizList").Type(HttpVerbs.Post))
+   ).Events(ev => ev.DataBound("onDatabound"))
+)
+
+<div id="modalWindow" class="popup hide">
+    <h4>Are you sure you Want to Delete?</h4>
+    <div class="pull-right">
+        <button id="yes" class="k-button">Yes</button>
+        <button id="no" class="k-button">No</button>
+    </div>
+</div>
+
+<style>
+    .k-grid td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>

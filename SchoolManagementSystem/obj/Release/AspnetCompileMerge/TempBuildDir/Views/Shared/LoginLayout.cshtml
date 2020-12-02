@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/AdminCommon.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+</head>
+<body class="loginBg">
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
+<style>
+    .loginBg {
+        background-image: url('../../Content/CSS/images/login.png');
+        background-size: cover;
+    }
+
+        .loginBg .panel-heading.text-center {
+            background: transparent;
+            border: none;
+        }
+
+    .panel-title {
+        font-size: 25px;
+        margin: 15px 0 0 0;
+        color: saddlebrown;
+    }
+
+    .loginBg .panel-heading.text-center {
+        background: transparent;
+        border: none;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #05566c;
+        border-color: #05566c;
+    }
+</style>

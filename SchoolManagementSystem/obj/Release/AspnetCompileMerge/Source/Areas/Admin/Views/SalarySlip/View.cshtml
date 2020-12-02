@@ -1,0 +1,445 @@
+﻿
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/SalarySlip.js"></script>
+<script src="~/Scripts/jQuery.print.js"></script>
+
+@model DomainEntities.SalarySlip
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", id = "formSalarySlip", name = "formSalarySlip", onSubmit = "return false;" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="x_panel">
+
+        <div class="col-md-3">
+            
+          <label>Organisation</label><span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+        </div>
+       
+        <div class="col-md-3">
+            <label>Employee</label><span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.EmployeeID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmployeeID, String.Empty, new { @class = "text-danger" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Year, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-md-2">
+
+            @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Month, (SelectList)ViewBag.monthList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+        </div>
+        
+        <div class="col-md-4">
+            <button style="margin-top:10px" class="btn btn-danger" id="GenerateSalarySlip">Generate</button>
+            @*<button style="margin-top:10px" class="btn btn" id="Cancel">Cancel</button>*@
+            <button style="margin-top:10px;display:none" class="btn btn-danger" id="Print">Print</button>
+        </div>
+
+    </div>
+
+
+}
+<div id="NODataAvailiable" style="display:none">
+    <main class="marksheet">
+        <header>
+            <dir class="row centered txt-centered">
+                <h2 class="organisation"></h2>
+                <h5 class="address"></h5>
+            </dir>
+            <section class="student-detail">
+                <div class="row centered txt-centered">
+                    <h2>Salary Slip for month of <span class="month"></span>, <span class="year"></span></h2>
+                    <table>
+                        <tr>
+                            <td class="tdbold">Employee Name</td>
+                            <td class="employee">Ram Prasad Gajurel</td>
+                            <td class="tdbold">PF No.</td>
+                            <td class="pf">$100</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">Department</td>
+                            <td class="department">$100</td>
+                            <td class="tdbold">Designation</td>
+                            <td class="designation">$100</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">JobType</td>
+                            <td class="jobtype">Temporary</td>
+                            <td class="tdbold">Daily Hour</td>
+                            <td class="dailyhour">9.00</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">PAN No.</td>
+                            <td class="pan">$100</td>
+                            <td class="tdbold">CIT No.</td>
+                            <td class="cit">$100</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">Bank Account No.</td>
+                            <td class="bankacnt">$100</td>
+                            <td class="tdbold">Joining Date.</td>
+                            <td class="joiningdate">$100</td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+            </section>
+
+            <section class="student-detail">
+                <div class="row centered txt-centered">
+                    <table>
+                        <tr>
+                            <td class="tdbold">TotalDays</td>
+                            <td class="totaldays">0.00</td>
+                            <td class="tdbold">Holidays</td>
+                            <td class="holiday">0.00</td>
+                            <td class="tdbold">Present Days</td>
+                            <td class="presentdays">0.00</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">Absent Days</td>
+                            <td class="absentdays">0.00</td>
+                            <td class="tdbold">Paid Leave</td>
+                            <td class="paidleave">0.00</td>
+                            <td class="tdbold">Working Days</td>
+                            <td class="workingdays">0.00</td>
+                        </tr>
+                        
+
+                    </table>
+                </div>
+            </section>
+            </header>  
+              
+        </main>
+</div>
+
+<div id="salaryResults" style="display:none">
+    <main class="marksheet">
+        <header>
+            <dir class="row centered txt-centered">
+                <h2 id="organisation">Ultimate Way Pvt. Ltd</h2>
+                <h5 id="address">Kathmandu, Nepal</h5>
+            </dir>
+            <section class="student-detail">
+                <div class="row centered txt-centered">
+                    <h2>Salary Slip for month of <span class="month"></span>, <span class="year"></span></h2>
+                                        <table>
+                        <tr>
+                            <td class="tdbold">Employee Name</td>
+                            <td class="employee">Ram Prasad Gajurel</td>
+                            <td class="tdbold">PF No.</td>
+                            <td class="pf">$100</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">Department</td>
+                            <td class="department">$100</td>
+                            <td class="tdbold">Designation</td>
+                            <td class="designation">$100</td>
+                        </tr>
+                                            <tr>
+                                                <td class="tdbold">JobType</td>
+                                                <td class="jobtype">Temporary</td>
+                                                <td class="tdbold">Daily Hour</td>
+                                                <td class="dailyhour">9.00</td>
+                                            </tr>
+                        <tr>
+                            <td class="tdbold">PAN No.</td>
+                            <td class="pan">$100</td>
+                            <td class="tdbold">CIT No.</td>
+                            <td class="cit">$100</td>
+                        </tr>
+                        <tr>
+                            <td class="tdbold">Bank Account No.</td>
+                            <td class="bankacnt">$100</td>
+                            <td class="tdbold">Joining Date.</td>
+                            <td class="joiningdate">$100</td>
+                        </tr>
+                                           
+                    </table>
+                </div>
+
+
+            </section>
+            
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <td class="tdbold">TotalDays</td>
+                                <td id="totaldays">0.00</td>
+                                <td class="tdbold">Holidays</td>
+                                <td id="holiday">0.00</td>
+                                <td class="tdbold">Present Days</td>
+                                <td id="presentdays">0.00</td>
+                            </tr>
+                            <tr>
+                                <td class="tdbold">Absent Days</td>
+                                <td id="absentdays">0.00</td>
+                                <td class="tdbold">Paid Leave</td>
+                                <td id="paidleave">0.00</td>
+                                <td class="tdbold">Working Days</td>
+                                <td id="workingdays">0.00</td>
+                            </tr>
+                            @*<tr>
+                            <td class="tdbold">UnPaid Leave</td>
+                            <td id="absentdays">0.00</td>
+
+                        </tr>*@
+
+                        </table>
+                    </div>
+
+
+                </section>
+            <div id="salarydesc">
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <th class="tdbold">Income</th>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </section>
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table id="addsalary"></table>
+                    </div>
+                </section>
+
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <td>#</td>
+                                <td class="tdbold">Gross Income</td>
+                                <td></td>
+                                <td class="tdbold" id="grossincome"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <th class="tdbold">Deduction</th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table id="deductsalary"></table>
+                    </div>
+                </section>
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th class="tdbold">Total Deduction</th>
+                                <th></th>
+                                <th class="tdbold" id="totaldeduction"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th class="tdbold">Total Saving</th>
+                                <th></th>
+                                <th class="tdbold" id="totalsaving"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="student-detail">
+                    <div class="row centered txt-centered">
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th class="tdbold">Final Salary</th>
+                                <th></th>
+                                <th class="tdbold" id="finalsalary"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            
+
+            
+        </header>
+    </main>
+</div>
+<style>
+    * {
+        -webkit-padding-start: 0px;
+    }
+
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+  
+    .marksheet {
+        border: 1px solid #2f2f2f;
+        margin: 0 auto;
+        width: 15cm;        
+        display: block;
+        background-color:white;
+    }
+
+    header {
+        position: relative;
+        border-bottom: 1px solid #2f2f2f;
+    }
+
+        header img {
+            position: absolute;
+            left: 10px;
+        }
+
+    .centered {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .txt-centered {
+        text-align: center;
+    }
+
+    .progress-report {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .sm-bot-border {
+        border-bottom: 1px dotted #716b6b;
+        padding: 0px 40px 0px 0px;
+    }
+
+    .md-bot-border {
+        border-bottom: 1px dotted #716b6b;
+        padding: 0px 40px 0px 0px;
+    }
+
+    .lg-bot-border {
+        border-bottom: 1px dotted #716b6b;
+        padding: 0px 40px 0px 0px;
+    }
+
+    .student-detail {
+        border-top: 1px solid #2f2f2f;
+       
+    }
+
+        .student-detail > div {
+            width: 90%;
+        }
+
+   .tdbold{
+       font-weight:bold;
+       height:25px;
+       color:black;
+       
+       
+   }
+
+    [colspan="3"] {
+        border-bottom: 2px solid black;
+    }
+
+    table {
+        display: table;            
+        width: 100%;
+        text-align:left;
+    }
+
+    .tables {
+        padding: 0px 0px;
+    }
+    /*table tr th:nth-child(2) {
+                      width: 25%;
+                  }*/
+    section.table-detail table {
+        width: 59%;
+        height: 290px;
+        float: left;
+        margin-right: 1%;
+        border-radius: 2px 2px 2px 2px;
+    }
+
+    section.table-detail article {
+        width: 38.2%;
+        float: left;
+        height: 293px;
+        border: 0.5px solid #000;
+        padding: 5px;
+        border-radius: 2px 2px 2px 2px;
+    }
+
+        section.table-detail article label {
+            border-bottom: 1px solid #383737;
+        }
+
+        section.table-detail article ul {
+            list-style: none;
+            margin: 2px;
+        }
+
+            section.table-detail article ul li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 3px 10px 2px 20px;
+            }
+
+    section.table-detail {
+        padding: 5px;
+        overflow: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 8px 0px !important;
+    }
+
+    footer {
+        height: 70px;
+        margin-top: 70px;
+    }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+            footer ul li {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+</style>

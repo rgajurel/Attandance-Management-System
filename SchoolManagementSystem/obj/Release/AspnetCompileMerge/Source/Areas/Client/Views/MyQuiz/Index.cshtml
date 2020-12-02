@@ -1,0 +1,136 @@
+﻿@model DomainEntities.QuizClientSide
+@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ClientLayout.cshtml";
+}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/2.0.46/css/materialdesignicons.css">
+<link href="~/Content/dist/css/customClient.css" rel="stylesheet" />
+<script src="~/Scripts/jqPaginator.js"></script>
+<script src="~/Scripts/jquery.plugin.js"></script>
+<script src="~/Scripts/jquery.countdown.js"></script>
+<link href="~/Content/vendor/kendo/css/kendo.common.min.css" rel="stylesheet">
+<link href="~/Content/vendor/kendo/css/kendo.silver.min.css" rel="stylesheet">
+<script src="~/Content/vendor/kendo/js/kendo.all.min.js"></script>
+<script type="text/javascript">
+    var NoofQuizPerPage = '@ViewBag.RecordsPerPage';
+    var totalQuizEntry = '@ViewBag.TotalQuiz';
+</script>
+<script src="~/Content/JS/frontend/MyQuiz.js"></script>
+<script src="~/Content/lib/kendo/kendo.all.min.js"></script>
+<div class="QuizTimerSection" style="display:none">
+    <div class="row">
+
+
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <div class="quiz-time">
+                <i class="mdi mdi-timer"></i>
+                <a href="#" class="close-button close-button-question QuizClose">✖</a>
+                <h5><span></span><span></span></h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="previousEntry">
+
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "quiz-play-form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row page-header-wrapper">
+        <div class="col-lg-7">
+            <div class="page-header-box">
+                <div class="page-header-icon">
+                    <span>
+                        <i class="mdi mdi-lightbulb-outline"></i>
+                    </span>
+                </div>
+                <h1 class="page-header">Quiz <br><span>List of All Quiz</span></h1>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="form-group">
+                @Html.DropDownList("ddlSortBy", (SelectList)ViewBag.QuizSortingOption, new { @class = "form-control", style = "display:none" })
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="input-group custom-search-form search-btn">
+                <input type="text" class="form-control" placeholder="Search" id="QuizTitle">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="btnQuizSearch">
+                        <i class="fa fa-search" title="Search"></i>
+                    </button>
+                    <button class="btn btn-default ResetInputFieldClient" type="button">
+                        <i class="mdi mdi-loop" title="Reset"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="quiz-model">
+                @Html.Raw(ViewBag.ContentOnPageLoad)
+            </ul>
+            <div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pull-right" id="pagination1"></ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /.col-lg-6 -->
+    </div>
+    <div class="row">
+        <div class="col-lg-12 indication">
+            <h4>Indication</h4>
+            <ul class="percentage-list">
+                <li><span>0% ~ 10%</span></li>
+                <li><span>11% ~ 20%</span></li>
+                <li><span>21% ~ 30%</span></li>
+                <li><span>31% ~ 40%</span></li>
+                <li><span>41% ~ 50%</span></li>
+                <li><span>51% ~ 60%</span></li>
+                <li><span>61% ~ 70%</span></li>
+                <li><span>71% ~ 80%</span></li>
+                <li><span>81% ~ 90%</span></li>
+                <li><span>91% ~ 100%</span></li>
+            </ul>
+        </div>
+    </div>
+}
+<div id="defaultCountdown" style="display:none"></div>
+@(Html.Kendo().Window()
+    .Name("popupWindow")
+    .Title("Error")
+    .Content(@<text>
+    <h4>Sorry!! This Quiz has been Expired. </h4>
+    <div class="pull-right">
+        <button id="Yes" class="k-button">Close</button>
+    </div>
+</text>)
+    .Draggable()
+    .Resizable()
+    .Width(600)
+    .Visible(false)
+    .Actions(actions => actions.Close())
+    .Events(ev => ev.Close("onClose"))
+)
+
+@(Html.Kendo().Window()
+    .Name("PopUpQuestionMandatory")
+    .Title("Mandatory Question")
+    .Content(@<text>
+        <h4>This Question cannot be skipped. </h4>
+        <div class="pull-right">
+            <button id="ConfirmMandatoryquestion" class="k-button">Ok</button>
+        </div>
+    </text>)
+    .Draggable()
+    .Resizable()
+    .Width(600)
+    .Visible(false)
+    .Actions(actions => actions.Close())
+    .Events(ev => ev.Close("onCloseMandatoryQuestion"))
+)

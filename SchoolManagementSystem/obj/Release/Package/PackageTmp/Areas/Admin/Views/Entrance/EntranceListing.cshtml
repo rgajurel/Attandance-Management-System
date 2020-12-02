@@ -1,0 +1,62 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.EntranceEntity>()
+            .Name("EntranceListingGrid")
+            .AutoBind(false)
+            .Columns(columns =>
+            {
+                columns.Template(x => { }).ClientTemplate("<input type='checkbox' name='checkbox' class='EntrancemultiSelect'/></text>").Title("<input type='checkbox' class='EntrancechkSelectAll' onclick='QuizcheckAll(this)'>").Width(50);
+                columns.Bound(c => c.EntranceID).Hidden();
+                columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                columns.Template(t => { }).Title(" ").ClientTemplate("#= renderRecordNumber(data) #").Width(50).Hidden();
+                columns.Bound(c => c.EntranceTitle).Title("Entrance Title").Width(300);
+                columns.Bound(c => c.TotalQuestion).Title("No. of Question").Width(150);
+                columns.Bound(c => c.StartDate).Title("Start Date").Format(ViewBag.settingDateFormat).Width(100);
+                columns.Bound(c => c.EndDate).Title("End Date").Format(ViewBag.settingDateFormat).Width(100);
+                columns.Bound(c => c.StatusName).Title("Status").Width(100);
+                columns.Command(command =>
+                {
+                    //if (ViewBag.editAccess)
+                    //{
+                    command.Custom("Edit").Text(" ").Click("EditEntrance");
+                    //}
+                    //    if (ViewBag.deleteAccess)
+                    //{
+                    command.Custom("Delete").Text(" ").Click("DeleteEntrance");
+                    //}
+
+
+                }).Title("Action").Width(100);
+            })
+             .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                        .PreviousNext(true))
+    //.Sortable()
+    //.Scrollable()
+    .DataSource(dataSource => dataSource
+    .Ajax()
+    .ServerOperation(true)
+    .Model(model =>
+    {
+        model.Id(p => p.EntranceID);
+        model.Field(p => p.EntranceTitle);
+        model.Field(p => p.TotalQuestion);
+        model.Id(p => p.StartDate);
+        model.Field(p => p.EndDate);
+        model.Field(p => p.AddedOn);
+        model.Id(p => p.UpdatedOn);
+        model.Field(p => p.StatusName);
+    })
+   .Read(read => read.Action("GetAllEntrance", "Entrance").Data("ParamToLoadEntranceListing"))
+   .PageSize((int)ViewBag.ItemPerPage)
+   //.Read(read => read.Url(Url.HttpRouteUrl("DefaultApi", new { controller = "QuizQuestionAdmin", action = "GetAllQuiz" })).Data("ParamToLoadQuizList").Type(HttpVerbs.Post))
+   ).Events(ev => ev.DataBound("onDataboundEntranceListing"))
+)
+
+<div id="modalWindow" class="popup hide">
+    <h4>Are you sure you Want to Delete?</h4>
+    <div class="pull-right">
+        <button id="yes" class="k-button">Yes</button>
+        <button id="no" class="k-button">No</button>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.QuizUserReport>()
+    .Name("QuizUserReport")
+    .AutoBind(false)
+            .Columns(columns =>
+            {
+                columns.Template(t => { }).Title("Row No").ClientTemplate("#= renderNumber(data) #").Hidden();
+                columns.Template(t => { }).Title("S.N").ClientTemplate("#= renderRecordNumber(data) #").Hidden();
+                columns.Bound(c => c.QuizUserID).Title("QuizUserID").Hidden();
+                columns.Bound(c => c.UserName).Title("UserName");
+                columns.Bound(c => c.QuizTitle).Title("Quiz");
+                columns.Bound(c => c.QuizStatus).Title("Status").Format(ViewBag.settingDateFormat);
+                columns.Bound(c => c.JoinedDate).Title("Joined On").Format(ViewBag.settingDateFormat);
+                columns.Bound(c => c.CompletedDate).Title("Completed On").ClientTemplate("#= FormatCompletedDate(CompletedDate) #");
+                columns.Bound(c => c.CompletedTime).Title("Time Spent(sec)");
+                columns.Bound(c => c.Score).Title("Score");
+                columns.Command(command =>
+                {
+                    command.Custom("Details").Text(" ").Click("QuizUserDetail");
+                }).Title("Action");
+
+            })
+              .Pageable(pageable => pageable
+                        .Refresh(true)
+                        .PageSizes(new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 })
+                        .PreviousNext(true)
+                        
+            )
+                        .DataSource(dataSource => dataSource
+                        .Ajax()
+                        .ServerOperation(true)
+                        
+                                        .Model(model =>
+                                        {
+                                            model.Id(p => p.QuizUserID);
+                                            model.Field(p => p.UserName);
+                                            model.Field(p => p.QuizTitle);
+                                            model.Field(p => p.QuizStatus);
+                                            model.Field(p => p.JoinedDate);
+                                            model.Field(p => p.CompletedDate);
+                                            model.Field(p => p.CompletedTime);
+                                            model.Field(p => p.Score);
+                                        })
+                                        .Read(read => read.Action("GetAllQuizUserListing", "QuizUserReport").Data("ParamToLoadQuizUserReportList").Type(HttpVerbs.Post))
+                                        .PageSize((int)ViewBag.ItemPerPage)
+                                        
+                                        )
+ .Events(ev => ev.DataBound("onDatabound"))
+)

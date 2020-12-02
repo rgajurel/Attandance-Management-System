@@ -1,0 +1,324 @@
+﻿.tile-stats .icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    position: absolute;
+    right: 53px;
+    top: 22px;
+    z-index: 1;
+}
+.k-grid-edit-row>td>.text-box {
+    width: 100%;
+    color: red;
+}
+
+.txtRed{
+    color:#d9534f;
+    
+}
+#clientmenu
+{
+    height:300px;
+    overflow-y:scroll;
+}
+
+#adminmenu{
+
+     height:300px;
+    overflow-y:scroll;
+}
+.tile-stats{
+   border-radius:0px !important;
+   border:2px solid white      
+}
+p.user-group-list, p.user-role-list {
+    column-count: 4;
+}
+
+.Error
+ {
+    background-color:#d9534f; 
+    color:white;     
+      
+}
+.tile-stats h3 {
+    color:white;
+}
+
+.count{
+    color:white;
+}
+
+.toggle{
+    padding-top:8px !important;
+}
+
+.nav_menu{
+    height:41px !important;
+}
+.navbar-nav>li>a {
+    font-weight: 500;
+    line-height: 40px;
+}
+.nav>li>a {
+    padding: 5px 15px 12px;
+}
+.dropdown {
+    height: 40px;
+    position: relative;
+}
+.navbar-nav .open .dropdown-menu {
+    position: absolute;
+    background: #EDEDED;
+    margin-top: 0;
+    border: 1px solid #D9DEE4;
+    -webkit-box-shadow: none;
+    right: 0;
+    left: auto;
+    width: 220px;
+}
+.nav.navbar-nav>li>a {
+    height: 40px;
+    color: #515356!important;
+}
+
+.nav.side-menu>li>a {
+    color: #E7E7E7;
+    font-weight: 500;
+   
+}
+.bg-green {
+    background: #e52512!important;
+    border: 1px solid #f7f7f7!important;
+    color: #fff;
+}
+
+.nav.side-menu>li.active, .nav.side-menu>li.current-page {
+    border-right: 3px solid #d9534f;
+}
+
+.x_panel {
+    width: 100%;
+    height:auto;
+     padding: 10px 17px;
+    display: inline-block;
+    background: #fff;
+    overflow-y: overlay ;
+    border: 1px solid #E6E9ED;
+    -webkit-column-break-inside: avoid;
+   
+    opacity: 1;
+    transition: all .2s ease;
+}
+.x_panel, .x_title {
+    margin-bottom: 2px;
+}
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    list-style: none;
+    background-color: #edeaea;
+    border-radius: 0px;
+}
+
+ body{
+     background-color:#F7F7F7;
+ }
+
+ .main_container{
+     height:auto !important;
+      background-color: #2A3F54
+ }
+ .right_col {   
+    height: auto;
+}
+
+ .left_col
+ {
+    background-color:#2A3F54;
+ }
+ .btn{    
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 13px;
+    text-align: center;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;  
+    border-radius: 0px;
+    margin-right:0px;
+}
+ 
+  .nav.child_menu li.active, .nav.child_menu li:hover {
+    background-color: #d95043 !important;
+}
+  .k-window-titlebar.k-header
+  {
+      background-color: #d95043 !important;
+  }
+  .k-window-actions{
+      display:none;
+  }
+  .fa.fa-trash{
+      color:#d95043;
+  }
+   .fa.fa-pencil{
+      color:#d95043;
+  }
+
+   .k-grid-header .k-header .k-link 
+   {
+    font-size: 13px;
+    font-weight: bold;
+    color: #d41b35;
+    
+}
+
+ .btn-danger.maintain{
+     margin-top:3px;
+ }
+ .k-state-selected{
+     background-color:#d41b35;
+     border-color:#d41b35;
+ }
+ .thumbnail{
+     margin-top:25px !important;
+ }
+
+ .pulldown
+ {
+     margin-top:27px;
+ }
+
+.panel{
+    border-radius:0px !important;
+}
+
+.buttoncolor{
+   color:red;
+}
+
+#salarywindow_wnd_title{
+    text-align:center;
+}
+
+.black{
+color:black;
+}
+.brown{
+    color:#a4060c;
+}
+
+.hide{
+    display:none;
+}
+.navbar-nav .open .dropdown-menu.msg_list {
+    width: 370px !important;
+}
+
+
+
+.navbar-nav .open .dropdown-menu {
+    background-color:antiquewhite;
+    width:150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+  
+}
+
+#nprogress .bar {
+  background-color: red;
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px red, 0 0 5px red;
+  opacity: 1.0;
+  background-color:red;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: red;
+  border-left-color: red;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+          animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+  
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes nprogress-spinner {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+

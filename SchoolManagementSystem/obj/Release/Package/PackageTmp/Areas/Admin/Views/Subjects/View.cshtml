@@ -1,0 +1,107 @@
+﻿
+
+@model DomainEntities.Subjects
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Content/JS/BackEnd/Subjects.js"></script>
+
+<div class="row">
+    <div class="col-md-12">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="/Admin/SchoolInformation">Exam</a></li>
+            <li><a href="/Admin/OrganisationType">Subject Master</a></li>
+            <li class="pull-right"><button class="btn btn-danger create" type="submit">Create New</button></li>
+        </ol>
+    </div>
+</div>
+<div style="display:none" id="hide">
+    <div class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Subject Master</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-lg-12">
+                            @using (Ajax.BeginForm("SaveSubjects", "Subjects",
+new AjaxOptions
+{
+    OnSuccess = "OnSuccess",
+    OnFailure = "OnFailure",
+    LoadingElementId = "progress",
+    OnBegin = "OnBegin"
+}))
+                            {
+                                <input data-val="true" data-val-number="The field ID must be a number." id="SubjectList[0].ID" name="SubjectList[0].ID" type="hidden" value="" class="id">
+                                @Html.AntiForgeryToken()
+                                <div class="form-group" style="margin-left:10px">
+                                    <div class="row">
+                                        <div class="col-md-3">
+
+                                            @Html.LabelFor(model => model.ClassID)<span style="color:red">*</span>
+                                            @Html.DropDownListFor(model => model.ClassID, (SelectList)ViewBag.classList, "--Select--", new { @class = "form-control", required = "required" })
+                                            @Html.ValidationMessageFor(model => model.ClassID, String.Empty, new { @class = "text-danger" })
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                                <div class="form-group">
+                                                    <table id="container" style="border-spacing:10px;border-collapse:separate;">
+                                                        <tr><td>Subject Code<span style="color:red">*</span></td><td>Subject Name<span style="color:red">*</span></td><td>Credit Points<span style="color:red">*</span></td></tr>
+                                                        <tr>
+                                                            <td style="display:none">
+                                                                <input class="form-control classid" data-val="true" data-val-required="This field is Required" id="SubjectList[0].ClassID" name="SubjectList[0].ClassID" type="hidden" value="">
+                                                                <span class="field-validation-valid text-danger" data-valmsg-for="SubjectList[0].ClassID" data-valmsg-replace="true"></span>
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control subjectcode" style="text-transform:uppercase" data-val="true" data-val-required="This field is Required" id="SubjectList[0].SubjectCode" name="SubjectList[0].SubjectCode" pattern="[0-99]" type="text" value="">
+                                                                <span class="field-validation-valid text-danger" data-valmsg-for="SubjectList[0].SubjectCode" data-valmsg-replace="true"></span>
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control subjectname" data-val="true" data-val-required="This field is Required" id="SubjectList[0].SubjectName" name="SubjectList[0].SubjectName" pattern="[0-99]" type="text" value="">
+                                                                <span class="field-validation-valid text-danger" data-valmsg-for="SubjectList[0].SubjectName" data-valmsg-replace="true"></span>
+                                                            </td>
+
+                                                            <td>
+                                                                <input class="form-control creditpoints" data-val="true" data-val-required="This field is Required" id="SubjectList[0].CreditPoints" name="SubjectList[0].CreditPoints" pattern="[0-99]" type="number" value="">
+                                                                <span class="field-validation-valid text-danger" data-valmsg-for="SubjectList[0].CreditPoints" data-valmsg-replace="true"></span>
+                                                            </td>
+                                                        </tr>
+
+
+
+
+                                                    </table>
+                                                    <div class="row">
+
+                                                    </div>
+                                                </div>
+
+                                                        <div class="form-group" style="margin-left:10px">
+                                                            <input class="btn btn-danger" name="subjectSubmit" id="subjectSubmit" value="Save" type="submit" />
+                                                            <button type="button" id="addSubjects" class="btn btn-danger">+Add Subjects</button>
+                                                            <input class="btn" name="subjectCancel" id="subjectCancel" value="Cancel" type="reset">
+
+                                                        </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>
+       
+    </div>
+</div>
+
+
+<div class="row" id="show">
+    <div class="col-md-12">
+        @Html.Partial("~/Areas/Admin/Views/Subjects/SubjectsList.cshtml")
+    </div>
+</div>  

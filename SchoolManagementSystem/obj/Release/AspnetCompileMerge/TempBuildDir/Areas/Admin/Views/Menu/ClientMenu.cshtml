@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<DomainEntities.Menu>
+@{var hasChildMenu = false;}
+
+@if (Model.Any())
+{
+    foreach (var item in Model.Where(x => x.ParentName == null && x.isAdmin == false))
+    {
+        hasChildMenu = false;
+        <li class="">
+            @if (Model.Where(x => x.ParentName == item.Name && x.isAdmin == false).Count() > 0)
+            {
+                hasChildMenu = true;
+            }
+            @if (item.Access.ToLower().Contains("view"))
+            {
+                if (item.URI.Equals("#"))
+                {
+                    <a href="#" class=""><i class="@item.IconClass"></i> @Html.DisplayFor(modelItem => item.Name)</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("Index", item.URI, new { Area = "Client" })" class="">
+                        <i class="@item.IconClass"></i> @Html.DisplayFor(modelItem => item.Name)
+
+                        @if (hasChildMenu == true)
+                            {
+                            <span class="fa fa-angle-right cke_menuarrow pull-right"></span>
+                        }
+                    </a>
+                }
+            }
+            @if (hasChildMenu == true)
+            {
+                <ul class="nav nav-second-level">
+                    @foreach (var subItem in Model.Where(x => x.ParentName == item.Name && x.ParentName != null && x.isAdmin == false))
+                        {
+                        <li>
+                            @if (subItem.Access.ToLower().Contains("view"))
+                            {
+                                if (subItem.URI.Equals("#"))
+                                {
+                                    <a href="#" class="">@subItem.Name</a>
+                                }
+                                else
+                                {
+                                    <a href="@Url.Action("Index", subItem.URI, new { Area = "Client" })" class="">@subItem.Name</a>
+                                }
+                            }
+                        </li>
+                    }
+
+                </ul>
+            }
+        </li>
+    }
+}
+<script>
+    $.ajax({
+        url: "/Admin/Menu/GetLoggedInUserName",
+        type: "POST",
+        dataType: "json",
+        global: false,
+        success: function (data)
+        {
+            $("#loginusername").text("Logged In As: " + data);
+        }
+    });
+</script>
+
+
+
+
+
+
+
+

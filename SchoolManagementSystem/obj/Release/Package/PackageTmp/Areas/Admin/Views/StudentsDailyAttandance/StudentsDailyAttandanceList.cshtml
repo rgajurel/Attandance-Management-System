@@ -1,0 +1,71 @@
+﻿
+@using Kendo.Mvc.UI
+@(Html.Kendo().Grid<DomainEntities.StudentsDailyAttandance>()
+    .Name("StudentsDailyAttadanceList")
+            .Columns(columns =>
+            {
+                columns.Bound(c => c.SN).Title("S.N").Width(10);
+                //columns.Bound(p => p.IsAdmin).ClientTemplate("<input type='checkbox' name='chkbx' class='chkbx' ></input>").Title("Check").Width(100);
+
+
+                columns.Bound(c => c.ClassID).Hidden();
+                columns.Bound(c => c.ID).Hidden();
+                columns.Bound(c => c.FacultyID).Hidden();
+                columns.Bound(c => c.StudentID).Hidden();
+                columns.Bound(c => c.SessionID).Hidden();
+                columns.Bound(c => c.Section).Hidden();
+                columns.Bound(c => c.StudentName).Title("Student Name").Width(150);
+                columns.Bound(c => c.Class).Title("Class").Width(50);
+                columns.Bound(c => c.Faculty).Title("Faculty").Width(50);
+                columns.Bound(c => c.RollNo).Title("Roll No").Width(20);
+                columns.Bound(c => c.Section).Title("Section").Width(20);
+                columns.Bound(c => c.Date).Title(" English Date").Format("{0:MM-dd-yyyy}").Width(50);
+                columns.Bound(c => c.NepaliDate).Title("Nepali Date").Width(50).Format("{0:MM-dd-yyyy}"); ;
+                columns.Bound(c => c.IsAttend).ClientTemplate("<input type='checkbox' name='chkbx' class='chkbx' ></input>").Title("<input type='checkbox' class='chkSelectAll' onclick='checkAll(this)'>All</>").Width(20);
+
+
+            })
+
+
+
+                    //.Editable(editable => editable.Mode(GridEditMode.InCell))
+
+                    .Pageable(
+              page => page.Refresh(true)
+             .PageSizes(new int[] { 100 })
+              .PreviousNext(true))
+                    //   .PersistSelection(true)
+                    // .Reorderable(reorder => reorder.Columns(true))
+
+                    //.Navigatable()
+                    .DataSource(dataSource => dataSource
+                        .Ajax()
+
+                        .ServerOperation(false)
+                                .Model(model =>
+                                {
+                                    model.Id(p => p.SN);
+                                    model.Field(p => p.SN).Editable(false);
+                                    model.Field(p => p.StudentName).Editable(false);
+
+                                })
+                  .Read(read => read.Action("GetAll", "StudentsDailyAttandance").Data("ParamToAttandanceList"))// Action invoked when the user saves a new data item
+                    .Events(e => e.Error("onError"))
+                  .PageSize(100)
+
+             )
+
+.Events(ev => ev.DataBound("resetRowNumberAttandanceEntryGrid"))
+
+.Events(ev => ev.Save("Save"))
+
+
+)
+
+
+
+
+
+
+
+

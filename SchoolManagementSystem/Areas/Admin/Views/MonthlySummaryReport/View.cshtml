@@ -1,0 +1,166 @@
+﻿
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/JS/BackEnd/MonthlySummaryReport.js"></script>
+
+@using Kendo.Mvc.UI
+@model DomainEntities.MonthlyAttandanceSummaryReport
+@using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data", autocomplete = "off", id = "formMonthlySummaryReport", name = "formMonthlySummaryReport", onSubmit = "return false;" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="x_panel">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.OrganisationID)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.OrganisationID, Enumerable.Empty<SelectListItem>(), "--Organisation--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.OrganisationID, String.Empty, new { @class = "text-danger" })
+        </div>
+                <div class="col-md-2">
+            <label>Employee</label><span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.EmployeeID, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EmployeeID, String.Empty, new { @class = "text-danger" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.Year)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Year, (SelectList)ViewBag.sessionList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Year, String.Empty, new { @class = "text-danger" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.Month)<span style="color:red">*</span>
+            @Html.DropDownListFor(model => model.Month, (SelectList)ViewBag.monthList, "--Select--", new { @class = "form-control", required = "required" })
+            @Html.ValidationMessageFor(model => model.Month, String.Empty, new { @class = "text-danger" })
+        </div>     
+
+        <div class="col-md-4">
+            <button style="margin-top:26px" class="btn btn-danger" id="monthlySummaryReportGenerate">Generate</button>
+            <button style="display:none" class="btn btn-danger" id="Print">Print</button>
+        </div>
+    </div>
+
+}
+
+<div id="attandanceResults" style="display:none">
+    <div style="border: 1px solid black;padding:5px;background-color:white">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="square" style="background-color:yellow;color:black">H</div>
+                <div style="font-weight:bold">Saturday/Public Holiday</div>
+            </div>
+            <div class="col-md-4">
+                <div class="square" style="background-color:greenyellow;color:white">P</div>
+                <div style="font-weight:bold">Present</div>
+            </div>
+            <div class="col-md-4">
+                <div class="square" style="background-color:red;color:white">A</div>
+                <div style="font-weight:bold">Absent</div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="square" style="background-color:black;color:white">L</div>
+                <div style="font-weight:bold">Leave</div>
+            </div>
+            <div class="col-md-4">
+                <div class="square" style="background-color:black;color:white">HL</div>
+                <div style="font-weight:bold">Half Leave</div>
+            </div>
+            <div class="col-md-4">
+                <div class="square" style="background-color:white;color:black">T</div>
+                <div style="font-weight:bold">Travel</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div style="text-align:center;margin-top:10px;margin-bottom:10px;font-weight:bold">Monthly Attandance Summary</div>
+        <table align="center">
+            <tr>
+                <td style="font-weight:bold">Name:</td>
+                <td id="name">Ram Prasad Gajurel</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold">Organisation:</td>
+                <td id="organisation">Ram Prasad Gajurel</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold">Designation:</td>
+                <td id="designation">Ram Prasad Gajurel</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold">Total Days in Month:</td>
+                <td id="totaldaysinmonth">Ram Prasad Gajurel</td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <table align="center" id="attendtable">
+            <tr>
+                <td><div class="square1" style="background-color:dimgrey;color:black">1</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">2</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">3</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">4</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">5</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">6</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">7</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">8</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">9</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">10</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">11</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">12</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">13</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">14</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">15</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">16</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">17</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">18</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">19</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">20</div></td>
+
+                <td><div class="square1" style="background-color:dimgrey;color:black">21</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">22</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">23</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">24</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">25</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">26</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">27</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">28</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">29</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">30</div></td>
+
+            </tr>
+            <tr>
+                <td><div class="square1" style="background-color:red;color:black">1</div></td>
+                <td><div class="square1" style="background-color:yellow;color:black">2</div></td>
+                <td><div class="square1" style="background-color:black;color:white">3</div></td>
+                <td><div class="square1" style="background-color:white;color:black">4</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">5</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">6</div></td>
+                <td><div class="square1" style="background-color:dimgrey;color:black">30</div></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<style>
+    .square 
+    {
+        display:block;
+        height: 20px;
+        width: 20px;    
+        border:1px solid black;   
+        line-height: 20px;
+        text-align: center;
+    }
+     .square1 
+    {
+        display:block;
+        height: 25px;
+        width: 25px;    
+        border:1px solid black;   
+        line-height: 25px;
+        text-align: center;
+    }
+</style>
